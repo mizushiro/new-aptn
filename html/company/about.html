@@ -1,0 +1,215 @@
+	<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>아파트엔</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="아파트엔, 부동산, 투자가치 평가"/>
+	<meta name="description" content="아파트엔에서는 실거래 데이터를 기반으로 투자가치 평가 정보를 제공합니다."/>
+	<script src="/js/jquery-1.12.4.min.js"></script>
+	<script src="/js/jquery-ui.js"></script>
+	<script src="/js/swiper.min.js"></script>
+	<script src="/js/common.ui.js"></script>
+	<link rel="stylesheet" href="/css/swiper.css">
+	<link rel="stylesheet" href="/css/ui.page.css">
+	<link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+
+<div class="wrap-company">
+	<header class="company-header" id="companyHeader">
+		<div class="header-group">
+			<h1 class="company-name"><a href="" class="link-company"><span class="company-logo">아파트앤</span></a></h1>
+			<ul class="list-nav">
+				<li class="nav-item"><a href="about.html" class="link-nav active">회사소개</a></li>
+				<li class="nav-item"><a href="service-a.html" class="link-nav">아파트가치평가</a></li>
+				<li class="nav-item"><a href="service-b.html" class="link-nav">3D 하늘지도</a></li>
+				<li class="nav-item"><a href="showcase.html" class="link-nav">showcase</a></li>
+			</ul>
+		</div>
+		<div class="header-group">
+			<a href="#login-layer" class="link-join" data-layer="login-layer">로그인</a>
+			<a href="" class="link-join">회원가입</a>
+		</div>
+		<button type="button" class="btn-nav-open"><i class="line">메뉴보기</i></button>
+	</header>
+	<!-- S : 상단 비주얼 -->
+	<div class="visual-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="visual-item-a"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="visual-item-b"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="visual-item-c"></div>
+			</div>
+		</div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination"></div>
+	</div>
+	<script>
+		var swiper = new Swiper('.visual-container', {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: false,
+			},
+			loop : true,
+		});
+	</script>
+	<!-- E : 상단 비주얼 -->
+	<!-- S : info -->
+	<div class="company-info">
+		<div class="content-inner">
+			<p class="txt-a"><strong class="f-w-a">아파트엔</strong>은 빅 데이터기반으로 <br>이루어진 서비스입니다.</p>
+			<div class="box-company-a">
+				<div class="item-col-a">
+					<p class="txt-b">대한민국 최초로 해외시장에 진출하며 한국 건설의 지평을 넓힌 <br>현대건설은 창의적인 생각과 열정으로 <br>보다 나은 세상을 건설하고, 끊임없는 혁신과 도전으로 더 나은 미래를 열어갑니다.</p>
+				</div>
+				<div class="item-col-b">
+					<button type="button" class="btn-down-a"><strong class="txt-big">회사소개서</strong>다운로드</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- E : info -->
+	<!-- S : 보도자료 -->
+	<div class="press-release">
+		<div class="content-inner">
+			<h2 class="main-title-a">보도자료</h2>
+			<div class="list-press">
+				<div class="press-item">
+					<a href="" class="link-a">
+						<p class="press-title clamp">- 아파트 인텔리전스! 아파트엔 </p>
+						<p class="press-txt clamp-b">20년, 제가 공간정보 분야에서 일한 시간입니다. 20년을 일하고 보니 아쉬운게 있습니다. 공간정보에 종사하는 것 20년, 제가 공간정보 분야에서 일한 시간입니다. 20년을 일하고 보니 아쉬운게 있습니다. 공간정보에 종사하는 것</p>
+					</a>
+				</div>
+				<div class="press-item">
+					<a href="" class="link-a">
+						<p class="press-title clamp">- 삼아항업·아파트엔, 3D 항공영상 활용 부동산 정보 제공 삼아항업·아파트엔, 3D 항공영상 활용 부동산 정보 제공</p>
+						<p class="press-txt clamp-b">20년, 제가 공간정보 분야에서 일한 시간입니다. 20년을 일하고 보니 아쉬운게 있습니다. 공간정보에 종사하는 것</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- E : 보도자료 -->
+	<!-- S : 회사연혁 -->
+	<div class="box-history">
+		<div class="content-inner">
+			<h2 class="main-title-a">회사연혁</h2>
+			<dl class="dl-item">
+				<dt class="dl-tit">2020년 06월</dt>
+				<dd class="dl-content">법인설립</dd>
+			</dl>
+			<dl class="dl-item">
+				<dt class="dl-tit">2020년 09월</dt>
+				<dd class="dl-content">아파트지수화를 통한 아파트 투자가치 평가 시스템 (출원번호 10-2020-0118012)</dd>
+			</dl>
+			<dl class="dl-item">
+				<dt class="dl-tit">2020년 10월</dt>
+				<dd class="dl-content">어쩌구 저쩌구</dd>
+			</dl>
+		</div>
+	</div>
+	<!-- E : 회사연혁 -->
+	<!-- S : 찾아오시는 길 -->
+	<div class="contact-map">
+		<div class="content-inner">
+			<h2 class="main-title-a">찾아오시는 길</h2>
+			<div class="contact-map-area">지도 영역</div>
+			<dl class="dl-item">
+				<dt class="dl-tit">주소</dt>
+				<dd class="dl-content">서울특별시 서초구 ㅇㅇㅇ ㅇㅇㅇ 000-00</dd>
+			</dl>
+			<dl class="dl-item">
+				<dt class="dl-tit">연락처</dt>
+				<dd class="dl-content">02-000-0000</dd>
+			</dl>
+			<dl class="dl-item">
+				<dt class="dl-tit">이메일</dt>
+				<dd class="dl-content">aaaaa@aaa.com</dd>
+			</dl>
+		</div>
+	</div>
+	<!-- E : 찾아오시는 길 -->
+	<!-- S : footer -->
+	<footer class="footer">
+		<div class="footer-area">
+			<div class="footer-content">
+				<p class="footer-logo"><i class="sp-com sp-logo-b"></i><span class="for-a11y">아파트엔</span></p>
+				<div class="copy-area">
+					<p class="text-copy-a">
+						<span class="text-copy-item">(주)아파트엔 대표이사 나일한</span>
+						<span class="text-copy-item">주소 : 서울특별시 강남구 강남대로 354, 11층(역삼동, 혜천빌딩)</span>
+						<span class="text-copy-item">사업자등록번호 : 119-87-09136 <button type="button" class="btn-business">사업자 정보확인</button></span>
+						<span class="text-copy-item">이메일문의 : <a href="mailto:ilhan11@jujuyeye.net" class="link-mail">ilhan11@jujuyeye.net</a></span>
+					</p>
+					<p class="text-copy-b">ALL CONTENTS Copyright ⓒ 2020 <span class="text-name">아파트엔</span> ALL RIGHTS RESERVED</p>
+				</div>
+			</div>
+			<div class="sns-list">
+				<button type="button" class="btn-sns"><i class="sp-com sp-sns-a"></i><span class="for-a11y">페이스북</span></button>
+				<button type="button" class="btn-sns"><i class="sp-com sp-sns-b"></i><span class="for-a11y">트위터</span></button>
+				<button type="button" class="btn-sns"><i class="sp-com sp-sns-c"></i><span class="for-a11y">카카오톡</span></button>
+			</div>
+		</div>
+	</footer>
+	<!-- E : footer -->
+</div>
+
+<!-- S : 로그인 layer -->
+<div id="login-layer" class="layer_section">
+	<div class="layer_section-container">
+		<div class="layer-content">
+			<div class="login-box">
+				<div class="login-head">
+					<h1 class="login-title"><i class="sp-com sp-login-logo"></i><span class="for-a11y">아파트엔</span></h1>
+					<div class="site-identity">
+						<span class="identity-item-a"></span>
+						<span class="identity-item-b"></span>
+						<span class="identity-item-c"></span>
+					</div>
+				</div>
+				<div class="login-type">
+					<a href="/oauth2/authorization/kakao" class="link-login-a">
+						<span class="login-icon"><i class="sp-com sp-login-a"></i></span>
+						<span class="login-name">카카오 로그인</span>
+					</a>
+					<a href="/oauth2/authorization/naver" class="link-login-b">
+						<span class="login-icon"><i class="sp-com sp-login-b"></i></span>
+						<span class="login-name">네이버 로그인</span>
+					</a>
+					<a href="/oauth2/authorization/google" class="link-login-c">
+						<span class="login-icon"><i class="sp-com sp-login-c"></i></span>
+						<span class="login-name">구글 로그인</span>
+					</a>
+					<a href="/oauth2/authorization/facebook" class="link-login-d">
+						<span class="login-icon"><i class="sp-com sp-login-d"></i></span>
+						<span class="login-name">페이스북 로그인</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="btn_layer-close"><i class="sp-com sp-layer-close"></i><span class="for-a11y">레이어팝업 닫기</span></button>
+	</div>
+</div>
+<!-- E : 로그인 layer -->
+
+
+<script type="text/javascript">
+	window.onload = function() {
+		APTNL.callLayer();
+		tollTipLayer();
+	};
+</script>
+</body>
+</html>

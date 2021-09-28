@@ -1,0 +1,1756 @@
+	<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>아파트엔</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="아파트엔, 부동산, 투자가치 평가"/>
+	<meta name="description" content="아파트엔에서는 실거래 데이터를 기반으로 투자가치 평가 정보를 제공합니다."/>
+	<script src="/js/jquery-1.12.4.min.js"></script>
+	<script src="/js/jquery-ui.js"></script>
+	<script src="/js/swiper.min.js"></script>
+	<script src="/js/common.ui.js"></script>
+	<link rel="stylesheet" href="/css/swiper.css">
+	<link rel="stylesheet" href="/css/ui.page.css">
+</head>
+<body>
+<div class="wrap">
+	<!-- S : header -->
+	<header class="header">
+		<div class="header-title-box">
+			<h1 class="logo-a"><span class="for-a11y">아파트엔</span></h1>
+		</div>
+		<div class="header-nav">
+			<a href="" class="link-company">회사소개</a>
+			<div class="personal-area">
+				<button type="button" class="btn-login">로그인</button>
+				<!-- D : 로그인 후
+				<button type="button" class="btn-my-info">내정보</button>
+				-->
+			</div>
+		</div>
+	</header>
+	<!-- E : header -->
+	<div class="content-area">
+		<!-- S : map -->
+		<div id="aptn_map" class="map-contents"></div>
+		<!-- E : map -->
+
+		<!-- S : 검색 -->
+		<div class="box-sh">
+			<div class="sh-area">
+				<i class="ico-com sh-icon-a"></i>
+				<div class="sh-input"><input type="text" class="input-sh" placeholder="지역을 입력하세요.">
+					<div class="box-sh-keyword" style="display:none">
+						<div class="sh-keyword-item">
+							<div class="move-map">
+								<i class="sp-com sp-map-point"></i>
+								<p class="keyword-value">
+									<span class="address-data">서울특별시 <span class="keyword">강남</span>구 강남대로 </span>
+								</p>
+							</div>
+						</div>
+						<div class="sh-keyword-item">
+							<div class="move-map">
+								<i class="sp-com sp-map-point"></i>
+								<p class="keyword-value">
+									<span class="keyword-name"><span class="keyword">은마</span> 아파트</span>
+									<span class="address-data">서울특별시 강남구 강남대로 강남대로</span>
+								</p>
+							</div>
+						</div>
+						<div class="sh-keyword-item">
+							<div class="move-map">
+								<i class="sp-com sp-map-point"></i>
+								<p class="keyword-value">
+									<span class="address-data">서울특별시 <span class="keyword">강남</span>구 강남대로 강남대로</span>
+								</p>
+							</div>
+						</div>
+						<div class="sh-keyword-item">
+							<div class="move-map">
+								<i class="sp-com sp-map-point"></i>
+								<p class="keyword-value">
+									<span class="address-data">서울특별시 <span class="keyword">강남</span>구 강남대로 강남대로 </span>
+								</p>
+							</div>
+						</div>
+						<div class="sh-keyword-item">
+							<div class="move-map">
+								<i class="sp-com sp-map-point"></i>
+								<p class="keyword-value">
+									<span class="address-data">서울특별시 <span class="keyword">강남</span>구 강남대로 강남대로 </span>
+								</p>
+							</div>
+						</div>
+						<div class="sh-keyword-item">
+							<div class="move-map">
+								<i class="sp-com sp-map-point"></i>
+								<p class="keyword-value">
+									<span class="address-data">서울특별시 <span class="keyword">강남</span>구 강남대로 강남대로 </span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="btn-filter"><span class="for-a11y">필터</span></button>
+			</div>
+			<!-- S : filter option -->
+			<div class="filter-option">
+				<div class="box-title-a">
+					<h2 class="filter-title">필터</h2>
+					<button type="button" class="btn-close-a"><span class="for-a11y">닫기</span></button>
+				</div>
+				<div class="option-group-list">
+					<!-- S : 투자 전망 -->
+					<div class="filter-option-group">
+						<h3 class="filter-option-title">투자 전망 <span class="txt-decs">통계 데이터 참고용입니다.</span></h3>
+						<div class="filter-option-list">
+							<div class="choice-a">
+								<input type="checkbox" id="ch-a1" class="in-choice">
+								<label for="ch-a1" class="choice-a-label">권장</label>
+							</div>
+							<div class="choice-a">
+								<input type="checkbox" id="ch-a2" class="in-choice">
+								<label for="ch-a2" class="choice-a-label">보통</label>
+							</div>
+							<div class="choice-a">
+								<input type="checkbox" id="ch-a3" class="in-choice">
+								<label for="ch-a3" class="choice-a-label">신중</label>
+							</div>
+						</div>
+					</div>
+					<!-- E : 투자 전망 -->
+					<!-- S : 면적 -->
+					<div class="filter-option-group">
+						<h3 class="filter-option-title">면적</h3>
+						<div class="filter-option-list">
+							<div class="choice-a">
+								<input type="checkbox" id="ch-b1" class="in-choice">
+								<label for="ch-b1" class="choice-a-label">초소형</label>
+							</div>
+							<div class="choice-a">
+								<input type="checkbox" id="ch-b2" class="in-choice">
+								<label for="ch-b2" class="choice-a-label">소형</label>
+							</div>
+							<div class="choice-a">
+								<input type="checkbox" id="ch-b3" class="in-choice">
+								<label for="ch-b3" class="choice-a-label">중소형</label>
+							</div>
+							<div class="choice-a">
+								<input type="checkbox" id="ch-b4" class="in-choice">
+								<label for="ch-b4" class="choice-a-label">중대형</label>
+							</div>
+							<div class="choice-a">
+								<input type="checkbox" id="ch-b5" class="in-choice">
+								<label for="ch-b5" class="choice-a-label">대형</label>
+							</div>
+						</div>
+					</div>
+					<!-- E : 면적 -->
+					<!-- S : 가격대 -->
+					<div class="filter-option-group">
+						<h3 class="filter-option-title">가격대</h3>
+						<div class="filter-option-list">
+							<div class="choice-a">
+								<input type="radio" id="ch-c1" class="in-choice" name="ch-c">
+								<label for="ch-c1" class="choice-a-label">2억 이하</label>
+							</div>
+							<div class="choice-a">
+								<input type="radio" id="ch-c2" class="in-choice" name="ch-c">
+								<label for="ch-c2" class="choice-a-label">5억 이하</label>
+							</div>
+							<div class="choice-a">
+								<input type="radio" id="ch-c3" class="in-choice" name="ch-c">
+								<label for="ch-c3" class="choice-a-label">10억 이하</label>
+							</div>
+							<div class="choice-a">
+								<input type="radio" id="ch-c4" class="in-choice" name="ch-c">
+								<label for="ch-c4" class="choice-a-label">20억 이하</label>
+							</div>
+							<div class="choice-a">
+								<input type="radio" id="ch-c5" class="in-choice" name="ch-c">
+								<label for="ch-c5" class="choice-a-label">20억 초과</label>
+							</div>
+						</div>
+					</div>
+					<!-- E : 가격대 -->
+				</div>
+				<div class="filter-action">
+					<button type="button" class="btn-reset">초기화</button>
+					<button type="button" class="btn-apply">적용하기</button>
+				</div>
+			</div>
+			<!-- E : filter option -->
+			<!-- S : apt summary -->
+			<div class="apt-summary">
+				<div class="box-title-a">
+					<button type="button" class="btn-back"><span class="for-a11y">이전</span></button>
+					<div class="apt-name">
+						<h2 class="apt-title">삼성동 삼성리치빌</h2>
+						<p class="apt-address">서울특별시 서초구 잠원동 34-1</p>
+					</div>
+					<button type="button" class="btn-close-a"><span class="for-a11y">닫기</span></button>
+				</div>
+				<div class="size-list">
+					<button type="button" class="btn-size-choice">초소형</button>
+					<button type="button" class="btn-size-choice active">소형</button>
+					<button type="button" class="btn-size-choice">중소형</button>
+					<button type="button" class="btn-size-choice">중대형</button>
+					<button type="button" class="btn-size-choice">대형</button>
+				</div>
+				<div class="box-summary">
+					<!-- S : 실거주 · 투자가치 평가 -->
+					<div class="summary-section">
+						<div class="summary-title-wrap">
+							<h3 class="summary-title">실거주 · 투자가치 평가</h3>
+							<button type="button" class="btn-detail"><span class="btn-txt">자세히 보기</span></button>
+						</div>
+						<div class="summary-content">
+							<p class="lately-price">
+								최근 실거래가
+								<span class="price-value">8</span>억
+								<span class="price-value">9,400</span>
+							</p>
+							<div class="box-aptn-data">
+								<p class="aptn-data">
+									아파트엔 평가 가격
+									<span class="data-value">29</span>억
+									<span class="data-value">2,600</span>
+								</p>
+							</div>
+							<div class="box-chart1">
+								<img src="/images/temp/temp1.png" alt="">
+							</div>
+						</div>
+					</div>
+					<!-- E : 실거주 · 투자가치 평가 -->
+					<!-- S : 세부평가 정보 -->
+					<div class="summary-section">
+						<div class="summary-title-wrap">
+							<h3 class="summary-title">세부평가 정보</h3>
+						</div>
+						<div class="summary-content">
+							<div class="box-chart2">
+								<img src="/images/temp/temp2.png" alt="">
+							</div>
+							<div class="box-aptn-data">
+								<p class="aptn-data">
+									아파트엔 지수
+									<span class="data-value">89</span>점
+								</p>
+							</div>
+							<div class="appraisal-list">
+								<dl class="appraisal-item">
+									<dt class="appraisal-item-title"><span class="appraisal-type level-c">A</span>거래가격</dt>
+									<dd class="appraisal-item-value">99</dd>
+								</dl>
+								<dl class="appraisal-item">
+									<dt class="appraisal-item-title"><span class="appraisal-type level-b">B</span>공시가격</dt>
+									<dd class="appraisal-item-value">62</dd>
+								</dl>
+								<dl class="appraisal-item">
+									<dt class="appraisal-item-title"><span class="appraisal-type level-c">C</span>지역특성</dt>
+									<dd class="appraisal-item-value">87</dd>
+								</dl>
+								<dl class="appraisal-item">
+									<dt class="appraisal-item-title"><span class="appraisal-type level-c">D</span>인프라</dt>
+									<dd class="appraisal-item-value">92</dd>
+								</dl>
+								<dl class="appraisal-item">
+									<dt class="appraisal-item-title"><span class="appraisal-type level-c">E</span>단지규모</dt>
+									<dd class="appraisal-item-value">98</dd>
+								</dl>
+								<dl class="appraisal-item">
+									<dt class="appraisal-item-title"><span class="appraisal-type level-a">F</span>면적구성</dt>
+									<dd class="appraisal-item-value">39</dd>
+								</dl>
+								<dl class="appraisal-item">
+									<dt class="appraisal-item-title"><span class="appraisal-type level-c">G</span>노후도</dt>
+									<dd class="appraisal-item-value">89</dd>
+								</dl>
+								<dl class="appraisal-item">
+									<dt class="appraisal-item-title"><span class="appraisal-type level-c">H</span>브랜드</dt>
+									<dd class="appraisal-item-value">85</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<!-- E : 세부평가 정보 -->
+					<!-- S : 일조권 -->
+					<div class="summary-section">
+						<div class="summary-title-wrap">
+							<h3 class="summary-title">일조권</h3>
+							<button type="button" class="btn-detail"><span class="btn-txt">조망권 보기</span></button>
+						</div>
+						<div class="summary-content">
+							<div class="box-chart3">
+								<img src="/images/temp/temp3.png" alt="">
+							</div>
+							<div class="slider-control">
+								<div class="slider-item">
+									<div id="slider-a"></div>
+									<div class="slider-value"><input type="text" id="slider-value-a" class="form-a" readonly></div>
+								</div>
+								<div class="slider-item">
+									<div id="slider-b"></div>
+									<div class="slider-value"><input type="text" id="slider-value-b" class="form-a" readonly></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- E : 일조권 -->
+				</div>
+			</div>
+			<!-- E : apt summary -->
+		</div>
+		<!-- E : 검색 -->
+	</div>
+</div>
+<!-- S : 지역 정보 A -->
+<div class="marker-basic" style="position:absolute;left:600px;top:500px">
+	<p class="txt-area">마산합포구</p>
+	<p class="apartment-count">86</p>
+	<p class="layer-data">마산시</p>
+</div>
+<!-- E : 지역 정보 A -->
+
+<!-- S : 아파트 정보 A -->
+<div class="marker-apartment-a" style="position:absolute;left:200px;top:100px">
+	<p class="apartment-size">23평</p>
+	<p class="apartment-price">22.2<span class="unit">억</span></p>
+	<p class="layer-data">노빌리티빌리지</p>
+</div>
+<!-- E : 아파트 정보 A -->
+<!-- S : 아파트 정보 B -->
+<div class="marker-apartment-b" style="position:absolute;left:240px;top:110px">
+	<p class="apartment-size">23평</p>
+	<p class="apartment-price">22.2<span class="unit">억</span></p>
+	<p class="layer-data">노빌리티</p>
+</div>
+<!-- E : 아파트 정보 B -->
+<!-- S : 아파트 정보 B -->
+<div class="marker-apartment-b" style="position:absolute;left:500px;top:300px">
+	<p class="apartment-size">23평</p>
+	<p class="apartment-price">22.2<span class="unit">억</span></p>
+	<p class="layer-data">노빌리티</p>
+</div>
+<!-- E : 아파트 정보 B -->
+<!-- S : 아파트 정보 C -->
+<div class="marker-apartment-c" style="position:absolute;left:800px;top:250px">
+	<p class="apartment-size">23평</p>
+	<p class="apartment-price">22.2<span class="unit">억</span></p>
+	<p class="layer-data">노빌리티 노빌리티 노빌리티</p>
+</div>
+<!-- E : 아파트 정보 C -->
+<!-- S : 거리 1K -->
+<div class="marker-area-1" style="position:absolute;left:600px;top:400px">
+	<i class="map-icon-20-a"></i>
+	<span class="for-a11y">마트</span>
+</div>
+<!-- E : 거리 1K -->
+<!-- S : 거리 2K -->
+<div class="marker-area-2" style="position:absolute;left:500px;top:400px">
+	<i class="map-icon-20-b"></i>
+	<span class="for-a11y">힉교</span>
+</div>
+<!-- E : 거리 2K -->
+<!-- S : 거리 3K -->
+<div class="marker-area-3" style="position:absolute;left:400px;top:400px">
+	<i class="map-icon-20-c"></i>
+	<span class="for-a11y">지하철</span>
+</div>
+<!-- E : 거리 3K -->
+<!-- S : 거리 3K -->
+<div class="marker-logo" style="position:absolute;left:800px;top:600px">
+	<span class="for-a11y">아파트엔</span>
+</div>
+<!-- E : 거리 3K -->
+
+<!-- S : 거리재기 박스 -->
+<div class="box-tip-a" style="position:absolute;top:600px;right:200px">
+	<p class="txt-area-data"><span class="area-value">241.3m</span></p>
+</div>
+
+<div class="box-tip-b" style="position:absolute;top:400px;right:200px">
+	<p class="txt-area-data"><span class="area-value">241.3m</span></p>
+	<button type="button" class="btn-box-del"><i class="sp-com sp-del"></i><span class="for-a11y">삭제</span></button>
+</div>
+<!-- E : 거리재기 박스 -->
+
+<!-- S : map control -->
+<div class="box-map-control">
+	<div class="control-section-a" style="display:none">
+		<div class="box-layer">
+			<button type="button" class="btn-control-a btn-tooltip" data-tooltip="layer-guide"><i class="sp-com sp-map-layer"></i><span class="for-a11y">레이어보기</span></button>
+			<div id="layer-guide" class="tooltip-layer">
+				<div class="tooltip-cont">
+					<div class="tooltip-menu"><button type="button" class="btn-layer-menu active">메뉴명 들어가요</button></div>
+					<div class="tooltip-menu"><button type="button" class="btn-layer-menu">메뉴명 들어가요</button></div>
+				</div>
+			</div>
+		</div>
+		<div class="box-map-type">
+			<button type="button" class="btn-map-type active">일반</button>
+			<button type="button" class="btn-map-type">항공</button>
+		</div>
+		<a href="" class="link-company-a">회사소개</a>
+		<button type="button" class="btn-login" data-layer="login-layer">로그인</button>
+	</div>
+	<div class="control-section-b">
+		<button type="button" class="btn-control-a"><i class="sp-com sp-map-now"></i><span class="for-a11y">현재위치</span></button>
+		<div class="control-group-a">
+			<button type="button" class="btn-control-b"><i class="sp-com sp-map-expand"></i><span class="for-a11y">확대</span></button>
+			<button type="button" class="btn-control-b"><i class="sp-com sp-map-reduce"></i><span class="for-a11y">축소</span></button>
+		</div>
+		<div class="control-group-b">
+			<button type="button" class="btn-control-b active"><i class="sp-com sp-map-distance"></i><span class="for-a11y">거리재기</span></button>
+			<button type="button" class="btn-control-b"><i class="sp-com sp-map-area"></i><span class="for-a11y">면적재기</span></button>
+		</div>
+	</div>
+</div>
+<!-- E : map control -->
+
+<!-- S : 아파트 상세 -->
+<div class="base-wrap box-level-c">
+	<!-- S : header -->
+	<header class="header">
+		<div class="box-header">
+			<h1 class="home-logo"><a href="" class="link-home"><i class="sp-com sp-logo"></i><span class="for-a11y">아파트엔</span></a></h1>
+			<div class="apartment-info">
+				<div class="box-a">
+					<h2 class="apartment-name">대구테크노폴리스엘에이치천년나무2단지</h2>
+					<div class="mobile-state box-state">
+						<span class="state-level-a"></span>
+						<span class="state-level-b"></span>
+						<span class="state-level-c"></span>
+					</div>
+				</div>
+				<div class="box-b">
+					<div class="pc-state box-state">
+						<span class="state-level-a"></span>
+						<span class="state-level-b"></span>
+						<span class="state-level-c"></span>
+					</div>
+					<p class="apartment-address">경기도 수원시 권선구 삼천병마로1598번길 28-20</p>
+				</div>
+			</div>
+			<button type="button" class="btn-close"><i class="sp-com sp-close-a"></i><span class="for-a11y">창닫기</span></button>
+		</div>
+	</header>
+	<!-- E : header -->
+	<!-- S : content -->
+	<article class="detail-wrap">
+		<div class="m-select">
+			<div class="select-date">
+				<button type="button" class="option-open"></button>
+			</div>
+			<div class="box-choice">
+				<div class="choice-item">
+					<span class="form_element-radio">
+						<input type="radio" id="typeA" name="choiceA" checked>
+						<label for="typeA"><span class="label-value">초소형(40㎡이하)</span></label>
+					</span>
+				</div>
+				<div class="choice-item">
+					<span class="form_element-radio">
+						<input type="radio" id="typeB" name="choiceA">
+						<label for="typeB"><span class="label-value">소형(40㎡초과60㎡이하)</span></label>
+					</span>
+				</div>
+				<div class="choice-item">
+					<span class="form_element-radio">
+						<input type="radio" id="typeC" name="choiceA">
+						<label for="typeC"><span class="label-value">중소형(60㎡ 초과 85㎡ 이하)</span></label>
+					</span>
+				</div>
+				<div class="choice-item">
+					<span class="form_element-radio">
+						<input type="radio" id="typeD" name="choiceA">
+						<label for="typeD"><span class="label-value">중대형(85㎡ 초과 135㎡ 이하)</span></label>
+					</span>
+				</div>
+				<div class="choice-item">
+					<span class="form_element-radio">
+						<input type="radio" id="typeE" name="choiceA">
+						<label for="typeE"><span class="label-value">대형(135㎡ 초과)</span></label>
+					</span>
+				</div>
+			</div>
+		</div>
+		<section class="box-section">
+			<!-- S : 실거주/투자가치 평가 -->
+			<div class="section-item size-a order-item1">
+				<div class="section-header point">
+					<h3 class="section-title">실거주/투자가치 평가</h3>
+					<div class="box-action-content">
+						<button type="button" class="btn-help slide-1" data-layer="info-layer"><i class="sp-com sp-help-b"></i><span class="for-a11y">도움말</span></button>
+					</div>
+				</div>
+				<div class="section-content">
+					<div class="col-a">
+						<canvas id="aptn_chart_1"></canvas>
+					</div>
+					<div class="col-b flex-column">
+						<div class="box-price">
+							<dl class="price-item">
+								<dt class="price-item-title">최근 실거래가</dt>
+								<dd class="price-item-value">20,500<span class="sub-txt">만원 (평당 4,300만원)</span></dd>
+							</dl>
+							<dl class="price-item appraisal">
+								<dt class="price-item-title">아파트엔 평가 가격</dt>
+								<dd class="price-item-value">19,000<span class="sub-txt">만원 (평당 4,200만원)</span></dd>
+							</dl>
+						</div>
+						<div class="box-bar">
+							<div class="bar-item state-bar-a">
+								<p class="bar-title">매입보류</p>
+								<span class="bar-line"></span>
+							</div>
+							<div class="bar-item state-bar-b">
+								<p class="bar-title">신중 접근</p>
+								<span class="bar-line"></span>
+							</div>
+							<div class="bar-item state-bar-c">
+								<p class="bar-title">투자 권장</p>
+								<span class="bar-line"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- E : 실거주/투자가치 평가 -->
+			<!-- S : 세부평가정보 -->
+			<div class="section-item size-a order-item2">
+				<div class="section-header point">
+					<h3 class="section-title">세부평가정보</h3>
+					<div class="box-action-content">
+						<button type="button" class="btn-help slide-2" data-layer="info-layer"><i class="sp-com sp-help-b"></i><span class="for-a11y">도움말</span></button>
+					</div>
+				</div>
+				<div class="section-content">
+					<div class="col-a">
+						<canvas id="aptn_chart_2"></canvas>
+					</div>
+					<div class="col-b flex-column">
+						<dl class="box-appraisal">
+							<dt class="appraisal-title">아파트엔지수</dt>
+							<dt class="appraisal-value">94</dt>
+						</dl>
+						<div class="appraisal-list">
+							<dl class="appraisal-item">
+								<dt class="appraisal-item-title">A.거래가격</dt>
+								<dd class="appraisal-item-value"><span class="value-data">99</span>/100</dd>
+							</dl>
+							<dl class="appraisal-item">
+								<dt class="appraisal-item-title">B.공시가격</dt>
+								<dd class="appraisal-item-value"><span class="value-data">99</span>/100</dd>
+							</dl>
+							<dl class="appraisal-item">
+								<dt class="appraisal-item-title">C.지역특성</dt>
+								<dd class="appraisal-item-value"><span class="value-data">94</span>/100</dd>
+							</dl>
+							<dl class="appraisal-item">
+								<dt class="appraisal-item-title">D.인프라</dt>
+								<dd class="appraisal-item-value"><span class="value-data">100</span>/100</dd>
+							</dl>
+							<dl class="appraisal-item">
+								<dt class="appraisal-item-title">E.단지규모</dt>
+								<dd class="appraisal-item-value"><span class="value-data">100</span>/100</dd>
+							</dl>
+							<dl class="appraisal-item">
+								<dt class="appraisal-item-title">F.면적구성</dt>
+								<dd class="appraisal-item-value"><span class="value-data">10</span>/100</dd>
+							</dl>
+							<dl class="appraisal-item">
+								<dt class="appraisal-item-title">G.노후도</dt>
+								<dd class="appraisal-item-value"><span class="value-data">60</span>/100</dd>
+							</dl>
+							<dl class="appraisal-item">
+								<dt class="appraisal-item-title">H.브랜드</dt>
+								<dd class="appraisal-item-value"><span class="value-data">40</span>/100</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- E : 세부평가정보 -->
+			<!-- S : 아파트기준정보 -->
+			<div class="section-item size-b order-item3">
+				<div class="section-header">
+					<h3 class="section-title">아파트기준정보</h3>
+				</div>
+				<div class="section-content type-column">
+					<div class="aptn-info-data">
+						<dl class="aptn-item-a">
+							<dt class="aptn-item-title">주소</dt>
+							<dd class="aptn-item-content">
+								<p class="aptn-address-a"><span class="address-flag">도로명</span>서울특별시 강남구 도곡로93길 12</p>
+								<p class="aptn-address-b">서울특별시 강남구 대치동 985 래미안대치하이스턴</p>
+							</dd>
+						</dl>
+						<div class="aptn-item-group">
+							<dl class="aptn-item-b">
+								<dt class="aptn-item-title">세대수</dt>
+								<dd class="aptn-item-content">562</dd>
+							</dl>
+							<dl class="aptn-item-b">
+								<dt class="aptn-item-title">준공년도</dt>
+								<dd class="aptn-item-content">2018</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="aptn-rank-area">
+						<p class="txt-rank-info">동일한 면적 기준입니다.</p>
+						<div class="aptn-rank-list">
+							<dl class="aptn-rank-item rank-c">
+								<dt class="aptn-rank-title">전국 상위</dt>
+								<dd class="aptn-rank-content"><span class="rank-value">12</span>%</dd>
+							</dl>
+							<dl class="aptn-rank-item rank-b">
+								<dt class="aptn-rank-title">서울특별시 상위</dt>
+								<dd class="aptn-rank-content"><span class="rank-value">35</span>%</dd>
+							</dl>
+							<dl class="aptn-rank-item rank-a">
+								<dt class="aptn-rank-title">강남구 상위</dt>
+								<dd class="aptn-rank-content"><span class="rank-value">69</span>%</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- E : 아파트기준정보 -->
+			<!-- S : 연도별 실거래 동향도움말 -->
+			<div class="section-item size-a box-tab order-item4">
+				<div class="section-header">
+					<h3 class="section-title">연도별 실거래 동향도움말</h3>
+					<div class="box-action-content">
+						<button type="button" class="btn-help slide-3" data-layer="info-layer"><i class="sp-com sp-help-a"></i><span class="for-a11y">도움말</span></button>
+						<ul class="list-tab">
+							<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view1-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
+							<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view1-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
+						</ul>
+					</div>
+				</div>
+				<div class="section-content type-block">
+					<div class="tab-contents" id="view1-a">
+						<div class="box-decs">
+							<ul class="dot-list">
+								<li class="list-item">세로선은 해당년도 최고거래가와 최소거래가를 나타냅니다.</li>
+								<li class="list-item">사각형은 해당년도 시작가격과 마감가격을 나타냅니다.</li>
+							</ul>
+						</div>
+						<div class="chart-area-a">
+							<div id="aptn_chart_3"></div>
+						</div>
+					</div>
+					<div class="tab-contents" id="view1-b">
+						<div class="box-table">
+							<table class="list-table-a" id="aptn_table_3">
+								<caption></caption>
+								<thead>
+								<tr>
+									<th scope="col">기준년도</th>
+									<th scope="col">최소<span class="unit">(단위:억원)</span></th>
+									<th scope="col">시작<span class="unit">(단위:억원)</span></th>
+									<th scope="col">마감<span class="unit">(단위:억원)</span></th>
+									<th scope="col">최대<span class="unit">(단위:억원)</span></th>
+									<th scope="col">평균<span class="unit">(단위:억원)</span></th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>2020</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2019</td>
+									<td>10.85</td>
+									<td>10.85</td>
+									<td>10.85</td>
+									<td>10.85</td>
+									<td>10.85</td>
+								</tr>
+								<tr>
+									<td>2018</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2017</td>
+									<td>8.05</td>
+									<td>8.15</td>
+									<td>8.05</td>
+									<td>8.15</td>
+									<td>8.1</td>
+								</tr>
+								<tr>
+									<td>2016</td>
+									<td>7.4</td>
+									<td>7.4</td>
+									<td>7.4</td>
+									<td>7.4</td>
+									<td>7.4</td>
+								</tr>
+								<tr>
+									<td>2015</td>
+									<td>5.98</td>
+									<td>6.7</td>
+									<td>7.4</td>
+									<td>7.5</td>
+									<td>6.89</td>
+								</tr>
+								<tr>
+									<td>2014</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2013</td>
+									<td>5.36</td>
+									<td>5.36</td>
+									<td>5.36</td>
+									<td>5.36</td>
+									<td>5.36</td>
+								</tr>
+								<tr>
+									<td>2012</td>
+									<td>6.5</td>
+									<td>6.5</td>
+									<td>6.5</td>
+									<td>6.5</td>
+									<td>6.5</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- E : 연도별 실거래 동향도움말 -->
+			<!-- S : 월간 아파트엔 지수 변동 -->
+			<div class="section-item size-a box-tab order-item5">
+				<div class="section-header">
+					<h3 class="section-title">월간 아파트엔 지수 변동</h3>
+					<div class="box-action-content">
+						<button type="button" class="btn-help slide-4" data-layer="info-layer"><i class="sp-com sp-help-a"></i><span class="for-a11y">도움말</span></button>
+						<ul class="list-tab">
+							<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view2-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
+							<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view2-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
+						</ul>
+					</div>
+				</div>
+				<div class="section-content type-block">
+					<div class="tab-contents" id="view2-a">
+						<div class="box-decs">
+							<ul class="dot-list">
+								<li class="list-item">아파트엔지수의 상승은 현가 가치가 <span class="point-color-a">상승</span>했음을 의미합니다.</li>
+								<li class="list-item">아파트엔지수의 하락은 현가 가치가 <span class="point-color-b">하락</span>했음을 의마합니다.</li>
+							</ul>
+						</div>
+						<div class="chart-area-a">
+							<canvas id="aptn_chart_4"></canvas>
+						</div>
+					</div>
+					<div class="tab-contents" id="view2-b">
+						<div class="box-table">
+							<table class="list-table-a" id="aptn_table_4">
+								<caption></caption>
+								<thead>
+								<tr>
+									<th scope="col">기준년월</th>
+									<th scope="col">아파트엔지수</th>
+									<th scope="col">평균거래가격<span class="unit">(단위:억원)</span></th>
+									<th scope="col">회전률<span class="unit">(단위:%)</span></th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>2020-09</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2020-08</td>
+									<td>86</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2020-07</td>
+									<td>86</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2020-06</td>
+									<td>86</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2020-05</td>
+									<td>86</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2020-04</td>
+									<td>86</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2020-03</td>
+									<td>86</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2020-02</td>
+									<td>86</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2020-01</td>
+									<td>86</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- E : 월간 아파트엔 지수 변동 -->
+			<!-- S : 일조권 -->
+			<div class="section-item size-b order-item6">
+				<div class="section-header">
+					<h3 class="section-title">일조권</h3>
+					<div class="box-action-content">
+						<button type="button" class="btn-help slide-5" data-layer="info-layer"><i class="sp-com sp-help-a"></i><span class="for-a11y">도움말</span></button>
+					</div>
+				</div>
+				<div class="section-content type-block">
+					<div class="map-area-a">
+
+					</div>
+				</div>
+			</div>
+			<!-- E : 일조권 -->
+			<!-- S : 소비자 물가 상승률 비교 -->
+			<div class="section-item size-b box-tab order-item7">
+				<div class="section-header">
+					<h3 class="section-title">소비자 물가 상승률 비교</h3>
+					<div class="box-action-content">
+						<button type="button" class="btn-help slide-6" data-layer="info-layer"><i class="sp-com sp-help-a"></i><span class="for-a11y">도움말</span></button>
+						<ul class="list-tab">
+							<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view3-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
+							<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view3-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
+						</ul>
+					</div>
+				</div>
+				<div class="section-content type-block">
+					<div class="tab-contents" id="view3-a">
+						<div class="box-decs">
+							<ul class="dot-list">
+								<li class="list-item">실거래가 상승률이 물가 상승률 보다 높을 경우 보유가치가 <span class="point-color-a">상승</span>했음을 의미합니다.</li>
+								<li class="list-item">실거래가 상승률이 물가 상승률 보다 적을 경우 보유가치가 <span class="point-color-b">하락</span>했음을 의미합니다.</li>
+							</ul>
+						</div>
+						<div class="chart-area-a">
+							<canvas id="aptn_chart_5"></canvas>
+						</div>
+					</div>
+					<div class="tab-contents" id="view3-b">
+						<div class="box-table">
+							<table class="list-table-a" id="aptn_table_5">
+								<caption></caption>
+								<thead>
+								<tr>
+									<th scope="col">기준년도</th>
+									<th scope="col">물가상승률</th>
+									<th scope="col">호가상승률<span class="unit">(단위:%)</span></th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>2020</td>
+									<td>0.6</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2019</td>
+									<td>0.4</td>
+									<td><span class="point-color-a">33.95</span></td>
+								</tr>
+								<tr>
+									<td>2018</td>
+									<td>1.5</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2017</td>
+									<td>1.9</td>
+									<td><span class="point-color-a">9.46</span></td>
+								</tr>
+								<tr>
+									<td>2016</td>
+									<td>1</td>
+									<td><span class="point-color-a">7.95</span></td>
+								</tr>
+								<tr>
+									<td>2015</td>
+									<td>0.7</td>
+									<td><span class="point-color-a">28.47</span></td>
+								</tr>
+								<tr>
+									<td>2014</td>
+									<td>1.3</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2013</td>
+									<td>1.3</td>
+									<td><span class="point-color-b">-17.54</span></td>
+								</tr>
+								<tr>
+									<td>2012</td>
+									<td>2.2</td>
+									<td><span class="point-color-a">2.36</span></td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- E : 소비자 물가 상승률 비교 -->
+			<!-- E : 호가 변동 비교(읍면동, 시군구) -->
+			<div class="section-item size-b box-tab order-item8">
+				<div class="section-header">
+					<h3 class="section-title">호가 변동 비교(읍면동, 시군구)</h3>
+					<div class="box-action-content">
+						<button type="button" class="btn-help slide-7" data-layer="info-layer"><i class="sp-com sp-help-a"></i><span class="for-a11y">도움말</span></button>
+						<ul class="list-tab">
+							<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view4-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
+							<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view4-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
+						</ul>
+					</div>
+				</div>
+				<div class="section-content type-block">
+					<div class="tab-contents" id="view4-a">
+						<div class="box-decs">
+							<ul class="dot-list">
+								<li class="list-item">우상향 선형그래프는 외부요인의 영향을 받지 않음을 의미합니다.</li>
+								<li class="list-item">꾸준한 거래량은 지속적으로 수요자의 관심이 있음을 의미합니다.</li>
+							</ul>
+						</div>
+						<div class="chart-area-a">
+							<canvas id="aptn_chart_6"></canvas>
+						</div>
+					</div>
+					<div class="tab-contents" id="view4-b">
+						<div class="box-table">
+							<table class="list-table-a" id="aptn_table_6">
+								<caption></caption>
+								<thead>
+								<tr>
+									<th scope="col">기준년월</th>
+									<th scope="col">아파트 거래가격 지수</th>
+									<th scope="col">읍면동 거래가격 지수</th>
+									<th scope="col">시군구 거래가격 지수</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>2020-08</td>
+									<td>-</td>
+									<td>100</td>
+									<td>99</td>
+								</tr>
+								<tr>
+									<td>2020-07</td>
+									<td>-</td>
+									<td>97</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>2020-06</td>
+									<td>-</td>
+									<td>100</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>2020-05</td>
+									<td>-</td>
+									<td>100</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>2020-04</td>
+									<td>-</td>
+									<td>100</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>2020-03</td>
+									<td>-</td>
+									<td>100</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>2020-02</td>
+									<td>-</td>
+									<td>100</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>2020-01</td>
+									<td>-</td>
+									<td>100</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>2019-12</td>
+									<td>-</td>
+									<td>100</td>
+									<td>100</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- E : 호가 변동 비교(읍면동, 시군구) -->
+			<!-- S : 월별 거래 동향 -->
+			<div class="section-item size-b box-tab order-item9">
+				<div class="section-header">
+					<h3 class="section-title">월별 거래 동향</h3>
+					<div class="box-action-content">
+						<button type="button" class="btn-help slide-8" data-layer="info-layer"><i class="sp-com sp-help-a"></i><span class="for-a11y">도움말</span></button>
+						<ul class="list-tab">
+							<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view5-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
+							<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view5-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
+						</ul>
+					</div>
+				</div>
+				<div class="section-content type-block">
+					<div class="tab-contents" id="view5-a">
+						<div class="box-decs">
+							<ul class="dot-list">
+								<li class="list-item">꾸준한 거래량은 자본유동성 확보에 유리합니다.</li>
+								<li class="list-item">거래량이 많을 수록 호가는 상승하는 경향이 있습니다.</li>
+							</ul>
+						</div>
+						<div class="chart-area-a">
+							<canvas id="aptn_chart_7"></canvas>
+						</div>
+					</div>
+					<div class="tab-contents" id="view5-b">
+						<div class="box-table">
+							<table class="list-table-a" id="aptn_table_7">
+								<caption></caption>
+								<thead>
+								<tr>
+									<th scope="col">기준년월</th>
+									<th scope="col">호가상승률<span class="unit">(단위:%)</span></th>
+									<th scope="col">회전률<span class="unit">(단위:%)</span></th>
+									<th scope="col">거래건수</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>2020-08</td>
+									<td>33.95</td>
+									<td>7.14</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>2020-07</td>
+									<td>-</td>
+									<td>14.29</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>2020-06</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- E : 월별 거래 동향 -->
+			<!-- S : 생활편의 -->
+			<div class="section-item size-b order-item10">
+				<div class="section-header">
+					<h3 class="section-title">생활편의</h3>
+				</div>
+				<div class="section-content type-block">
+					<div class="map-area-a">
+
+					</div>
+					<div class="map-data-list">
+						<div class="map-data-item">
+							<span class="area-value">1<span class="unit">Km</span></span>
+							<span class="area-content">지하철:1 / 학교:2</span>
+						</div>
+						<div class="map-data-item">
+							<span class="area-value">2<span class="unit">Km</span></span>
+							<span class="area-content">학교:2</span>
+						</div>
+						<div class="map-data-item">
+							<span class="area-value">3<span class="unit">Km</span></span>
+							<span class="area-content">마켓:10</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- E : 생활편의 -->
+			<!-- S : 공시지가/실거래가 변동지수 -->
+			<div class="section-item size-b box-tab order-item11">
+				<div class="section-header">
+					<h3 class="section-title">공시지가/실거래가 변동지수</h3>
+					<div class="box-action-content">
+						<button type="button" class="btn-help slide-9" data-layer="info-layer"><i class="sp-com sp-help-a"></i><span class="for-a11y">도움말</span></button>
+						<ul class="list-tab">
+							<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view6-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
+							<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view6-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
+						</ul>
+					</div>
+				</div>
+				<div class="section-content type-block">
+					<div class="tab-contents" id="view6-a">
+						<div class="box-decs">
+							<ul class="dot-list">
+								<li class="list-item">실거래가 상승률이 물가 상승률 보다 높을 경우 보유가치가 <span class="point-color-a">상승</span>했음을 의미합니다.</li>
+								<li class="list-item">실거래가 상승률이 물가 상승률 보다 적을 경우 보유가치가 <span class="point-color-b">하락</span>했음을 의미합니다.</li>
+							</ul>
+						</div>
+						<div class="chart-area-a">
+							<canvas id="aptn_chart_8"></canvas>
+						</div>
+					</div>
+					<div class="tab-contents" id="view6-b">
+						<div class="box-table">
+							<table class="list-table-a" id="aptn_table_8">
+								<caption></caption>
+								<thead>
+								<tr>
+									<th scope="col">기준년월</th>
+									<th scope="col">공시가격</th>
+									<th scope="col">실거래가</th>
+									<th scope="col">실거래가 대비 공시가격 비율</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>2020-08</td>
+									<td>6.65</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2020-07</td>
+									<td>6.65</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2020-06</td>
+									<td>6.65</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2020-05</td>
+									<td>6.65</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2020-04</td>
+									<td>6.65</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2020-03</td>
+									<td>6.65</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>2020-02</td>
+									<td>6.65</td>
+									<td>-</td>
+									<td>-</td>
+								</tr><tr>
+									<td>2020-01</td>
+									<td>6.65</td>
+									<td>-</td>
+									<td>-</td>
+								</tr><tr>
+									<td>2019-12</td>
+									<td>6.65</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- E : 공시지가/실거래가 변동지수 -->
+			<!-- S : 실거래 내역 -->
+			<div class="section-item size-b box-tab order-item12">
+				<div class="section-header">
+					<h3 class="section-title">실거래 내역</h3>
+					<div class="box-action-content">
+						<ul class="list-tab">
+							<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view7-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
+							<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view7-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
+						</ul>
+					</div>
+				</div>
+				<div class="section-content type-block">
+					<div class="tab-contents" id="view7-a">
+						<div class="box-decs">
+							<ul class="dot-list">
+								<li class="list-item">실거래가 상승률이 물가 상승률 보다 높을 경우 보유가치가 <span class="point-color-a">상승</span>했음을 의미합니다.</li>
+								<li class="list-item">실거래가 상승률이 물가 상승률 보다 적을 경우 보유가치가 <span class="point-color-b">하락</span>했음을 의미합니다.</li>
+							</ul>
+						</div>
+						<div class="chart-area-a">
+							<canvas id="aptn_chart_9"></canvas>
+						</div>
+					</div>
+					<div class="tab-contents" id="view7-b">
+						<div class="box-table">
+							<table class="list-table-a" id="aptn_table_11">
+								<caption></caption>
+								<thead>
+								<tr>
+									<th scope="col" class="w-size-a">거래일자</th>
+									<th scope="col" class="w-auto">전용면적<br><span class="unit">(단위:㎡)</span></th>
+									<th scope="col" class="w-size-b">층수</th>
+									<th scope="col" class="w-auto">거래가격<br><span class="unit">(단위:억원)</span></th>
+									<th scope="col" class="w-auto">가격등락</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td class="w-size-a">2020년 06월 22일</td>
+									<td class="w-auto">114.15</td>
+									<td class="w-size-b">22</td>
+									<td class="w-auto">41.7</td>
+									<td class="w-auto"><span class="point-color-b">41.70 ↘</span></td>
+								</tr>
+								<tr>
+									<td class="w-size-a">2020년 06월 22일</td>
+									<td class="w-auto">94.49</td>
+									<td class="w-size-b">5</td>
+									<td class="w-auto">32.5</td>
+									<td class="w-auto"><span class="point-color-a">32.50 ↗</span></td>
+								</tr>
+								<tr>
+									<td class="w-size-a">2020년 06월 21일</td>
+									<td class="w-auto">94.49</td>
+									<td class="w-size-b">8</td>
+									<td class="w-auto">33.5</td>
+									<td class="w-auto"><span class="point-color-b">33.50 ↘</span></td>
+								</tr>
+								<tr>
+									<td class="w-size-a">2020년 06월 20일</td>
+									<td class="w-auto">94.49</td>
+									<td class="w-size-b">4</td>
+									<td class="w-auto">32.7</td>
+									<td class="w-auto"><span class="point-color-b">32.70 ↘</span></td>
+								</tr>
+								<tr>
+									<td class="w-size-a">2020년 06월 16일</td>
+									<td class="w-auto">94.49</td>
+									<td class="w-size-b">3</td>
+									<td class="w-auto">31</td>
+									<td class="w-auto"><span class="point-color-a">31.00 ↗</span></td>
+								</tr>
+								<tr>
+									<td class="w-size-a">2020년 06월 13일</td>
+									<td class="w-auto">94.49</td>
+									<td class="w-size-b">20</td>
+									<td class="w-auto">35</td>
+									<td class="w-auto"><span class="point-color-b">35.00 ↘</span></td>
+								</tr>
+								<tr>
+									<td class="w-size-a">2020년 06월 09일</td>
+									<td class="w-auto">94.49</td>
+									<td class="w-size-b">2</td>
+									<td class="w-auto">30.5</td>
+									<td class="w-auto"><span class="point-color-a">30.50 ↗</span></td>
+								</tr>
+								<tr>
+									<td class="w-size-a">2020년 01월 04일</td>
+									<td class="w-auto">94.5</td>
+									<td class="w-size-b">11</td>
+									<td class="w-auto">34</td>
+									<td class="w-auto"><span class="point-color-a">34.00 ↗</span></td>
+								</tr>
+								<tr>
+									<td class="w-size-a">2019년 12월 30일</td>
+									<td class="w-auto">114.17</td>
+									<td class="w-size-b">31</td>
+									<td class="w-auto">41.2</td>
+									<td class="w-auto"><span class="point-color-b">41.20 ↘</span></td>
+								</tr>
+								<tr>
+									<td class="w-size-a">2019년 12월 13일</td>
+									<td class="w-auto">94.49</td>
+									<td class="w-size-b">12</td>
+									<td class="w-auto">33</td>
+									<td class="w-auto"><span class="point-color-b">33.00 ↘</span></td>
+								</tr>
+								<tr>
+									<td class="w-size-a">2019년 10월 26일</td>
+									<td class="w-auto">94.49</td>
+									<td class="w-size-b">10</td>
+									<td class="w-auto">31.8</td>
+									<td class="w-auto"><span class="point-color-a">31.80 ↗</span></td>
+								</tr>
+								<tr>
+									<td class="w-size-a">2019년 10월 11일</td>
+									<td class="w-auto">114.14</td>
+									<td class="w-size-b">21</td>
+									<td class="w-auto">37</td>
+									<td class="w-auto"><span class="point-color-b">37.00 ↘</span></td>
+								</tr>
+								<tr>
+									<td class="w-size-a">2019년 10월 04일</td>
+									<td class="w-auto">94.49</td>
+									<td class="w-size-b">15</td>
+									<td class="w-auto">31</td>
+									<td class="w-auto"><span class="point-color-a">31.00 ↗</span></td>
+								</tr>
+								<tr>
+									<td class="w-size-a">2019년 10월 02일</td>
+									<td class="w-auto">94.49</td>
+									<td class="w-size-b">21</td>
+									<td class="w-auto">32</td>
+									<td class="w-auto"><span class="point-color-b">32.00 ↘</span></td>
+								</tr>
+								<tr>
+									<td class="w-size-a">2019년 09월 30일</td>
+									<td class="w-auto">94.49</td>
+									<td class="w-size-b">18</td>
+									<td class="w-auto">31</td>
+									<td class="w-auto"><span class="point-color-b">31.00 ↘</span></td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- E : 실거래 내역 -->
+			<!-- S : 유사단지 목록 -->
+			<div class="section-item size-b order-item13">
+				<div class="section-header">
+					<h3 class="section-title">유사단지 목록</h3>
+				</div>
+				<div class="section-content type-block">
+					<div class="box-table">
+						<table class="list-table-a" id="aptn_table_9">
+							<caption></caption>
+							<thead>
+							<tr>
+								<th scope="col">아파트명</th>
+								<th scope="col">거리<span class="unit">(단위:m)</span></th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>한티(933-35)</td>
+								<td>136.1</td>
+							</tr>
+							<tr>
+								<td>동양</td>
+								<td>333.6</td>
+							</tr>
+							<tr>
+								<td>한양팰리스</td>
+								<td>343.9</td>
+							</tr>
+							<tr>
+								<td>도성</td>
+								<td>364.4</td>
+							</tr>
+							<tr>
+								<td>대치타워</td>
+								<td>405.9</td>
+							</tr>
+							<tr>
+								<td>노빌리티빌리지</td>
+								<td>416.8</td>
+							</tr>
+							<tr>
+								<td>메트로</td>
+								<td>503</td>
+							</tr>
+							<tr>
+								<td>대치주성</td>
+								<td>510</td>
+							</tr>
+							<tr>
+								<td>월드빌</td>
+								<td>1,070.8</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- E : 유사단지 목록 -->
+			<!-- S : 주요거점 접근성 -->
+			<div class="section-item size-b order-item14">
+				<div class="section-header">
+					<h3 class="section-title">주요거점 접근성</h3>
+				</div>
+				<div class="section-content type-block">
+					<div class="box-decs">
+						<p class="txt-decs-a"><i class="sp-com sp-decs-a"></i>자가차량을 이용하여 30분 내 도달할 수 있는 자가차량을 이용하여 30분 내 자가 차량을 이용하여 30분 내 도달할 수 있는도달할 수 있는 자가차량을 이용</p>
+					</div>
+					<div class="map-area-a">
+					</div>
+				</div>
+			</div>
+			<!-- E : 주요거점 접근성 -->
+		</section>
+		<!-- S : footer -->
+		<footer class="footer">
+			<div class="footer-area">
+				<div class="footer-content">
+					<p class="footer-logo"><i class="sp-com sp-logo-b"></i><span class="for-a11y">아파트엔</span></p>
+					<div class="copy-area">
+						<p class="text-copy-a">
+							<span class="text-copy-item">(주)아파트엔 대표이사 나일한</span>
+							<span class="text-copy-item">주소 : 서울특별시 강남구 강남대로 354, 11층(역삼동, 혜천빌딩)</span>
+							<span class="text-copy-item">사업자등록번호 : 119-87-09136 <button type="button" class="btn-business">사업자 정보확인</button></span>
+							<span class="text-copy-item">이메일문의 : <a href="mailto:ilhan11@jujuyeye.net" class="link-mail">ilhan11@jujuyeye.net</a></span>
+						</p>
+						<p class="text-copy-b">ALL CONTENTS Copyright ⓒ 2020 <span class="text-name">아파트엔</span> ALL RIGHTS RESERVED</p>
+					</div>
+				</div>
+				<div class="sns-list">
+					<button type="button" class="btn-sns"><i class="sp-com sp-sns-a"></i><span class="for-a11y">페이스북</span></button>
+					<button type="button" class="btn-sns"><i class="sp-com sp-sns-b"></i><span class="for-a11y">트위터</span></button>
+					<button type="button" class="btn-sns"><i class="sp-com sp-sns-c"></i><span class="for-a11y">카카오톡</span></button>
+				</div>
+			</div>
+		</footer>
+		<!-- E : footer -->
+	</article>
+	<!-- E : content -->
+</div>
+<!-- E : 아파트 상세 -->
+
+<!-- S : 로그인 layer -->
+<div id="login-layer" class="layer_section">
+	<div class="layer_section-container">
+		<div class="layer-content">
+			<div class="login-box">
+				<div class="login-head">
+					<h1 class="login-title"><i class="sp-com sp-login-logo"></i><span class="for-a11y">아파트엔</span></h1>
+					<div class="site-identity">
+						<span class="identity-item-a"></span>
+						<span class="identity-item-b"></span>
+						<span class="identity-item-c"></span>
+					</div>
+				</div>
+				<div class="login-type">
+					<a href="/oauth2/authorization/kakao" class="link-login-a">
+						<span class="login-icon"><i class="sp-com sp-login-a"></i></span>
+						<span class="login-name">카카오 로그인</span>
+					</a>
+					<a href="/oauth2/authorization/naver" class="link-login-b">
+						<span class="login-icon"><i class="sp-com sp-login-b"></i></span>
+						<span class="login-name">네이버 로그인</span>
+					</a>
+					<a href="/oauth2/authorization/google" class="link-login-c">
+						<span class="login-icon"><i class="sp-com sp-login-c"></i></span>
+						<span class="login-name">구글 로그인</span>
+					</a>
+					<a href="/oauth2/authorization/facebook" class="link-login-d">
+						<span class="login-icon"><i class="sp-com sp-login-d"></i></span>
+						<span class="login-name">페이스북 로그인</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="btn_layer-close"><i class="sp-com sp-layer-close"></i><span class="for-a11y">레이어팝업 닫기</span></button>
+	</div>
+</div>
+<!-- E : 로그인 layer -->
+
+<!-- S : 도움말 layer -->
+<div id="info-layer" class="layer_section">
+	<div class="layer_section-container help-content">
+		<div class="layer-content">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<!-- S : 실거주/투자가치 평가 -->
+					<div class="swiper-slide">
+						<p class="help-title">실거주/투자가치 평가</p>
+						<div class="box-scroll">
+							<div class="box-des">
+								<p class="des-type-a">호가가 나타내는 실거주 및 투자가치 평가!</p>
+								<p class="des-type-b">아파트엔은 거래 동향, 입지, 단지 특징 등 가격 원인을 분석하여 아파트의 적정 호가를 산출하고 가치를 평가합니다. <br>주거 편의, 선호 시설, 기피시설의 유무 등을 평가하여 실거주 가치를 평가하고, 호가와 관련있는 회전률, 거래량, 상승률 등의 상호 비교를 통해 투자를 위한 인사이트를 제공합니다.</p>
+							</div>
+							<div class="box-sec-img">
+								<img src="/images/help-img-01.png" alt="" class="pc">
+								<img src="/images/help-img-01-m.png" alt="" class="mobile">
+							</div>
+						</div>
+					</div>
+					<!-- E : 실거주/투자가치 평가 -->
+					<!-- S : 세부평가정보 -->
+					<div class="swiper-slide">
+						<p class="help-title">세부평가정보</p>
+						<div class="box-scroll">
+							<div class="box-des">
+								<p class="des-type-a">아파트 보유 가치 등락의 객관적 평가 지표! 아파트엔지수!</p>
+								<p class="des-type-b">아파트엔지수는 가격, 생활편의, 노후도 등 다양한 원인의 종합적인 분석정보를 기반으로 전국 아파트단지에 부여되는 평가점수 입니다. 아파트엔지수의 변동 추이를 통해 다른 아파트 단지를 직접 조사하지 않더라도 관심 아파트의 가치가 상승했는지 하락했는지 알 수 있습니다.</p>
+							</div>
+							<div class="box-sec-img">
+								<img src="/images/help-img-02.png" alt="" class="pc">
+								<img src="/images/help-img-02-m.png" alt="" class="mobile">
+							</div>
+						</div>
+					</div>
+					<!-- E : 세부평가정보 -->
+					<!-- S : 연도별 실거래 동향도움말 -->
+					<div class="swiper-slide">
+						<p class="help-title">연도별 실거래 동향도움말</p>
+						<div class="box-scroll">
+							<div class="box-des">
+								<p class="des-type-a">거래가격 변동 추이! 연도별 거래가격 동향!</p>
+								<p class="des-type-b">아파트 거래 가격의 움직임을 설명합니다. 연도별 거래된 아파트의 시가, 종가, 고가, 저가를 나타냅니다. 연도별 촛대(Candle Stick) 모양의 몸체 색상에 따라 해당년도의 거래추이를 알 수 있습니다.
+									거래 종가가 시가보다 높게 마감되면 몸체는 녹색으로 표시됩니다. 이 때 시가는 몸체 하단, 종가는 상단에 있습니다. 종가가 시가보다 낮게 마감되면 몸체는 빨간색으로 표시됩니다. 이 때 시가는 몸체 상단, 종가는 하단에 있습니다.
+									몸체를 가로지르는 추세선을 통해 아파트 거래호가의 과거 변동 추이를 파악합니다.</p>
+							</div>
+							<div class="box-sec-img">
+								<img src="/images/help-img-03.png" alt="" class="pc">
+								<img src="/images/help-img-03-m.png" alt="" class="mobile">
+							</div>
+						</div>
+					</div>
+					<!-- E : 연도별 실거래 동향도움말 -->
+					<!-- S : 월간 아파트엔 지수 변동 -->
+					<div class="swiper-slide">
+						<p class="help-title">월간 아파트엔 지수 변동</p>
+						<div class="box-scroll">
+							<div class="box-des">
+								<p class="des-type-a">아파트의 현가 가치 및 보유가치! 아파트엔지수 변동!</p>
+								<p class="des-type-b">아파트엔지수와 실거래 되는 가격의 관계를 설명합니다.<br>
+									아파트 호가가 상승하는 매도 우위 장세일 경우 관심 아파트의 호가 상승폭이 다른 아파트의 상승폭보다 작다면 아파트엔지수는 하락할 가능성이 높습니다. 매수 우위 장세일 경우 호가가 다소 하락하더라도 타단지보다 하락폭이 작다면 아파트엔지수는 유지되거나 상승할 수 있습니다.</p>
+							</div>
+							<div class="box-sec-img">
+								<img src="/images/help-img-04.png" alt="" class="pc">
+								<img src="/images/help-img-04-m.png" alt="" class="mobile">
+							</div>
+						</div>
+					</div>
+					<!-- E : 월간 아파트엔 지수 변동 -->
+					<!-- S : 일조권 -->
+					<div class="swiper-slide">
+						<p class="help-title">일조권</p>
+						<div class="box-scroll">
+							<div class="box-des">
+								<p class="des-type-a">주거 중 햇빛을 누리는 생활 이익!</p>
+								<p class="des-type-b">아파트 매입을 위하여 실제 해단 단지의 계절별 일조량은 특정 시점 방문하고 계약이 이루어지는 부동산 중개 특성으로 파악하기 힘든 정보입니다. 단지의 위치, 주변 건물과의 간격, 계절 및 시간 등 일조량에 영향을 미치는 요소는 많이 있습니다.
+									제한적이지만 날짜 슬라이드와 시간 슬라이드를 조정하여 관심단지의 일조량을 조회할 수 있습니다.<br>
+									해당 정보의 경우 공공개방되는 건물정보와 일출, 일몰 시각 및 태양 위치 계산을 위하여 SunCalc 라이브러리를 이용합니다.
+									공공개방되는 건물정보의 경우 건물 높이 또는 층수에 누락이 존재하는 경우가 있어 오류가 존재할 수 있음을 알려드립니다.</p>
+							</div>
+							<div class="box-sec-img">
+								<img src="/images/help-img-05.png" alt="" class="pc">
+								<img src="/images/help-img-05-m.png" alt="" class="mobile">
+							</div>
+						</div>
+					</div>
+					<!-- E : 일조권 -->
+					<!-- S : 소비자 물가 상승률 비교 -->
+					<div class="swiper-slide">
+						<p class="help-title">소비자 물가 상승률 비교</p>
+						<div class="box-scroll">
+							<div class="box-des">
+								<p class="des-type-a">투자 자산으로써 아파트! 호가 상승률!</p>
+								<p class="des-type-b">현가가치를 통해 투자자산으로써 아파트를 평가합니다. 현가란 미래에 얻게 될 부(富)의 가치를 현재의 가치로 환산한 것을 말합니다.
+									만일 호가상승률이 소비자물가상승률보다 높지 않다면 과거 아파트 구입을 통해 현가가치가 하락했음을 알 수 있습니다.</p>
+							</div>
+							<div class="box-sec-img">
+								<img src="/images/help-img-06.png" alt="" class="pc">
+								<img src="/images/help-img-06-m.png" alt="" class="mobile">
+							</div>
+						</div>
+					</div>
+					<!-- E : 소비자 물가 상승률 비교 -->
+					<!-- S : 호가 변동 비교(읍면동, 시군구) -->
+					<div class="swiper-slide">
+						<p class="help-title">호가 변동 비교(읍면동, 시군구)</p>
+						<div class="box-scroll">
+							<div class="box-des">
+								<p class="des-type-a">아파트 가격을 결정하는 공간적 종속성 파악!</p>
+								<p class="des-type-b">아파트의 호가는 공간적 위치의 영향을 많이 받습니다. 공간적 위치는 변하지 않는 불변의 속성으로 외부요인으로부터 자산가치를 높여주거나 또는 유지시켜주는 절대적 평가 지표입니다.
+									실거래가를 기준으로 산출되는 거래가격지수를 아파트가 위치한 지역의 평균 거래가격지수와 비교합니다. 아파트가 위치하고 있는 지역의 실거래 동향을 통해 거래가격의 적정성을 알 수 있습니다.</p>
+							</div>
+							<div class="box-sec-img">
+								<img src="/images/help-img-07.png" alt="" class="pc">
+								<img src="/images/help-img-07-m.png" alt="" class="mobile">
+							</div>
+						</div>
+					</div>
+					<!-- E : 호가 변동 비교(읍면동, 시군구) -->
+					<!-- S : 월별 거래 동향 -->
+					<div class="swiper-slide">
+						<p class="help-title">월별 거래 동향</p>
+						<div class="box-scroll">
+							<div class="box-des">
+								<p class="des-type-a">매도 우위, 매수 우위 파악! 거래량과 호가 상승률</p>
+								<p class="des-type-b">전체 세대수와 거래가 발생하는 세대수의 비율을 회전률이라고 합니다. 일반적으로 회전률이 높다는 것은 거래가 쉽다는 것으로 자본의 유동성 확보에 유리합니다.
+									거래가 많을 수록 호가가 상승했다면, 매도자가 유리한 단지일 경우가 많습니다. 반대의 경우라면 매수자가 유리한 단지일 수 있습니다.</p>
+							</div>
+							<div class="box-sec-img">
+								<img src="/images/help-img-08.png" alt="" class="pc">
+								<img src="/images/help-img-08-m.png" alt="" class="mobile">
+							</div>
+						</div>
+					</div>
+					<!-- E : 월별 거래 동향 -->
+					<!-- S : 공시지가/실거래가 변동지수 -->
+					<div class="swiper-slide">
+						<p class="help-title">공시지가/실거래가 변동지수</p>
+						<div class="box-scroll">
+							<div class="box-des">
+								<p class="des-type-a">객관적 호가! 한국감정원 공동주택가격</p>
+								<p class="des-type-b">한국감정원은 년2회 공동주택(아파트, 연립, 다세대)의 적정가격을 조사∙산정하여 공시합니다. 이 가격은 매년부과되는 재산세 산정의 기준금액으로 객관적 가격이라고 할 수 있습니다.
+									“실거래가대비공시지가비율”은 [(월별 실거래가 평균 가격 – 연도별 공동주택가격) x 100 ] – 100의 수식에 의해 산출됩니다.
+									연도별 공시가격 반영에 따라 연초에서 연말로 지날수록 비율이 높아지는 경향을 보입니다. 일반적으로 아파트엔지수가 높을 수록 실거래가 대비 공시가격의 금액차이가 커집니다.</p>
+							</div>
+							<div class="box-sec-img">
+								<img src="/images/help-img-09.png" alt="" class="pc">
+								<img src="/images/help-img-09-m.png" alt="" class="mobile">
+							</div>
+						</div>
+					</div>
+					<!-- E : 공시지가/실거래가 변동지수 -->
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+				<!-- Add Arrows -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+			<!--<section class="help-content-a">
+			</section>-->
+		</div>
+		<button type="button" class="btn_layer-close"><i class="sp-com sp-layer-close"></i><span class="for-a11y">레이어팝업 닫기</span></button>
+	</div>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+		document.querySelector('.slide-1').addEventListener('click', function (e) {
+			e.preventDefault();
+			swiper.slideTo(0, 0);
+		});
+		document.querySelector('.slide-2').addEventListener('click', function (e) {
+			e.preventDefault();
+			swiper.slideTo(1, 0);
+		});
+		document.querySelector('.slide-3').addEventListener('click', function (e) {
+			e.preventDefault();
+			swiper.slideTo(2, 0);
+		});
+		document.querySelector('.slide-4').addEventListener('click', function (e) {
+			e.preventDefault();
+			swiper.slideTo(3, 0);
+		});
+		document.querySelector('.slide-5').addEventListener('click', function (e) {
+			e.preventDefault();
+			swiper.slideTo(4, 0);
+		});
+		document.querySelector('.slide-6').addEventListener('click', function (e) {
+			e.preventDefault();
+			swiper.slideTo(5, 0);
+		});
+		document.querySelector('.slide-7').addEventListener('click', function (e) {
+			e.preventDefault();
+			swiper.slideTo(6, 0);
+		});
+		document.querySelector('.slide-8').addEventListener('click', function (e) {
+			e.preventDefault();
+			swiper.slideTo(7, 0);
+		});
+		document.querySelector('.slide-9').addEventListener('click', function (e) {
+			e.preventDefault();
+			swiper.slideTo(8, 0);
+		});
+		document.querySelector('.slide-10').addEventListener('click', function (e) {
+			e.preventDefault();
+			swiper.slideTo(9, 0);
+		});
+		document.querySelector('.slide-11').addEventListener('click', function (e) {
+			e.preventDefault();
+			swiper.slideTo(10, 0);
+		});
+		document.querySelector('.slide-12').addEventListener('click', function (e) {
+			e.preventDefault();
+			swiper.slideTo(11, 0);
+		});
+	</script>
+</div>
+<!-- E : 도움말 layer -->
+
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=udj14zm9sv"></script>
+<script type="text/javascript" src="/js/custom/chart/Chart.bundle.js"></script>
+<script type="text/javascript" src="/js/custom/chart/google/loader.js"></script>
+
+<script type="text/javascript" src="/js/custom/aptn.js"></script>
+
+<script type="text/javascript">
+	window.onload = function() {
+		APTNL.callLayer();
+		tollTipLayer();
+	};
+</script>
+</body>
+</html>
