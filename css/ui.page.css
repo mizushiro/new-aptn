@@ -137,9 +137,10 @@ label {font-size:13px}
 
 html.scroll_off {overflow:hidden}
 
-.base-wrap {position:fixed;top:0;width:100%;left:-110%;height:100%;/*background-color:#f0f3f4;*/background-color:rgba(240,243,244,.7);-webkit-transition:left .3s ease-out;transition:left .3s ease-out;z-index:999}
-.base-wrap.open,
-.base-wrap.open .header {left:0}
+.base-wrap {position:fixed;width:100%;left:0;top:0;height:100%;background-color:rgba(0,0,0,.55);opacity:0;z-index:-1;-webkit-transition:opacity .3s ease-out;transition:opacity .3s ease-out}
+.base-wrap .apt-detail-area {position:absolute;bottom:-110%;left:0;width:100%;margin-top:86px;height:calc(100% - 86px);background-color:#f5f6fa;border-radius:30px 30px 0 0;overflow:hidden;-webkit-transition:bottom .3s ease-out;transition:bottom .3s ease-out}
+.base-wrap.open {z-index:999;opacity:1}
+.base-wrap.open .apt-detail-area {bottom:0}
 
 /* input */
 .input-a {height:32px;padding:0 8px;border:1px solid #666;font-size:14px;border-radius:2px !important;-webkit-appearance:none !important;font-family:'Spoqa Han Sans Neo', 'Noto Sans KR', HelveticaNeue,AppleSDGothicNeo,sans-serif;outline:none;box-sizing:border-box;color:#333;font-weight:500}
@@ -163,7 +164,9 @@ html.scroll_off {overflow:hidden}
 .wrap .map-contents {width:100%;height:100%}
 
 /* header */
+.wrap .header-title-box {display:flex;align-items:center}
 .wrap .header .logo-a {background:url("/images/common/logo.png") no-repeat 0 0;width:91px;height:36px}
+.wrap .header .sub-bi {background:url("/images/common/sub-bi.png") no-repeat 0 0;width:107px;height:31px;display:block;margin-left:20px}
 .header-nav {display:flex;align-items:center}
 .header-nav .link-company {font-size:16px;color:#000;font-weight:600;padding-left:14px;position:relative}
 .header-nav .link-company:before {background-color:#00b0a9;content:'';position:absolute;left:0;top:50%;margin-top:-2px;width:4px;height:4px;border-radius:50%}
@@ -312,19 +315,6 @@ html.scroll_off {overflow:hidden}
 .box-level-c .section-content .box-bar .bar-item.state-bar-c .bar-title {font-size:14px;color:#333;font-weight:600}
 .box-level-c .section-content .box-bar .bar-item.state-bar-c .bar-line:after {content:''}
 
-/* header */
-.box-header {position:relative;height:100%;padding-left:68px}
-.box-header .home-logo {position:absolute;top:50%;left:20px;margin-top:-17px}
-.box-header .apartment-info {display:flex;align-items:center;height:100%}
-.apartment-info .box-state {font-size:0}
-.apartment-info .box-state.mobile-state {display:none}
-.apartment-info .box-state [class^="state-level-"] {display:inline-block;width:8px;height:8px;border:1px solid #fff;border-radius:50%;margin-right:4px}
-.apartment-info .box-a .apartment-name {font-size:28px;font-weight:600;color:#111}
-.apartment-info .box-b {padding-left:8px}
-.apartment-info .box-b .apartment-address {font-size:14px;color:#fff;font-weight:500}
-.apartment-info .box-b .box-state {padding-left:4px}
-.box-header .btn-close {position:absolute;right:0;top:0;height:60px;width:60px;text-align:center}
-
 /* sprite */
 .m-select .select-date .option-open:after,
 .section-content .box-bar .bar-item .bar-line:after,
@@ -374,17 +364,37 @@ html.scroll_off {overflow:hidden}
 .form_element-radio label .label-value:before {content:'';width:24px;height:24px;position:absolute;top:0;left:0;border:1px solid #c3ccce;background-color:#fff;border-radius:50%;box-sizing:border-box}
 .form_element-radio label .label-value:after {content:'';width:12px;height:12px;position:absolute;background-color:#c3ccce;border-radius:50%;top:6px;left:6px;}
 
+
+/* header */
+.box-header {position:relative;padding-left:10px}
+.box-header .apartment-info {display:flex;align-items:flex-end;height:32px}
+.apartment-info .box-a .apartment-name {font-size:28px;font-weight:500;color:#000;transform:rotate(.04deg)}
+.apartment-info .apartment-address {font-size:15px;color:#151515;position:relative;padding-left:10px;margin-left:10px}
+.apartment-info .apartment-address:before {content:'';position:absolute;left:0;top:1px;width:1px;height:14px;background-color:#d7d7d7}
+.apartment-info .apartment-address .address-type {height:28px;border:1px solid #dbdbdb;border-radius:14px;background-color:#fff;display:inline-flex;align-items:center;justify-content:center;padding:1px 15px 0;color:#000;font-size:12px;position:absolute;left:10px;top:50%;margin-top:-14px}
+.apartment-info .apartment-address.new-type {padding-left:84px}
+.box-header .btn-close {position:absolute;right:30px;top:39px;height:50px;width:50px;text-align:center;border-radius:50%;border:2px solid #07b2ab;background:url("/images/common/btn-arrow2.png") no-repeat 50% 50% #fff}
+
+/* box-choice */
+.box-choice {font-size:0;margin-top:24px}
+.box-choice .choice-item {display:inline-block;margin-right:8px;vertical-align:top}
+.box-choice .form_element-radio label {position:relative;padding:2px 40px 0;height:60px;align-items:center;display:flex}
+.box-choice .form_element-radio label .label-value {padding:0;font-size:16px;color:#000}
+.box-choice .form_element-radio label .label-value:after,
+.box-choice .form_element-radio label .label-value:before {display:none}
+.box-choice .form_element-radio label:before {content:'';position:absolute;left:0;top:0;right:0;bottom:0;border:1px solid #c3ccce;border-radius:30px;background-color:#fff}
+.box-choice .form_element-radio input[type="radio"]:checked + label:before {background-color:#00b0a9;border-color:#00b0a9}
+.box-choice .form_element-radio input[type="radio"]:checked + label .label-value {color:#fff}
+
 /* contents */
-.detail-wrap {padding:80px 20px 0;overflow-y:auto;-webkit-overflow-scrolling:touch;height:100%}
+.apt-detail-area .header {padding:48px 0;margin:0 20px;height:198px;border-bottom:2px solid #151515}
+.detail-wrap {padding:30px 20px 0;overflow-y:auto;-webkit-overflow-scrolling:touch;height:calc(100% - 198px)}
 .box-section {display:flex;flex-wrap:wrap;width:100%;margin-top:10px;justify-content:space-between}
-.section-item {background-color:#fff;border:1px solid #c3ccce;margin-bottom:20px;border-radius:4px}
-.section-item.size-a {width:calc(((100% - ((100% - 60px) / 4)) - 40px) / 2)}
-.section-item.size-b {width:calc((100% - 60px) / 4)}
-.section-item .section-header {position:relative;height:46px;border-bottom:1px solid #dee5e7;background-color:#eef9fd;border-radius:4px 4px 0 0}
-.section-item .section-header .section-title {line-height:46px;font-size:16px;color:#333;font-weight:500;padding-left:16px}
-.section-item .section-header .box-action-content {position:absolute;right:16px;top:50%;height:24px;margin-top:-12px;font-size:0}
-.section-item .section-header .box-action-content * {vertical-align:middle}
-.box-action-content .btn-help {height:24px}
+.section-item {background-color:#fff;border:1px solid #e8ebee;margin-bottom:20px;border-radius:16px;overflow:hidden;box-shadow:0 1px 4px 0 rgba(0, 0, 0, 0.05);width:calc((100% - 40px) / 3)}
+.section-item .section-header {position:relative;height:60px;border-bottom:1px solid #e8ebee;display:flex;align-items:center;padding:0 18px;justify-content:space-between}
+.section-item .section-header .section-title-box {display:flex;align-items:center}
+.section-item .section-header .section-title {font-size:16px;color:#333;font-weight:500;margin-right:10px}
+.section-header .btn-help {height:28px;width:28px;border:1px solid #e9e9e9;border-radius:50%;background:url("/images/common/btn-help.png") no-repeat 50% 50% #fff}
 .box-action-content .list-tab {display:inline-block;margin-left:8px}
 .box-action-content .list-tab:after {content:'';display:block;clear:both}
 .box-action-content .list-tab .list-item-tab {float:left}
@@ -394,8 +404,6 @@ html.scroll_off {overflow:hidden}
 .box-action-content .list-tab .list-item-tab ~ .list-item-tab {margin-left:-1px}
 .box-action-content .list-tab .list-item-tab.is-selected {position:relative}
 .box-action-content .list-tab .list-item-tab.is-selected .list-item-btn {background-color:#019bd4;border-color:#019bd4}
-.section-item .section-header.point {background-color:#019bd4;border-color:#019bd4}
-.section-item .section-header.point .section-title {color:#fff}
 .section-item .section-content {display:flex;height:calc(100% - 46px)}
 .section-item .section-content.type-block {display:block}
 .section-item .section-content.type-column {flex-direction:column}
@@ -494,11 +502,6 @@ html.scroll_off {overflow:hidden}
 .map-data-list .map-data-item .area-value .unit {font-size:11px;font-weight:400;padding-left:2px}
 .map-data-list .map-data-item .area-content {padding-left:8px;font-size:14px;color:#333;font-weight:500;word-break:keep-all;width:calc(100% - 36px)}
 
-/* box-choice */
-.box-choice {font-size:0}
-.box-choice .choice-item {display:inline-block;margin-right:8px;vertical-align:top}
-.box-choice .form_element-radio label {position:relative;padding:8px 10px}
-.box-choice .form_element-radio label:before {content:'';position:absolute;left:0;top:0;right:0;bottom:0;border:1px solid #c3ccce;border-radius:4px;background-color:#fff}
 
 .box-decs {background-color:#fafbfc;padding:16px;border-bottom:1px solid #dee5e7}
 .box-decs .txt-decs-a {position:relative;padding-left:24px;font-size:13px;line-height:22px;color:#666;word-break:keep-all}
@@ -893,13 +896,8 @@ html.scroll_off {overflow:hidden}
 	::-webkit-scrollbar-button {width:0;height:0}
 }
 
-@media (max-width:1830px) {
-	.section-content .box-price .price-item {flex-direction:column}
-	.section-content .box-price .price-item .price-item-title {width:100%;text-align:left}
-	.section-content .box-price .price-item .price-item-value {width:100%}
-}
 @media (max-width:1660px) {
-	/* align */
+	/* align
 	.order-item1 {order:1}
 	.order-item2 {order:2}
 	.order-item4 {order:3}
@@ -914,33 +912,57 @@ html.scroll_off {overflow:hidden}
 	.order-item10 {order:12}
 	.order-item14 {order:13}
 	.order-item3 {order:14}
-	/* align
-	.order-item1 {order:1}
-	.order-item2 {order:2}
-	.order-item3 {order:3}
-	.order-item4 {order:4}
-	.order-item5 {order:5}
-	.order-item7 {order:6}
-	.order-item8 {order:7}
-	.order-item9 {order:8}
-	.order-item11 {order:9}
-	.order-item12 {order:10}
-	.order-item13 {order:11}
-	.order-item6 {order:12}
-	.order-item10 {order:13}
-	.order-item14 {order:14}
 	*/
 
 	/* size */
-	.section-item.size-a {width:calc((100% - 20px) / 2)}
-	.section-item.size-b {width:calc((100% - 40px) / 3)}
-	.section-item.size-b.order-item3 {width:100%}
+	.section-item {width:calc((100% - 20px) / 2)}
 }
 @media (max-width:1350px) {
+	/* box-choice */
+	.box-choice {margin-top:16px}
+	.box-choice .form_element-radio label {;padding:2px 20px 0;height:40px}
+	.box-choice .form_element-radio label .label-value {font-size:14px}
+	.box-choice .form_element-radio label:before {border-radius:20px}
+
+	/* header */
+	.apt-detail-area .header {height:160px}
+	.box-header .btn-close {top:10px}
+
+	.detail-wrap {height:calc(100% - 160px)}
+
 	/* footer */
 	.footer-area .footer-content {padding-left:0}
 	.footer-area .footer-content .footer-logo {position:static;margin:0 0 8px}
 }
+@media (max-width:1180px) {
+
+	.apt-detail-area .header {padding:32px 0 0}
+	.apartment-info .box-a .apartment-name {text-overflow:ellipsis;word-break:break-all;white-space:nowrap;overflow:hidden}
+	.box-header .apartment-info {display:block;height:auto}
+	.apartment-info .apartment-address {margin-left:0;padding:0;margin-top:4px;font-size:13px}
+	.apartment-info .apartment-address:before {display:none}
+	.apartment-info .apartment-address.new-type {padding-left:70px;margin-top:8px}
+	.apartment-info .apartment-address .address-type {left:0}
+
+	.box-header .btn-close {right:30px}
+
+	/* mobile select */
+	.m-select {position:relative;z-index:10;margin-top:12px}
+	.m-select .select-date {display:block}
+	.m-select.option-open .box-choice {display:block}
+	.m-select .box-choice {position:absolute;top:39px;left:0;right:0;display:none}
+	.m-select .select-date .option-open {position:relative;height:40px;width:100%;text-align:left;font-size:14px;color:#151515;border:1px solid #e7e7e7;border-radius:4px;padding:0 16px;background-color:#fff}
+	.m-select .select-date .option-open:after {content:'';width:12px;height:7px;background-position:-260px -40px;position:absolute;right:16px;top:50%;margin-top:-4px}
+	.m-select.option-open .select-date .option-open:after {transform:rotate(-180deg);-webkit-transform:rotate(-180deg)}
+	.box-choice {border-radius:0 0 2px 2px;border:1px solid #c3ccce;border-top:none}
+	.box-choice .choice-item {width:100%;margin-right:0}
+	.box-choice .choice-item:nth-child(n+2) {margin-top:0}
+	.box-choice .form_element-radio label:before {border:none;border-radius:0}
+	.box-level-a .m-select .select-date .option-open {background-color:#df1010;border-color:#cc0000}
+	.box-level-b .m-select .select-date .option-open {background-color:#ffb413;border-color:#f4ae17}
+	.box-level-c .m-select .select-date .option-open {background-color:#0ec717;border-color:#1ec139}
+}
+
 @media (max-width:1300px) {
 
 	/* 회사소개 */
@@ -958,10 +980,6 @@ html.scroll_off {overflow:hidden}
 	.footer-area .sns-list {margin-top:16px}
 }
 @media (max-width:1200px) {
-	/* size */
-	.section-item.size-b.order-item3,
-	.section-item.size-b {width:calc((100% - 20px) / 2)}
-
 	.section-content .col-a {width:200px}
 	.section-content .col-b {width:calc(100% - 200px)}
 
@@ -972,13 +990,7 @@ html.scroll_off {overflow:hidden}
 	.content-inner {padding:0 40px}
 	.box-company-a .item-col-b {right:-40px;width:200px}
 }
-@media (max-width:1180px) {
-	.section-content .box-price {padding:16px}
-	.section-content .box-price .price-item {flex-direction:column}
-	.section-content .box-price .price-item .price-item-title {width:100%;text-align:left}
-	.section-content .box-price .price-item .price-item-value {width:100%}
-	.tutorial-popup .tutorial-txt-b {margin-top:30px}
-}
+
 @media (max-width:1150px) {
 	.tutorial-popup .box-text-a {left:330px;top:170px}
 	.tutorial-popup .thumb-4 {left:330px;top:380px}
@@ -1014,26 +1026,6 @@ html.scroll_off {overflow:hidden}
 }
 
 @media (max-width:1023px) {
-	/* size */
-	.section-item.size-a.order-item1,
-	.section-item.size-a.order-item2 {width:100%}
-
-	/* box choice */
-	.box-choice {display:flex;flex-wrap:wrap}
-	.box-choice .choice-item {width:calc(50% - 4px);display:block}
-	.box-choice .choice-item:nth-child(2n) {margin-right:0}
-	.box-choice .choice-item:nth-child(n+3) {margin-top:8px}
-	.box-choice .choice-item .form_element-radio,
-	.box-choice .choice-item .form_element-radio label {display:block}
-
-	/* header */
-	.box-header .apartment-info {display:block;padding:12px 54px 0 0}
-	.apartment-info .box-a {display:flex;align-items:flex-end}
-	.apartment-info .box-a .apartment-name {font-size:20px;line-height:100%;white-space:nowrap;max-width:calc(100% - 46px);overflow:hidden;text-overflow:ellipsis}
-	.apartment-info .box-state.mobile-state {display:block;padding:0 0 4px 4px}
-	.apartment-info .box-b {padding-left:0}
-	.apartment-info .box-b .box-state {display:none}
-	.apartment-info .box-b .apartment-address {font-size:12px;margin-top:2px;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 	/* layer */
 	.layer_section .layer_section-container.help-content {width:700px}
@@ -1117,22 +1109,6 @@ html.scroll_off {overflow:hidden}
 	.section-item.size-a,
 	.section-item.size-b.order-item3,
 	.section-item.size-b {width:100%}
-
-	/* mobile select */
-	.m-select {position:relative;z-index:10}
-	.m-select .select-date {display:block}
-	.m-select.option-open .box-choice {display:block}
-	.m-select .box-choice {position:absolute;top:39px;left:0;right:0;display:none}
-	.m-select .select-date .option-open {position:relative;height:40px;width:100%;text-align:left;font-size:14px;color:#fff;border:1px solid transparent;border-radius:2px;padding:0 16px}
-	.m-select .select-date .option-open:after {content:'';width:12px;height:7px;background-position:-260px -40px;position:absolute;right:16px;top:50%;margin-top:-4px}
-	.m-select.option-open .select-date .option-open:after {transform:rotate(-180deg);-webkit-transform:rotate(-180deg)}
-	.box-choice {border-radius:0 0 2px 2px;border:1px solid #c3ccce;border-top:none}
-	.box-choice .choice-item {width:100%;margin-right:0}
-	.box-choice .choice-item:nth-child(n+2) {margin-top:0}
-	.box-choice .form_element-radio label:before {border:none;border-radius:0}
-	.box-level-a .m-select .select-date .option-open {background-color:#df1010;border-color:#cc0000}
-	.box-level-b .m-select .select-date .option-open {background-color:#ffb413;border-color:#f4ae17}
-	.box-level-c .m-select .select-date .option-open {background-color:#0ec717;border-color:#1ec139}
 
 	.tutorial-popup .m-line-a,
 	.tutorial-popup .thumb-4 {display:none}
