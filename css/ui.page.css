@@ -225,6 +225,7 @@ html.scroll_off {overflow:hidden}
 .apt-summary .summary-title-wrap .summary-title {font-size:16px;color:#000;font-weight:500;transform:rotate(.04deg);padding-top:30px}
 .apt-summary .summary-title-wrap .btn-detail {margin-top:18px}
 .apt-summary .summary-content {padding:20px 15px 40px}
+.apt-summary .appraisal-list {margin-top:11px}
 .apt-summary .lately-price {text-align:right;font-size:14px;color:#000;padding-right:20px}
 .apt-summary .lately-price .price-value {font-size:26px;font-family:'Roboto', 'sans-serif';font-weight:600;padding-left:8px;position:relative;top:2px}
 .apt-summary .box-aptn-data {height:80px;border-radius:4px;background-color:#f6f6fb;padding-top:20px;margin-top:10px}
@@ -233,15 +234,6 @@ html.scroll_off {overflow:hidden}
 .apt-summary .box-chart1 {height:350px}
 .apt-summary .box-chart2 {height:300px}
 .apt-summary .box-chart3 {height:360px;border-radius:6px;overflow:hidden}
-.apt-summary .appraisal-list {display:flex;flex-wrap:wrap;margin-top:11px}
-.apt-summary .appraisal-list .appraisal-item {width:50%;border-bottom:1px solid #efeff0;display:flex;align-items:center;justify-content:space-between;padding:11px 0}
-.apt-summary .appraisal-list .appraisal-item .appraisal-item-title {font-size:12px;color:#969696;width:106px;font-weight:500;display:flex;align-items:center}
-.apt-summary .appraisal-list .appraisal-item .appraisal-type {width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#fff;margin:0 8px 0 2px}
-.apt-summary .appraisal-list .appraisal-item .appraisal-type.level-a {background-color:#e31212}
-.apt-summary .appraisal-list .appraisal-item .appraisal-type.level-b {background-color:#e08d16}
-.apt-summary .appraisal-list .appraisal-item .appraisal-type.level-c {background-color:#35c44b}
-.apt-summary .appraisal-list .appraisal-item .appraisal-item-value {font-size:24px;color:#151515;width:calc(100% - 106px);text-align:center;font-weight:600;font-family:'Roboto', 'sans-serif';position:relative}
-.apt-summary .appraisal-list .appraisal-item .appraisal-item-value:before {content:'';position:absolute;top:50%;margin-top:-5px;left:0;width:1px;height:10px;background-color:#efeff0}
 .apt-summary .slider-control {display:flex;justify-content:space-between;margin-top:15px;margin-bottom:20px}
 .apt-summary .slider-item {width:calc(50% - 5px);background-color:#e8faf9;border:1px solid #d2f1f0;border-radius:2px;height:40px;padding:17px 9px 0}
 .apt-summary .slider-item .slider-value {margin-top:24px}
@@ -251,6 +243,16 @@ html.scroll_off {overflow:hidden}
 .btn-detail {height:40px;padding:0 32px;display:flex;justify-content:center;align-items:center;border-radius:20px;border:1px solid #00b0a9}
 .btn-detail .btn-txt {color:#151515;font-weight:500;padding-top:1px}
 .btn-detail:after {content:'';background:url("/images/common/btn-arrow.png") no-repeat 0 0;width:6px;height:10px;display:block;margin-left:10px}
+
+.appraisal-list {display:flex;flex-wrap:wrap}
+.appraisal-list .appraisal-item {width:50%;border-bottom:1px solid #efeff0;display:flex;align-items:center;justify-content:space-between;padding:11px 0}
+.appraisal-list .appraisal-item .appraisal-item-title {font-size:12px;color:#969696;width:106px;font-weight:500;display:flex;align-items:center}
+.appraisal-list .appraisal-item .appraisal-type {width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#fff;margin:0 8px 0 2px}
+.appraisal-list .appraisal-item .appraisal-type.level-a {background-color:#e31212}
+.appraisal-list .appraisal-item .appraisal-type.level-b {background-color:#e08d16}
+.appraisal-list .appraisal-item .appraisal-type.level-c {background-color:#35c44b}
+.appraisal-list .appraisal-item .appraisal-item-value {font-size:24px;color:#151515;width:calc(100% - 106px);text-align:center;font-weight:600;font-family:'Roboto', 'sans-serif';position:relative}
+.appraisal-list .appraisal-item .appraisal-item-value:before {content:'';position:absolute;top:50%;margin-top:-5px;left:0;width:1px;height:10px;background-color:#efeff0}
 
 /* slider */
 .ui-slider {position:relative;text-align:left;}
@@ -393,7 +395,7 @@ html.scroll_off {overflow:hidden}
 .section-item {background-color:#fff;border:1px solid #e8ebee;margin-bottom:20px;border-radius:16px;overflow:hidden;box-shadow:0 1px 4px 0 rgba(0, 0, 0, 0.05);width:calc((100% - 40px) / 3)}
 .section-item .section-header {position:relative;height:60px;border-bottom:1px solid #e8ebee;display:flex;align-items:center;padding:0 18px;justify-content:space-between}
 .section-item .section-header .section-title-box {display:flex;align-items:center}
-.section-item .section-header .section-title {font-size:16px;color:#333;font-weight:500;margin-right:10px}
+.section-item .section-header .section-title {font-size:16px;color:#333;font-weight:600;margin-right:10px;transform:rotate(.04deg)}
 .section-header .btn-help {height:28px;width:28px;border:1px solid #e9e9e9;border-radius:50%;background:url("/images/common/btn-help.png") no-repeat 50% 50% #fff}
 .box-action-content .list-tab {display:inline-block;margin-left:8px}
 .box-action-content .list-tab:after {content:'';display:block;clear:both}
@@ -404,61 +406,62 @@ html.scroll_off {overflow:hidden}
 .box-action-content .list-tab .list-item-tab ~ .list-item-tab {margin-left:-1px}
 .box-action-content .list-tab .list-item-tab.is-selected {position:relative}
 .box-action-content .list-tab .list-item-tab.is-selected .list-item-btn {background-color:#019bd4;border-color:#019bd4}
-.section-item .section-content {display:flex;height:calc(100% - 46px)}
+.section-item .section-content {display:flex;padding:10px}
 .section-item .section-content.type-block {display:block}
 .section-item .section-content.type-column {flex-direction:column}
-.section-content .col-a {width:300px;border-right:1px solid #dee5e7;padding:12px}
-.section-content .col-b {width:calc(100% - 300px)}
-.section-content .col-b.flex-column {display:flex;flex-direction:column;height:100%}
+.section-content .col-a {width:260px}
+.section-content .col-b {width:calc(100% - 260px)}
 
-.order-item1 .section-content .col-a {width:300px;padding:12px 12px 0}
-.order-item1 .section-content .col-b {width:calc(100% - 300px)}
+.section-item.order-item1 .section-content,
+.section-item.order-item2 .section-content {padding:30px 20px}
+.order-item2 .section-content .col-b {padding-left:20px}
 
-.section-content .box-price {padding:24px 16px}
-.section-content .box-price .price-item {display:flex}
-.section-content .box-price .price-item ~ .price-item {margin-top:8px}
-.section-content .box-price .price-item .price-item-title {font-size:15px;color:#333;font-weight:500;text-align:right;padding-right:8px;line-height:30px;width:calc(100% - 200px);letter-spacing:-.8px}
-.section-content .box-price .price-item .price-item-value {width:200px;height:30px;border-radius:15px;color:#fff;background-color:#3a3f51;line-height:30px;text-align:right;padding:0 12px;font-size:16px}
-.section-content .box-price .price-item .price-item-value .sub-txt {font-size:13px;padding-left:2px}
-.section-content .box-bar {padding:20px 16px;border-top:1px solid #dee5e7;background-color:#fafbfc;border-radius:0 0 4px;display:flex;flex:1;align-items:center}
-.section-content .box-bar .bar-item {flex:1;text-align:center}
-.section-content .box-bar .bar-item .bar-title {font-size:12px;color:#999;font-weight:500;height:18px}
-.section-content .box-bar .bar-item .bar-line {position:relative;height:15px;display:block;margin-top:4px}
-.section-content .box-bar .bar-item .bar-line:before {content:'';position:absolute;top:-1px;left:-1px;right:-1px;bottom:-1px;background-color:rgba(255,255,255,.7)}
-.section-content .box-bar .bar-item .bar-line:after {width:14px;height:9px;background-position:-180px 0;position:absolute;bottom:-1px;left:50%;margin-left:-7px}
-.section-content .box-bar .bar-item.state-bar-a .bar-line {background-color:#df1010;border:1px solid #cc0000}
-.section-content .box-bar .bar-item.state-bar-b .bar-line {background-color:#ffd042;border:1px solid #ffc705}
-.section-content .box-bar .bar-item.state-bar-c .bar-line {background-color:#0ec717;border:1px solid #22bc12}
+.section-content .box-price {padding:0 10px 0 20px}
+.section-content .lately-price {text-align:right;font-size:14px;color:#000;padding-right:20px}
+.section-content .lately-price .price-value {font-size:26px;font-family:'Roboto', 'sans-serif';font-weight:600;padding-left:8px;position:relative;top:2px;display:inline-block}
+.section-content .box-aptn-data {border-radius:4px;background-color:#f6f6fb;padding:16px;margin-top:10px}
+.section-content .box-aptn-data .aptn-data {text-align:right;font-size:16px;color:#000}
+.section-content .box-aptn-data .aptn-data .data-value {font-size:42px;font-family:'Roboto', 'sans-serif';color:#35c44b;font-weight:600;padding-left:8px;position:relative;top:2px;display:inline-block}
+.section-content .box-aptn-data .aptn-data .data-unit {font-size:22px;color:#000}
 
-.box-appraisal {background-color:#3a3f51;height:58px;padding:0 16px;display:flex;justify-content:space-between;align-items:center}
-.box-appraisal .appraisal-title {color:#fff;font-size:18px;font-weight:600}
-.box-appraisal .appraisal-value {color:#67d6ff;font-size:36px;font-weight:600}
+.section-content .box-state {display:flex;margin:30px -2px 0 0;padding:0 0 0 8px}
+.section-content .box-state .state-item {flex:1;text-align:center;padding:0 12px;position:relative}
+.section-content .box-state .state-item ~ .state-item:before {content:'';display:block;position:absolute;top:20px;bottom:0;left:0;width:1px;background-color:#efeff0}
+.section-content .box-state .state-item .state-title {font-size:14px;color:#969696;font-weight:500;margin-top:12px}
+.section-content .box-state .state-item .state-icon {display:block;padding-top:100%;background:url("/images/common/state-basic.png") no-repeat 50% 50%;background-size:100%;max-width:68px;margin:0 auto}
+.section-content .box-state.level-a .state-item:nth-of-type(1) .state-title,
+.section-content .box-state.level-b .state-item:nth-of-type(2) .state-title,
+.section-content .box-state.level-c .state-item:nth-of-type(3) .state-title {color:#000}
+.section-content .box-state.level-a .state-item:nth-of-type(1) .state-icon {background-image:url("/images/common/state-a.png")}
+.section-content .box-state.level-b .state-item:nth-of-type(2) .state-icon {background-image:url("/images/common/state-b.png")}
+.section-content .box-state.level-c .state-item:nth-of-type(3) .state-icon {background-image:url("/images/common/state-c.png")}
+
+.box-appraisal {padding:0 0 12px 0;text-align:right;color:#000;font-size:16px;border-bottom:1px solid #cdcdcd}
+.box-appraisal .appraisal-value {color:#35c44b;font-size:68px;font-weight:600;font-family:'Roboto', 'sans-serif'}
+
+.section-content .appraisal-list .appraisal-item .appraisal-item-title {width:86px}
+.section-content .appraisal-list .appraisal-item .appraisal-item-value {width:calc(100% - 86px)}
 
 
-.aptn-info-data {padding:16px;display:flex;flex-wrap:wrap;height:50%}
-.aptn-info-data .aptn-item-a {width:100%;display:flex;margin-bottom:8px}
-.aptn-item-group {width:100%;display:flex}
-.aptn-info-data .aptn-item-b {width:50%;display:flex}
-.aptn-info-data .aptn-item-title {width:68px;text-align:center;font-size:13px;color:#333;border:1px solid #c4d0e7;background-color:#e6edfa;border-radius:2px;font-weight:500;display:flex;align-items:center;justify-content:center}
-.aptn-info-data .aptn-item-content {line-height:24px;padding-left:8px;width:calc(100% - 68px);font-size:14px;color:#333;display:flex;align-items:center}
-.aptn-info-data .aptn-item-a .aptn-item-content {flex-direction:column;justify-content:center}
-.aptn-info-data .aptn-address-a {font-size:14px;color:#111;font-weight:500;width:100%}
-.aptn-info-data .aptn-address-b {font-size:13px;color:#666;width:100%}
-.aptn-info-data .aptn-address-a .address-flag {display:inline-block;height:20px;width:50px;background-color:#3a3f51;color:#fff;text-align:center;font-size:12px;line-height:20px;border-radius:2px;margin-right:4px}
-.aptn-rank-area .txt-rank-info {height:28px;line-height:28px;padding:0 16px;font-size:13px;color:#333;font-weight:500;background-color:#fafbfc;border-top:1px solid #dee5e7;text-align:right}
-.aptn-rank-area {height:50%}
-.aptn-rank-area .aptn-rank-list {display:flex;height:calc(100% - 28px)}
-.aptn-rank-area .aptn-rank-list .aptn-rank-item {width:calc((100% - 2px) / 3)}
-.aptn-rank-area .aptn-rank-list .aptn-rank-item ~ .aptn-rank-item {margin-left:1px}
-.aptn-rank-area .aptn-rank-list .aptn-rank-item .aptn-rank-title {height:32px;text-align:center;color:#fff;font-weight:500;font-size:14px;line-height:30px}
-.aptn-rank-area .aptn-rank-list .aptn-rank-item .aptn-rank-content {font-size:20px;height:calc(100% - 32px);display:flex;justify-content:center;align-items:center;padding-top:12px}
-.aptn-rank-area .aptn-rank-list .aptn-rank-item .aptn-rank-content .rank-value {font-size:44px;font-weight:600;padding-bottom:14px}
-.aptn-rank-area .aptn-rank-list .aptn-rank-item.rank-a .aptn-rank-title {border:1px solid #e52447;background-color:#ea4646}
-.aptn-rank-area .aptn-rank-list .aptn-rank-item.rank-a .aptn-rank-content {color:#c31919;background-color:#f9c7c7}
-.aptn-rank-area .aptn-rank-list .aptn-rank-item.rank-b .aptn-rank-title {border:1px solid #e89006;background-color:#feb414}
-.aptn-rank-area .aptn-rank-list .aptn-rank-item.rank-b .aptn-rank-content {color:#ec8b00;background-color:#ffe8b8}
-.aptn-rank-area .aptn-rank-list .aptn-rank-item.rank-c .aptn-rank-title {border:1px solid #14981a;background-color:#0ec717}
-.aptn-rank-area .aptn-rank-list .aptn-rank-item.rank-c .aptn-rank-content {color:#089e0f;background-color:#b6eeb9}
+.aptn-info-data {display:flex;flex-wrap:wrap}
+.aptn-item-group {width:100%;display:flex;padding:0 0 5px;border-bottom:1px solid #efeff0}
+.aptn-item-group ~ .aptn-item-group {padding-top:5px}
+.aptn-info-data .aptn-item {width:50%;display:flex}
+.aptn-info-data .aptn-item-title {width:88px;text-align:center;font-size:12px;color:#8e8f8e;background-color:#f6f6fb;border-radius:4px;font-weight:500;display:flex;align-items:center;justify-content:center;min-height:34px}
+.aptn-info-data .aptn-item-content {line-height:24px;padding-left:20px;width:calc(100% - 88px);font-size:14px;color:#000;display:flex;align-items:center}
+.aptn-rank-area .aptn-rank-list {display:flex;margin-top:28px}
+.aptn-rank-area .aptn-rank-list .aptn-rank-item {width:calc(100% / 3);padding:0 24px;position:relative}
+.aptn-rank-area .aptn-rank-list .aptn-rank-item ~ .aptn-rank-item:before {content:'';position:absolute;top:50%;left:0;width:1px;height:60px;margin-top:-30px;background-color:#efeff0}
+.aptn-rank-area .aptn-rank-list .box-circle {border-radius:50%;border:12px solid transparent;position:relative;padding-top:calc(100% - 24px)}
+.aptn-rank-area .aptn-rank-list .aptn-rank-item.level-a .box-circle {border-color:#e31212}
+.aptn-rank-area .aptn-rank-list .aptn-rank-item.level-b .box-circle {border-color:#e08d16}
+.aptn-rank-area .aptn-rank-list .aptn-rank-item.level-c .box-circle {border-color:#35c44b}
+.aptn-rank-area .aptn-rank-list .aptn-rank-data {position:absolute;top:0;left:0;width:100%;height:100%;padding:12px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.aptn-rank-area .aptn-rank-list .aptn-rank-item .aptn-rank-title {padding-top:8px;text-align:center;color:#000;font-weight:500;font-size:14px;position:relative;width:100%}
+.aptn-rank-area .aptn-rank-list .aptn-rank-item .aptn-rank-title:before {content:'';position:absolute;top:0;left:16%;right:16%;height:1px;background-color:#e8e8e8}
+.aptn-rank-area .aptn-rank-list .aptn-rank-item .aptn-rank-content {font-size:18px;color:#151515;font-weight:500}
+.aptn-rank-area .aptn-rank-list .aptn-rank-item .aptn-rank-content .rank-value {font-size:36px;font-weight:600;font-family:'Roboto', 'sans-serif'}
+.aptn-rank-area .txt-rank-info {padding:16px 16px;font-size:12px;color:#969696;font-weight:500;text-align:center}
 
 /* tab content */
 .tab-contents {height:100%;display:none}
@@ -896,7 +899,7 @@ html.scroll_off {overflow:hidden}
 	::-webkit-scrollbar-button {width:0;height:0}
 }
 
-@media (max-width:1660px) {
+@media (max-width:1720px) {
 	/* align
 	.order-item1 {order:1}
 	.order-item2 {order:2}
