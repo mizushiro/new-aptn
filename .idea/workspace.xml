@@ -10,17 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce30add8-291b-4903-bc48-f6a2deacce7b" name="Default Changelist" comment="ing">
-      <change afterPath="$PROJECT_DIR$/images/common/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/common/map-point-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/common/map-point-b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/common/map-point-c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/common/map-round-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/common/map-round-b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/common/map-round-big-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/common/map-round-big-b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/common/map-round-big-c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/common/map-round-c.png" afterDir="false" />
+    <list default="true" id="ce30add8-291b-4903-bc48-f6a2deacce7b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/ui.page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ui.page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/content-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/content-detail.html" afterDir="false" />
@@ -87,7 +77,7 @@
       <workItem from="1632708541596" duration="31244000" />
       <workItem from="1632897666603" duration="1186000" />
       <workItem from="1633056047203" duration="8694000" />
-      <workItem from="1633225011723" duration="3698000" />
+      <workItem from="1633225011723" duration="5467000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1632807714294</created>
@@ -103,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632889380050</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ing">
+      <created>1633228883123</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1633228883123</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

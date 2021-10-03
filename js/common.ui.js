@@ -146,6 +146,11 @@ $(document).ready(function(){
 	$('.btn-tutorial-hide').on('click', function (e) {
 		$('.tutorial-popup').addClass('hide');
 	});
+	
+	// 레이어
+	$('.btn-tooltip').on('click', function (e) {
+		$(this).toggleClass('active');
+	});
 
 	// filter open
 	$('.btn-filter').on('click', function (e) {
