@@ -185,15 +185,16 @@ html.scroll_off {overflow:hidden}
 .box-sh .sh-area .input-sh::-moz-placeholder {font-size:16px}
 .box-sh .sh-area .input-sh:-ms-input-placeholder {font-size:16px}
 .box-sh .sh-area .input-sh:-moz-placeholder {font-size:16px}
-.box-sh .sh-area .sh-icon-a {width:40px;height:40px}
-.box-sh .sh-area .btn-filter {width:40px;height:40px;border:1px solid #e8e8e8;border-radius:4px}
+.box-sh .sh-area .box-icon {width:40px;height:40px;display:flex;align-items:center;justify-content:center}
+.box-sh .sh-area .btn-filter {width:40px;height:40px;border:1px solid #e8e8e8;border-radius:4px;display:flex;align-items:center;justify-content:center}
+.box-sh .sh-area .btn-filter:hover .icon-filter {background-position-y:-20px}
 .box-sh .box-title-a {background-color:#e8faf9;border-top:1px solid #d2f1f0;padding:10px;display:flex;align-items:center}
 .box-sh .filter-option {display:none}
 .box-sh .filter-option.is-open {display:block}
 .box-sh .filter-title {font-size:24px;color:#000;font-weight:500;padding-left:8px;flex:1 1 auto;transform:rotate(.04deg)}
 .box-sh .btn-back,
-.box-sh .btn-close-a {width:40px;height:40px;border:1px solid #00b0a9;border-radius:4px;background-color:#fff}
-.box-sh .option-group-list {max-height:calc(100vh - 284px);overflow-y:auto}
+.box-sh .btn-close-a {width:40px;height:40px;border:1px solid #00b0a9;border-radius:4px;background-color:#fff;display:flex;align-items:center;justify-content:center}
+.box-sh .option-group-list {max-height:calc(100vh - 290px);overflow-y:auto}
 .box-sh .filter-option-title {color:#000;font-size:18px;font-weight:500}
 .box-sh .filter-option-title .txt-decs {font-size:12px;padding-left:4px;color:#969696}
 .box-sh .filter-option-group {padding:28px 16px 30px}
@@ -206,6 +207,7 @@ html.scroll_off {overflow:hidden}
 .box-sh .filter-action button {height:52px;display:flex;align-items:center;justify-content:center;font-size:18px}
 .box-sh .filter-action button ~ button {margin-left:8px}
 .box-sh .filter-action .btn-reset {flex:1;background-color:transparent;border:none;color:#151515}
+.box-sh .filter-action .btn-reset i {margin-right:10px}
 .box-sh .filter-action .btn-apply {width:210px;color:#fff;background-color:#00b0a9;border:1px solid #04a09a;border-radius:4px}
 
 .box-sh .apt-summary {display:none}
@@ -218,7 +220,7 @@ html.scroll_off {overflow:hidden}
 .apt-summary .size-list .btn-size-choice:nth-last-child(1) {border-right:none}
 .apt-summary .size-list .btn-size-choice.active {position:relative;background-color:#00b0a9;color:#fff}
 .apt-summary .size-list .btn-size-choice.active:before {content:'';position:absolute;top:-1px;left:-1px;right:-1px;bottom:-1px;border:1px solid #04a09a}
-.apt-summary .box-summary {max-height:calc(100vh - 276px);overflow-y:auto}
+.apt-summary .box-summary {max-height:calc(100vh - 290px);overflow-y:auto}
 .apt-summary .summary-section ~ .summary-section {border-top:4px solid #e8ebee}
 .apt-summary .summary-section ~ .summary-section .summary-title-wrap {border-top:1px solid #d9dee3}
 .apt-summary .summary-title-wrap {display:flex;padding:0 15px;min-height:68px;border-bottom:1px solid #e8ebee;justify-content:space-between}
@@ -355,6 +357,14 @@ html.scroll_off {overflow:hidden}
 .sp-com.sp-map-distance {width:20px;height:20px;background-position:-60px -140px}
 .sp-com.sp-map-area {width:20px;height:20px;background-position:-80px -140px}
 .sp-com.sp-del {width:8px;height:8px;background-position:-240px -40px}
+
+.ico-com {display:inline-block;background-image:url("/images/common/icon.png");background-repeat:no-repeat}
+.ico-com.sh-icon-a {width:20px;height:20px;background-position:0 0}
+.ico-com.icon-filter {width:20px;height:20px;background-position:-20px 0}
+/*.active .ico-com.icon-filter {background-position:-20px -20px}*/
+.ico-com.icon-back {width:20px;height:20px;background-position:-260px -20px}
+.ico-com.icon-close-a {width:20px;height:20px;background-position:-280px -20px}
+.ico-com.icon-reset {width:20px;height:20px;background-position:-260px 0}
 
 /* radio */
 .m-select .select-date {display:none}
@@ -534,20 +544,42 @@ html.scroll_off {overflow:hidden}
 .footer-area .sns-list .btn-sns ~ .btn-sns {margin-left:8px}
 
 /* marker */
-[class^="marker-apartment-"] {width:70px;height:54px;background-size:70px auto;background-position:0 0;background-repeat:no-repeat;padding:15px 0 0 22px;cursor:pointer;z-index:99}
+[class^="marker-apartment-"] {width:56px;height:56px;cursor:pointer;z-index:99}
+[class^="marker-apartment-"] .marker-summery {width:100%;height:100%;border-radius:50%;background-size:100%;background-position:0 0;background-repeat:no-repeat;text-align:center;padding-top:14px;position:relative}
+[class^="marker-apartment-"]:before {content:'';position:absolute;width:15px;height:22px;right:13px;bottom:-18px}
 [class^="marker-apartment-"] .apartment-size {font-size:10px;font-weight:500;color:rgba(255,255,255,.8);line-height:100%}
 [class^="marker-apartment-"] .apartment-price {font-size:12px;color:#fff;font-weight:500;line-height:100%;margin-top:2px}
 [class^="marker-apartment-"] .apartment-price .unit {font-size:11px}
-.marker-basic .layer-data,
-[class^="marker-apartment-"] .layer-data {display:none;position:absolute;top:40px;white-space:nowrap;color:#fff;font-size:11px;height:24px;line-height:22px;border:1px solid #01749f;background-color:#019bd4;padding:0 8px;border-radius:2px}
-[class^="marker-apartment-"] .layer-data {left:20px}
-.marker-basic .layer-data {left:8px}
-[class^="marker-apartment-"]:hover .layer-data,
-.marker-basic:hover .layer-data {display:block}
-.marker-apartment-a {background-image:url("/images/map-data-a.png")}
-.marker-apartment-b {background-image:url("/images/map-data-b.png")}
-.marker-apartment-c {background-image:url("/images/map-data-c.png")}
+[class^="marker-apartment-"] .layer-data {display:none;position:absolute;bottom:0;width:230px;border:1px solid transparent;background-color:#fff;padding:15px;border-radius:28px}
+[class^="marker-apartment-"] .layer-data {right:0}
+[class^="marker-apartment-"]:hover .layer-data {display:block}
+.marker-apartment-a:before {background-image:url("/images/common/map-point-a.png")}
+.marker-apartment-a .marker-summery {background-image:url("/images/common/map-round-a.png")}
+.marker-apartment-a .layer-data {border-color:#af0808}
+.marker-apartment-a .layer-data .aptn-data .data-value {color:#e31212}
+.marker-apartment-b:before {background-image:url("/images/common/map-point-b.png")}
+.marker-apartment-b .marker-summery {background-image:url("/images/common/map-round-b.png")}
+.marker-apartment-b .layer-data {border-color:#b17114}
+.marker-apartment-b .layer-data .aptn-data .data-value {color:#d88714}
+.marker-apartment-c:before {background-image:url("/images/common/map-point-c.png")}
+.marker-apartment-c .marker-summery {background-image:url("/images/common/map-round-c.png")}
+.marker-apartment-c .layer-data {border-color:#2aa13c}
+.marker-apartment-c .layer-data .aptn-data .data-value {color:#35c44b}
 [class^="marker-apartment-"]:hover {z-index:100}
+[class^="marker-apartment-"] .layer-data .apartment-name {font-size:16px;color:#000;border-bottom:1px solid #e8ebee;padding-bottom:8px;margin-bottom:8px}
+[class^="marker-apartment-"] .layer-data .lately-price,
+[class^="marker-apartment-"] .layer-data .aptn-data {font-size:12px;font-weight:500;color:#000}
+[class^="marker-apartment-"] .layer-data .lately-price .price-value,
+[class^="marker-apartment-"] .layer-data .aptn-data .data-value {font-size:18px;font-weight:600;font-family:'Roboto', 'sans-serif'}
+[class^="marker-zone-"] {position:absolute;width:82px;height:82px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;background-size:100%;background-position:0 0;background-repeat:no-repeat}
+[class^="marker-zone-"] .txt-area {color:#fff;font-size:12px;font-weight:500;margin-top:4px}
+[class^="marker-zone-"] .apartment-count {color:#fff;font-size:26px;font-weight:600;font-family:'Roboto', 'sans-serif';line-height:100%;margin-top:2px}
+.marker-zone-a {background-image:url("/images/common/map-round-big-a.png")}
+.marker-zone-b {background-image:url("/images/common/map-round-big-b.png")}
+.marker-zone-c {background-image:url("/images/common/map-round-big-c.png")}
+
+
+
 [class^="marker-area-"] {width:32px;height:36px;background-size:32px auto;background-position:0 0;background-repeat:no-repeat;padding:6px 0 0 0;text-align:center;cursor:pointer;z-index:99}
 .marker-area-1 {background-image:url("/images/map-pin-a.png")}
 .marker-area-2 {background-image:url("/images/map-pin-b.png")}

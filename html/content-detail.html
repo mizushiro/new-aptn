@@ -42,7 +42,9 @@
 		<!-- S : 검색 -->
 		<div class="box-sh">
 			<div class="sh-area">
-				<i class="ico-com sh-icon-a"></i>
+				<span class="box-icon">
+					<i class="ico-com sh-icon-a"></i>
+				</span>
 				<div class="sh-input"><input type="text" class="input-sh" placeholder="지역을 입력하세요.">
 					<div class="box-sh-keyword" style="display:none">
 						<div class="sh-keyword-item">
@@ -96,13 +98,13 @@
 						</div>
 					</div>
 				</div>
-				<button type="button" class="btn-filter"><span class="for-a11y">필터</span></button>
+				<button type="button" class="btn-filter"><i class="ico-com icon-filter"></i><span class="for-a11y">필터</span></button>
 			</div>
 			<!-- S : filter option -->
 			<div class="filter-option">
 				<div class="box-title-a">
 					<h2 class="filter-title">필터</h2>
-					<button type="button" class="btn-close-a"><span class="for-a11y">닫기</span></button>
+					<button type="button" class="btn-close-a"><i class="ico-com icon-close-a"></i><span class="for-a11y">닫기</span></button>
 				</div>
 				<div class="option-group-list">
 					<!-- S : 투자 전망 -->
@@ -180,7 +182,7 @@
 					<!-- E : 가격대 -->
 				</div>
 				<div class="filter-action">
-					<button type="button" class="btn-reset">초기화</button>
+					<button type="button" class="btn-reset"><i class="ico-com icon-reset"></i>초기화</button>
 					<button type="button" class="btn-apply">적용하기</button>
 				</div>
 			</div>
@@ -188,12 +190,12 @@
 			<!-- S : apt summary -->
 			<div class="apt-summary">
 				<div class="box-title-a">
-					<button type="button" class="btn-back"><span class="for-a11y">이전</span></button>
+					<button type="button" class="btn-back"><i class="ico-com icon-back"></i><span class="for-a11y">이전</span></button>
 					<div class="apt-name">
 						<h2 class="apt-title">삼성동 삼성리치빌</h2>
 						<p class="apt-address">서울특별시 서초구 잠원동 34-1</p>
 					</div>
-					<button type="button" class="btn-close-a"><span class="for-a11y">닫기</span></button>
+					<button type="button" class="btn-close-a"><i class="ico-com icon-close-a"></i><span class="for-a11y">닫기</span></button>
 				</div>
 				<div class="size-list">
 					<button type="button" class="btn-size-choice">초소형</button>
@@ -311,39 +313,85 @@
 	</div>
 </div>
 <!-- S : 지역 정보 A -->
-<div class="marker-basic" style="position:absolute;left:600px;top:500px">
+<div class="marker-zone-a" style="position:absolute;left:600px;top:500px">
 	<p class="txt-area">마산합포구</p>
 	<p class="apartment-count">86</p>
-	<p class="layer-data">마산시</p>
 </div>
 <!-- E : 지역 정보 A -->
+<!-- S : 지역 정보 B -->
+<div class="marker-zone-b" style="position:absolute;left:300px;top:250px">
+	<p class="txt-area">강서구</p>
+	<p class="apartment-count">86</p>
+</div>
+<!-- E : 지역 정보 B -->
+<!-- S : 지역 정보 C -->
+<div class="marker-zone-c" style="position:absolute;left:900px;top:700px">
+	<p class="txt-area">강남구</p>
+	<p class="apartment-count">86</p>
+</div>
+<!-- E : 지역 정보 C -->
 
 <!-- S : 아파트 정보 A -->
-<div class="marker-apartment-a" style="position:absolute;left:200px;top:100px">
-	<p class="apartment-size">23평</p>
-	<p class="apartment-price">22.2<span class="unit">억</span></p>
-	<p class="layer-data">노빌리티빌리지</p>
+<div class="marker-apartment-a summary-open" style="position:absolute;left:200px;top:400px">
+	<div class="marker-summery">
+		<p class="apartment-size">23평</p>
+		<p class="apartment-price">22.2<span class="unit">억</span></p>
+	</div>
+	<div class="layer-data">
+		<p class="apartment-name">노빌리티</p>
+		<p class="lately-price">
+			최근 실거래가
+			<span class="price-value">8</span>억
+			<span class="price-value">9,400</span>
+		</p>
+		<p class="aptn-data">
+			아파트엔 평가 가격
+			<span class="data-value">29</span>억
+			<span class="data-value">2,600</span>
+		</p>
+	</div>
 </div>
 <!-- E : 아파트 정보 A -->
 <!-- S : 아파트 정보 B -->
-<div class="marker-apartment-b" style="position:absolute;left:240px;top:110px">
-	<p class="apartment-size">23평</p>
-	<p class="apartment-price">22.2<span class="unit">억</span></p>
-	<p class="layer-data">노빌리티</p>
-</div>
-<!-- E : 아파트 정보 B -->
-<!-- S : 아파트 정보 B -->
-<div class="marker-apartment-b" style="position:absolute;left:500px;top:300px">
-	<p class="apartment-size">23평</p>
-	<p class="apartment-price">22.2<span class="unit">억</span></p>
-	<p class="layer-data">노빌리티</p>
+<div class="marker-apartment-b summary-open" style="position:absolute;left:500px;top:300px">
+	<div class="marker-summery">
+		<p class="apartment-size">23평</p>
+		<p class="apartment-price">22.2<span class="unit">억</span></p>
+	</div>
+	<div class="layer-data">
+		<p class="apartment-name">노빌리티</p>
+		<p class="lately-price">
+			최근 실거래가
+			<span class="price-value">8</span>억
+			<span class="price-value">9,400</span>
+		</p>
+		<p class="aptn-data">
+			아파트엔 평가 가격
+			<span class="data-value">29</span>억
+			<span class="data-value">2,600</span>
+		</p>
+	</div>
 </div>
 <!-- E : 아파트 정보 B -->
 <!-- S : 아파트 정보 C -->
-<div class="marker-apartment-c" style="position:absolute;left:800px;top:250px">
-	<p class="apartment-size">23평</p>
-	<p class="apartment-price">22.2<span class="unit">억</span></p>
-	<p class="layer-data">노빌리티 노빌리티 노빌리티</p>
+<div class="marker-apartment-c summary-open" style="position:absolute;left:800px;top:250px">
+	<div class="marker-summery">
+		<p class="apartment-size">23평</p>
+		<p class="apartment-price">22.2<span class="unit">억</span></p>
+	</div>
+	<div class="layer-data">
+		<p class="apartment-name">노빌리티 노빌리티 노빌리티</p>
+		<p class="lately-price">
+			최근 실거래가
+			<span class="price-value">8</span>억
+			<span class="price-value">9,400</span>
+		</p>
+		<p class="aptn-data">
+			아파트엔 평가 가격
+			<span class="data-value">29</span>억
+			<span class="data-value">2,600</span>
+		</p>
+	</div>
 </div>
 <!-- E : 아파트 정보 C -->
 <!-- S : 거리 1K -->

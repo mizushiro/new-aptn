@@ -134,15 +134,35 @@ $(document).ready(function(){
 		'autoFirstActivate': true,
 		'navClickScrollToTabsTop':true
 	});
-	$('.detail-open').on('click', function (e) {
+
+	//detail open
+	$('.btn-detail').on('click', function (e) {
 		$('.base-wrap').addClass('open');
 	});
-	$('.btn-close').on('click', function (e) {
+	$('.base-wrap .btn-close').on('click', function (e) {
 		$('.base-wrap').removeClass('open');
 	});
 
 	$('.btn-tutorial-hide').on('click', function (e) {
 		$('.tutorial-popup').addClass('hide');
+	});
+
+	// filter open
+	$('.btn-filter').on('click', function (e) {
+		$(this).addClass('active');
+		$('.filter-option').addClass('is-open');
+	});
+	$('.btn-close-a').on('click', function (e) {
+		$('.btn-filter').removeClass('active');
+		$('.filter-option').removeClass('is-open');
+	});
+
+	// summary open
+	$('.summary-open').on('click', function (e) {
+		$('.apt-summary').addClass('is-open');
+	});
+	$('.apt-summary .btn-close-a').on('click', function (e) {
+		$('.apt-summary').removeClass('is-open');
 	});
 
 	// 모바일 셀렉트 형태
