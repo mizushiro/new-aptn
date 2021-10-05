@@ -26,7 +26,7 @@
 		<div class="header-nav">
 			<a href="" class="link-company">회사소개</a>
 			<div class="personal-area">
-				<button type="button" class="btn-login">로그인</button>
+				<button type="button" class="btn-login" data-layer="login-layer">로그인</button>
 				<!-- D : 로그인 후
 				<button type="button" class="btn-my-info">내정보</button>
 				-->
@@ -431,29 +431,11 @@
 	</div>
 </div>
 <!-- E : 아파트 정보 C -->
-<!-- S : 거리 1K -->
-<div class="marker-area-1" style="position:absolute;left:600px;top:400px">
-	<i class="map-icon-20-a"></i>
-	<span class="for-a11y">마트</span>
-</div>
-<!-- E : 거리 1K -->
-<!-- S : 거리 2K -->
-<div class="marker-area-2" style="position:absolute;left:500px;top:400px">
-	<i class="map-icon-20-b"></i>
-	<span class="for-a11y">힉교</span>
-</div>
-<!-- E : 거리 2K -->
-<!-- S : 거리 3K -->
-<div class="marker-area-3" style="position:absolute;left:400px;top:400px">
-	<i class="map-icon-20-c"></i>
-	<span class="for-a11y">지하철</span>
-</div>
-<!-- E : 거리 3K -->
-<!-- S : 거리 3K -->
+<!-- S : 아파트엔 -->
 <div class="marker-logo" style="position:absolute;left:800px;top:600px">
 	<span class="for-a11y">아파트엔</span>
 </div>
-<!-- E : 거리 3K -->
+<!-- E : 아파트엔 -->
 
 <!-- S : 거리재기 박스 -->
 <div class="box-tip-a" style="position:absolute;top:600px;right:200px">
@@ -462,7 +444,7 @@
 
 <div class="box-tip-b" style="position:absolute;top:400px;right:200px">
 	<p class="txt-area-data"><span class="area-value">241.3m</span></p>
-	<button type="button" class="btn-box-del"><i class="sp-com sp-del"></i><span class="for-a11y">삭제</span></button>
+	<button type="button" class="btn-box-del"><span class="for-a11y">삭제</span></button>
 </div>
 <!-- E : 거리재기 박스 -->
 
@@ -729,7 +711,7 @@
 								</div>
 								<div class="tab-sub-contents" id="view1-a-2">
 									<div class="chart-area-a">
-
+										<img src="/images/temp/temp9.png" alt="">
 									</div>
 								</div>
 								<div class="legend-info">
@@ -844,8 +826,8 @@
 						</div>
 						<div class="box-action-content">
 							<ul class="list-tab">
-								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view2-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
-								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view2-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
+								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view2-a"><i class="ico-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
+								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view2-b"><i class="ico-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
 							<button type="button" class="btn-compare">다른 단지 비교하기</button>
 						</div>
@@ -983,21 +965,35 @@
 						</div>
 						<div class="box-action-content">
 							<ul class="list-tab">
-								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view3-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
-								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view3-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
+								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view3-a"><i class="ico-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
+								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view3-b"><i class="ico-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
+							<button type="button" class="btn-compare">다른 단지 비교하기</button>
 						</div>
 					</div>
-					<div class="section-content type-block">
-						<div class="tab-contents" id="view3-a">
-							<div class="box-decs">
-								<ul class="dot-list">
-									<li class="list-item">실거래가 상승률이 물가 상승률 보다 높을 경우 보유가치가 <span class="point-color-a">상승</span>했음을 의미합니다.</li>
-									<li class="list-item">실거래가 상승률이 물가 상승률 보다 적을 경우 보유가치가 <span class="point-color-b">하락</span>했음을 의미합니다.</li>
+					<div class="section-content type-column">
+						<div class="tab-contents type-column-box" id="view3-a">
+							<div class="box-sub-tab">
+								<ul class="list-sub-tab">
+									<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#view3-a-1">실거주별</button></li>
+									<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#view3-a-2">투자가치별</button></li>
 								</ul>
-							</div>
-							<div class="chart-area-a">
-								<canvas id="aptn_chart_5"></canvas>
+								<div class="tab-sub-contents" id="view3-a-1">
+									<div class="chart-area-a">
+										<div id="aptn_chart_5"></div>
+									</div>
+								</div>
+								<div class="tab-sub-contents" id="view3-a-2">
+									<div class="chart-area-a">
+										<img src="/images/temp/temp6.png" alt="">
+									</div>
+								</div>
+								<div class="legend-info">
+									<div class="legend-list">
+										<div class="legend-item"><i class="legend-color1"></i><span class="legend-txt">물가상승율(%)</span></div>
+										<div class="legend-item"><i class="legend-color3"></i><span class="legend-txt">호가상승율(%)</span></div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="tab-contents" id="view3-b">
@@ -1073,21 +1069,36 @@
 						</div>
 						<div class="box-action-content">
 							<ul class="list-tab">
-								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view4-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
-								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view4-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
+								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view4-a"><i class="ico-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
+								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view4-b"><i class="ico-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
+							<button type="button" class="btn-compare">다른 단지 비교하기</button>
 						</div>
 					</div>
-					<div class="section-content type-block">
-						<div class="tab-contents" id="view4-a">
-							<div class="box-decs">
-								<ul class="dot-list">
-									<li class="list-item">우상향 선형그래프는 외부요인의 영향을 받지 않음을 의미합니다.</li>
-									<li class="list-item">꾸준한 거래량은 지속적으로 수요자의 관심이 있음을 의미합니다.</li>
+					<div class="section-content type-column">
+						<div class="tab-contents type-column-box" id="view4-a">
+							<div class="box-sub-tab">
+								<ul class="list-sub-tab">
+									<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#view4-a-1">실거주별</button></li>
+									<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#view4-a-2">투자가치별</button></li>
 								</ul>
-							</div>
-							<div class="chart-area-a">
-								<canvas id="aptn_chart_6"></canvas>
+								<div class="tab-sub-contents" id="view4-a-1">
+									<div class="chart-area-a">
+										<div id="aptn_chart_6"></div>
+									</div>
+								</div>
+								<div class="tab-sub-contents" id="view4-a-2">
+									<div class="chart-area-a">
+										<img src="/images/temp/temp7.png" alt="">
+									</div>
+								</div>
+								<div class="legend-info">
+									<div class="legend-list">
+										<div class="legend-item"><i class="legend-color1"></i><span class="legend-txt">(아파트)거래가격지수</span></div>
+										<div class="legend-item"><i class="legend-color4"></i><span class="legend-txt">(강남구)거래가격지수</span></div>
+										<div class="legend-item"><i class="legend-color5"></i><span class="legend-txt">(대치동)거래가격지수</span></div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="tab-contents" id="view4-b">
@@ -1173,21 +1184,36 @@
 						</div>
 						<div class="box-action-content">
 							<ul class="list-tab">
-								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view5-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
-								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view5-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
+								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view5-a"><i class="ico-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
+								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view5-b"><i class="ico-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
+							<button type="button" class="btn-compare">다른 단지 비교하기</button>
 						</div>
 					</div>
-					<div class="section-content type-block">
-						<div class="tab-contents" id="view5-a">
-							<div class="box-decs">
-								<ul class="dot-list">
-									<li class="list-item">꾸준한 거래량은 자본유동성 확보에 유리합니다.</li>
-									<li class="list-item">거래량이 많을 수록 호가는 상승하는 경향이 있습니다.</li>
+					<div class="section-content type-column">
+						<div class="tab-contents type-column-box" id="view5-a">
+							<div class="box-sub-tab">
+								<ul class="list-sub-tab">
+									<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#view5-a-1">실거주별</button></li>
+									<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#view5-a-2">투자가치별</button></li>
 								</ul>
-							</div>
-							<div class="chart-area-a">
-								<canvas id="aptn_chart_7"></canvas>
+								<div class="tab-sub-contents" id="view5-a-1">
+									<div class="chart-area-a">
+										<div id="aptn_chart_7"></div>
+									</div>
+								</div>
+								<div class="tab-sub-contents" id="view5-a-2">
+									<div class="chart-area-a">
+										<img src="/images/temp/temp8.png" alt="">
+									</div>
+								</div>
+								<div class="legend-info">
+									<div class="legend-list">
+										<div class="legend-item"><i class="legend-color1"></i><span class="legend-txt">회전률(%)</span></div>
+										<div class="legend-item"><i class="legend-color3"></i><span class="legend-txt">호가상승률(%)</span></div>
+										<div class="legend-item"><i class="legend-color5"></i><span class="legend-txt">거래건수(건)</span></div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="tab-contents" id="view5-b">
@@ -1236,22 +1262,13 @@
 						</div>
 					</div>
 					<div class="section-content type-block">
-						<div class="map-area-a">
-
-						</div>
-						<div class="map-data-list">
-							<div class="map-data-item">
-								<span class="area-value">1<span class="unit">Km</span></span>
-								<span class="area-content">지하철:1 / 학교:2</span>
-							</div>
-							<div class="map-data-item">
-								<span class="area-value">2<span class="unit">Km</span></span>
-								<span class="area-content">학교:2</span>
-							</div>
-							<div class="map-data-item">
-								<span class="area-value">3<span class="unit">Km</span></span>
-								<span class="area-content">마켓:10</span>
-							</div>
+						<div class="map-area-b">
+							<img src="/images/temp/temp12.png" alt="" class="sample">
+							<div class="map-pins" style="left:50%;top:50%"><span class="marker-logo"></span></div>
+							<div class="map-pins" style="left:300px;top:100px"><img src="/images/common/map-pin-a.png" alt=""></div>
+							<div class="map-pins" style="left:120px;top:150px"><img src="/images/common/map-pin-b.png" alt=""></div>
+							<div class="map-pins" style="left:80px;top:240px"><img src="/images/common/map-pin-c.png" alt=""></div>
+							<div class="map-pins" style="left:220px;top:300px"><img src="/images/common/map-pin-d.png" alt=""></div>
 						</div>
 					</div>
 				</div>
@@ -1265,21 +1282,37 @@
 						</div>
 						<div class="box-action-content">
 							<ul class="list-tab">
-								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view6-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
-								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view6-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
+								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view6-a"><i class="ico-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
+								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view6-b"><i class="ico-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
+							<button type="button" class="btn-compare">다른 단지 비교하기</button>
 						</div>
 					</div>
-					<div class="section-content type-block">
-						<div class="tab-contents" id="view6-a">
-							<div class="box-decs">
-								<ul class="dot-list">
-									<li class="list-item">실거래가 상승률이 물가 상승률 보다 높을 경우 보유가치가 <span class="point-color-a">상승</span>했음을 의미합니다.</li>
-									<li class="list-item">실거래가 상승률이 물가 상승률 보다 적을 경우 보유가치가 <span class="point-color-b">하락</span>했음을 의미합니다.</li>
+					<div class="section-content type-column">
+						<div class="tab-contents type-column-box" id="view6-a">
+							<div class="box-sub-tab">
+								<ul class="list-sub-tab">
+									<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#view6-a-1">실거주별</button></li>
+									<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#view6-a-2">투자가치별</button></li>
 								</ul>
-							</div>
-							<div class="chart-area-a">
-								<canvas id="aptn_chart_8"></canvas>
+								<div class="tab-sub-contents" id="view6-a-1">
+									<div class="chart-area-a">
+										<div id="aptn_chart_8"></div>
+									</div>
+								</div>
+								<div class="tab-sub-contents" id="view6-a-2">
+									<div class="chart-area-a">
+										<img src="/images/temp/temp10.png" alt="">
+									</div>
+								</div>
+								<div class="legend-info">
+									<div class="legend-list">
+										<div class="legend-item"><i class="legend-color1"></i><span class="legend-txt">아파트엔지수</span></div>
+										<div class="legend-item"><i class="legend-color3"></i><span class="legend-txt">실거래가대비공시지가비율(%)</span></div>
+										<div class="legend-item"><i class="legend-color4"></i><span class="legend-txt">공시가격(억원)</span></div>
+										<div class="legend-item"><i class="legend-color5"></i><span class="legend-txt">실거래가(억원)</span></div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="tab-contents" id="view6-b">
@@ -1365,18 +1398,31 @@
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view7-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view7-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
+							<button type="button" class="btn-compare">다른 단지 비교하기</button>
 						</div>
 					</div>
-					<div class="section-content type-block">
-						<div class="tab-contents" id="view7-a">
-							<div class="box-decs">
-								<ul class="dot-list">
-									<li class="list-item">실거래가 상승률이 물가 상승률 보다 높을 경우 보유가치가 <span class="point-color-a">상승</span>했음을 의미합니다.</li>
-									<li class="list-item">실거래가 상승률이 물가 상승률 보다 적을 경우 보유가치가 <span class="point-color-b">하락</span>했음을 의미합니다.</li>
+					<div class="section-content type-column">
+						<div class="tab-contents type-column-box" id="view7-a">
+							<div class="box-sub-tab">
+								<ul class="list-sub-tab">
+									<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#view7-a-1">실거주별</button></li>
+									<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#view7-a-2">투자가치별</button></li>
 								</ul>
-							</div>
-							<div class="chart-area-a">
-								<canvas id="aptn_chart_9"></canvas>
+								<div class="tab-sub-contents" id="view7-a-1">
+									<div class="chart-area-a">
+										<div id="aptn_chart_9"></div>
+									</div>
+								</div>
+								<div class="tab-sub-contents" id="view7-a-2">
+									<div class="chart-area-a">
+										<img src="/images/temp/temp11.png" alt="">
+									</div>
+								</div>
+								<div class="legend-info">
+									<div class="legend-list">
+										<div class="legend-item"><i class="legend-color1"></i><span class="legend-txt">실거래가(억원)</span></div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="tab-contents" id="view7-b">
