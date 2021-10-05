@@ -237,10 +237,10 @@ html.scroll_off {overflow:hidden}
 .apt-summary .box-chart2 {height:300px}
 .apt-summary .box-chart3 {height:360px;border-radius:6px;overflow:hidden}
 .apt-summary .slider-control {display:flex;justify-content:space-between;margin-top:15px;margin-bottom:20px}
-.apt-summary .slider-item {width:calc(50% - 5px);background-color:#e8faf9;border:1px solid #d2f1f0;border-radius:2px;height:40px;padding:17px 9px 0}
-.apt-summary .slider-item .slider-value {margin-top:24px}
-.apt-summary .slider-item .slider-value .form-a {width:100%;text-align:center;height:20px;line-height:20px;padding:0;border:none;background-color:transparent;font-size:17px;color:#00b0a9;font-weight:600;font-family:'Roboto', 'sans-serif';outline:none !important;}
-.apt-summary .slider-item .slider-value .form-a:readonly {background-color:transparent !important}
+.slider-control .slider-item {width:calc(50% - 5px);background-color:#e8faf9;border:1px solid #d2f1f0;border-radius:2px;height:40px;padding:17px 9px 0}
+.slider-control .slider-item .slider-value {margin-top:24px}
+.slider-control .slider-item .slider-value .form-a {width:100%;text-align:center;height:20px;line-height:20px;padding:0;border:none;background-color:transparent;font-size:17px;color:#00b0a9;font-weight:600;font-family:'Roboto', 'sans-serif';outline:none !important;}
+.slider-control .slider-item .slider-value .form-a:readonly {background-color:transparent !important}
 
 .btn-detail {height:40px;padding:0 32px;display:flex;justify-content:center;align-items:center;border-radius:20px;border:1px solid #00b0a9}
 .btn-detail .btn-txt {color:#151515;font-weight:500;padding-top:1px}
@@ -375,6 +375,8 @@ html.scroll_off {overflow:hidden}
 .ico-com.sp-map-distance {background-position:-140px 0}
 .ico-com.sp-map-area {background-position:-160px 0}
 .control-section .active .ico-com {background-position-y:-20px}
+.ico-com.sp-view-a {width:20px;height:20px;background-position:-200px 0}
+.ico-com.sp-view-b {width:20px;height:20px;background-position:-220px 0}
 
 
 /* radio */
@@ -418,18 +420,33 @@ html.scroll_off {overflow:hidden}
 .section-item .section-header .section-title-box {display:flex;align-items:center}
 .section-item .section-header .section-title {font-size:16px;color:#333;font-weight:600;margin-right:10px;transform:rotate(.04deg)}
 .section-header .btn-help {height:28px;width:28px;border:1px solid #e9e9e9;border-radius:50%;background:url("/images/common/btn-help.png") no-repeat 50% 50% #fff}
-.box-action-content .list-tab {display:inline-block;margin-left:8px}
+.box-action-content {display:flex;align-items:center}
+.box-action-content .list-tab {height:40px;border-radius:20px;background-color:#fafafa;border:1px solid #e8e8e8;padding:3px}
 .box-action-content .list-tab:after {content:'';display:block;clear:both}
 .box-action-content .list-tab .list-item-tab {float:left}
-.box-action-content .list-tab .list-item-tab .list-item-btn {width:24px;height:24px;background-color:#fff;border:1px solid #c8d0d4}
-.box-action-content .list-tab .list-item-tab:first-child .list-item-btn {border-radius:2px 0 0 2px}
-.box-action-content .list-tab .list-item-tab:last-child .list-item-btn {border-radius:0 2px 2px 0}
-.box-action-content .list-tab .list-item-tab ~ .list-item-tab {margin-left:-1px}
-.box-action-content .list-tab .list-item-tab.is-selected {position:relative}
-.box-action-content .list-tab .list-item-tab.is-selected .list-item-btn {background-color:#019bd4;border-color:#019bd4}
+.box-action-content .list-tab .list-item-tab .list-item-btn {width:32px;height:32px;border-radius:50%;border:1px solid transparent;background-color:transparent;display:flex;align-items:center;justify-content:center}
+.box-action-content .list-tab .list-item-tab.is-selected .list-item-btn {background-color:#00b0a9;border-color:#09a29c}
+.box-action-content .list-tab .list-item-tab.is-selected .ico-com {background-position-y:-20px}
+.box-action-content .btn-compare {height:40px;border-radius:20px;border:1px solid #e8e8e8;color:#969696;font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:500;width:128px;margin-left:4px}
+.box-sub-tab .list-sub-tab {display:flex}
+.box-sub-tab .list-sub-tab .list-item-sub-tab {flex:1}
+.box-sub-tab .list-sub-tab .list-item-sub-tab .list-item-btn {width:100%;display:flex;align-items:center;justify-content:center;font-size:14px;color:#000;height:40px;border:1px solid #e8e8e8}
+.box-sub-tab .list-sub-tab .list-item-sub-tab.is-selected .list-item-btn {color:#fff;background-color:#00b0a9;position:relative}
+.box-sub-tab .list-sub-tab .list-item-sub-tab.is-selected .list-item-btn:before {content:'';border:1px solid #04a09a;position:absolute;top:-1px;left:-1px;right:-1px;bottom:-1px}
+.box-sub-tab .list-sub-tab .list-item-sub-tab ~ .list-item-sub-tab .list-item-btn {border-left:none}
+.box-sub-tab .list-sub-tab .list-item-sub-tab:first-child .list-item-btn,
+.box-sub-tab .list-sub-tab .list-item-sub-tab:first-child .list-item-btn:before {border-radius:4px 0 0 4px}
+.box-sub-tab .list-sub-tab .list-item-sub-tab:last-child .list-item-btn,
+.box-sub-tab .list-sub-tab .list-item-sub-tab:last-child .list-item-btn:before {border-radius:0 4px 4px 0}
 .section-item .section-content {display:flex;padding:10px}
 .section-item .section-content.type-block {display:block}
-.section-item .section-content.type-column {flex-direction:column}
+.section-item .section-content.type-column {flex-direction:column;height:calc(100% - 60px)}
+.section-item .section-content.type-column .type-column-box {height:100%;min-height:400px}
+.section-item .section-content.type-column .type-column-box .box-sub-tab {display:flex;flex-direction:column;height:100%}
+.section-item .section-content.type-column .type-column-box .list-sub-tab {height:40px;flex-shrink:0}
+.section-item .section-content.type-column .type-column-box .tab-sub-contents {flex:1 auto}
+.section-item .section-content.type-column .type-column-box .chart-area-a {height:100%}
+.section-item .section-content.type-column .type-column-box .legend-info {height:40px;flex-shrink:0;margin:0 -10px;border-top:1px solid #e8ebee}
 .section-content .col-a {width:260px}
 .section-content .col-b {width:calc(100% - 260px)}
 
@@ -463,7 +480,6 @@ html.scroll_off {overflow:hidden}
 .section-content .appraisal-list .appraisal-item .appraisal-item-title {width:86px}
 .section-content .appraisal-list .appraisal-item .appraisal-item-value {width:calc(100% - 86px)}
 
-
 .aptn-info-data {display:flex;flex-wrap:wrap}
 .aptn-item-group {width:100%;display:flex;padding:0 0 5px;border-bottom:1px solid #efeff0}
 .aptn-item-group ~ .aptn-item-group {padding-top:5px}
@@ -484,16 +500,35 @@ html.scroll_off {overflow:hidden}
 .aptn-rank-area .aptn-rank-list .aptn-rank-item .aptn-rank-content .rank-value {font-size:36px;font-weight:600;font-family:'Roboto', 'sans-serif'}
 .aptn-rank-area .txt-rank-info {padding:16px 16px;font-size:12px;color:#969696;font-weight:500;text-align:center}
 
+.legend-info {text-align:right;padding:15px 20px 0}
+.legend-info .price-compare {display:flex;justify-content:flex-end}
+.legend-info .price-compare .compare-year {font-size:17px;color:#151515;font-weight:600;font-family:'Roboto', 'sans-serif';margin-right:12px}
+.legend-info .price-compare .compare-item {font-size:12px;font-weight:500;color:#151515}
+.legend-info .price-compare .compare-item .compare-value {font-size:17px;color:#00b0a9;font-weight:600;font-family:'Roboto', 'sans-serif';padding:0 2px 0 4px}
+.legend-info .price-compare .compare-item ~ .compare-item {margin-left:12px;padding-left:12px;position:relative}
+.legend-info .price-compare .compare-item ~ .compare-item:before {content:'';position:absolute;left:0;top:5px;width:1px;height:12px;background-color:#cfcfd4}
+.legend-info .legend-list {display:flex;justify-content:flex-end}
+.legend-info .legend-list .legend-item {font-size:12px;color:#151515;font-weight:500}
+.legend-info .legend-list .legend-item ~ .legend-item {margin-left:12px;padding-left:12px;position:relative}
+.legend-info .legend-list .legend-item ~ .legend-item:before {content:'';position:absolute;left:0;top:1px;width:1px;height:12px;background-color:#cfcfd4}
+.legend-info [class^="legend-color"] {display:inline-block;width:10px;height:10px;border-radius:50%;border:1px solid transparent;margin-right:4px;position:relative;top:2px;vertical-align:top}
+.legend-info .legend-color1 {background-color:#35c44b;border-color:#34a545}
+.legend-info .legend-color2 {background-color:#edaf14;border-color:#c99922}
+
+.section-content .slider-control {padding:10px;display:flex;justify-content:space-between;flex-shrink:0;height:90px}
+
 /* tab content */
-.tab-contents {height:100%;display:none}
-.tab-contents.active {display:block}
+.tab-contents,
+.tab-sub-contents {display:none}
+.tab-contents.active,
+.tab-sub-contents.active {display:block}
 
 /* table */
 .list-table-a {overflow:hidden}
 
-.list-table-a thead {float:left;width:100%;border-bottom:1px solid #dee5e7;background-color:#e6edfa;padding-right:16px}
+.list-table-a thead {float:left;width:100%;border:1px solid #d2f1f0;background-color:#e8faf9;padding-right:16px;border-radius:4px}
 .list-table-a thead tr {display:table;width:100%;table-layout:fixed}
-.list-table-a thead tr th {text-align:center;height:40px;font-size:14px;font-weight:600;color:#000;word-break:keep-all;line-height:16px}
+.list-table-a thead tr th {text-align:center;height:40px;font-size:14px;font-weight:600;color:#000;word-break:keep-all;line-height:16px;transform:rotate(.04deg)}
 .list-table-a thead tr th .unit {font-size:12px;font-weight:400;padding-left:2px}
 
 .list-table-a tbody{float:left;width:100%;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
@@ -508,6 +543,9 @@ html.scroll_off {overflow:hidden}
 
 /* chart */
 .chart-area-a {height:280px;padding:12px 12px 0}
+.chart-area-a img {max-width:100%;vertical-align:top}
+.chart-area-b {margin:10px;border-radius:6px;overflow:hidden;flex:1 auto}
+.chart-area-b img {width:100%;vertical-align:top;height:100%;object-fit:cover}
 
 /* map */
 .map-area-a {height:calc(100% - 60px);min-height:200px}

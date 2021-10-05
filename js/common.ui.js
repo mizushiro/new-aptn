@@ -134,6 +134,13 @@ $(document).ready(function(){
 		'autoFirstActivate': true,
 		'navClickScrollToTabsTop':true
 	});
+	$('.box-sub-tab').uxeTabs({
+		'tabsContentSlector':'.tab-sub-contents',
+		'menuSelector': '.list-item-sub-tab',
+		'useSubTarget': true,
+		'autoFirstActivate': true,
+		'navClickScrollToTabsTop':true
+	});
 
 	//detail open
 	$('.btn-detail').on('click', function (e) {
@@ -224,4 +231,26 @@ $(document).ready(function(){
 		}
 	});
 	$( "#slider-value-b" ).val( "시간 : " + $( "#slider-b" ).slider( "value" ) );
+
+	$( "#slider-c" ).slider({
+		range: "min",
+		value: 400,
+		min: 1,
+		max: 700,
+		slide: function( event, ui ) {
+			$( "#slider-value-a" ).val( "일자 : " + ui.value );
+		}
+	});
+	$( "#slider-value-c" ).val( "일자 : " + $( "#slider-c" ).slider( "value" ) );
+
+	$( "#slider-d" ).slider({
+		range: "min",
+		value: 9,
+		min: 1,
+		max: 24,
+		slide: function( event, ui ) {
+			$( "#slider-value-b" ).val( "시간 : " + ui.value );
+		}
+	});
+	$( "#slider-value-d" ).val( "시간 : " + $( "#slider-d" ).slider( "value" ) );
 })

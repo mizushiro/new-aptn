@@ -709,21 +709,36 @@
 						</div>
 						<div class="box-action-content">
 							<ul class="list-tab">
-								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view1-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
-								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view1-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
+								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view1-a"><i class="ico-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
+								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view1-b"><i class="ico-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
+							<button type="button" class="btn-compare">다른 단지 비교하기</button>
 						</div>
 					</div>
-					<div class="section-content type-block">
-						<div class="tab-contents" id="view1-a">
-							<div class="box-decs">
-								<ul class="dot-list">
-									<li class="list-item">세로선은 해당년도 최고거래가와 최소거래가를 나타냅니다.</li>
-									<li class="list-item">사각형은 해당년도 시작가격과 마감가격을 나타냅니다.</li>
+					<div class="section-content type-column">
+						<div class="tab-contents type-column-box" id="view1-a">
+							<div class="box-sub-tab">
+								<ul class="list-sub-tab">
+									<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#view1-a-1">실거주별</button></li>
+									<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#view1-a-2">투자가치별</button></li>
 								</ul>
-							</div>
-							<div class="chart-area-a">
-								<div id="aptn_chart_3"></div>
+								<div class="tab-sub-contents" id="view1-a-1">
+									<div class="chart-area-a">
+										<div id="aptn_chart_3"></div>
+									</div>
+								</div>
+								<div class="tab-sub-contents" id="view1-a-2">
+									<div class="chart-area-a">
+
+									</div>
+								</div>
+								<div class="legend-info">
+									<div class="price-compare">
+										<p class="compare-year">2021.</p>
+										<p class="compare-item">시작가 <span class="compare-value">10.6</span>억</p>
+										<p class="compare-item">종료가 <span class="compare-value">12.8</span>억</p>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="tab-contents" id="view1-b">
@@ -832,18 +847,32 @@
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view2-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view2-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
+							<button type="button" class="btn-compare">다른 단지 비교하기</button>
 						</div>
 					</div>
-					<div class="section-content type-block">
-						<div class="tab-contents" id="view2-a">
-							<div class="box-decs">
-								<ul class="dot-list">
-									<li class="list-item">아파트엔지수의 상승은 현가 가치가 <span class="point-color-a">상승</span>했음을 의미합니다.</li>
-									<li class="list-item">아파트엔지수의 하락은 현가 가치가 <span class="point-color-b">하락</span>했음을 의마합니다.</li>
+					<div class="section-content type-column">
+						<div class="tab-contents type-column-box" id="view2-a">
+							<div class="box-sub-tab">
+								<ul class="list-sub-tab">
+									<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#view2-a-1">실거주별</button></li>
+									<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#view2-a-2">투자가치별</button></li>
 								</ul>
-							</div>
-							<div class="chart-area-a">
-								<canvas id="aptn_chart_4"></canvas>
+								<div class="tab-sub-contents" id="view2-a-1">
+									<div class="chart-area-a">
+										<div id="aptn_chart_4"></div>
+									</div>
+								</div>
+								<div class="tab-sub-contents" id="view2-a-2">
+									<div class="chart-area-a">
+										<img src="/images/temp/temp4.png" alt="">
+									</div>
+								</div>
+								<div class="legend-info">
+									<div class="legend-list">
+										<div class="legend-item"><i class="legend-color1"></i><span class="legend-txt">아파트엔 지수</span></div>
+										<div class="legend-item"><i class="legend-color2"></i><span class="legend-txt">평균거래가격(억원)</span></div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="tab-contents" id="view2-b">
@@ -928,9 +957,19 @@
 							<button type="button" class="btn-help slide-5" data-layer="info-layer"><span class="for-a11y">도움말</span></button>
 						</div>
 					</div>
-					<div class="section-content type-block">
-						<div class="map-area-a">
-
+					<div class="section-content type-column">
+						<div class="chart-area-b">
+							<img src="/images/temp/temp5.png" alt="">
+						</div>
+						<div class="slider-control">
+							<div class="slider-item">
+								<div id="slider-c"></div>
+								<div class="slider-value"><input type="text" id="slider-value-c" class="form-a" readonly></div>
+							</div>
+							<div class="slider-item">
+								<div id="slider-d"></div>
+								<div class="slider-value"><input type="text" id="slider-value-d" class="form-a" readonly></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1466,82 +1505,6 @@
 					</div>
 				</div>
 				<!-- E : 실거래 내역 -->
-				<!-- S : 유사단지 목록 -->
-				<div class="section-item order-item13">
-					<div class="section-header">
-						<div class="section-title-box">
-							<h3 class="section-title">유사단지 목록</h3>
-						</div>
-					</div>
-					<div class="section-content type-block">
-						<div class="box-table">
-							<table class="list-table-a" id="aptn_table_9">
-								<caption></caption>
-								<thead>
-								<tr>
-									<th scope="col">아파트명</th>
-									<th scope="col">거리<span class="unit">(단위:m)</span></th>
-								</tr>
-								</thead>
-								<tbody>
-								<tr>
-									<td>한티(933-35)</td>
-									<td>136.1</td>
-								</tr>
-								<tr>
-									<td>동양</td>
-									<td>333.6</td>
-								</tr>
-								<tr>
-									<td>한양팰리스</td>
-									<td>343.9</td>
-								</tr>
-								<tr>
-									<td>도성</td>
-									<td>364.4</td>
-								</tr>
-								<tr>
-									<td>대치타워</td>
-									<td>405.9</td>
-								</tr>
-								<tr>
-									<td>노빌리티빌리지</td>
-									<td>416.8</td>
-								</tr>
-								<tr>
-									<td>메트로</td>
-									<td>503</td>
-								</tr>
-								<tr>
-									<td>대치주성</td>
-									<td>510</td>
-								</tr>
-								<tr>
-									<td>월드빌</td>
-									<td>1,070.8</td>
-								</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-				<!-- E : 유사단지 목록 -->
-				<!-- S : 주요거점 접근성 -->
-				<div class="section-item order-item14">
-					<div class="section-header">
-						<div class="section-title-box">
-							<h3 class="section-title">주요거점 접근성</h3>
-						</div>
-					</div>
-					<div class="section-content type-block">
-						<div class="box-decs">
-							<p class="txt-decs-a"><i class="sp-com sp-decs-a"></i>자가차량을 이용하여 30분 내 도달할 수 있는 자가차량을 이용하여 30분 내 자가 차량을 이용하여 30분 내 도달할 수 있는도달할 수 있는 자가차량을 이용</p>
-						</div>
-						<div class="map-area-a">
-						</div>
-					</div>
-				</div>
-				<!-- E : 주요거점 접근성 -->
 			</section>
 			<!-- S : footer -->
 			<footer class="footer" style="display:none">
