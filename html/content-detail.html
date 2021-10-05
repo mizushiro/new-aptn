@@ -694,7 +694,7 @@
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view1-a"><i class="ico-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view1-b"><i class="ico-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
-							<button type="button" class="btn-compare">다른 단지 비교하기</button>
+							<button type="button" class="btn-compare" data-layer="compare-layer">다른 단지 비교하기</button>
 						</div>
 					</div>
 					<div class="section-content type-column">
@@ -829,7 +829,7 @@
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view2-a"><i class="ico-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view2-b"><i class="ico-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
-							<button type="button" class="btn-compare">다른 단지 비교하기</button>
+							<button type="button" class="btn-compare" data-layer="compare-layer">다른 단지 비교하기</button>
 						</div>
 					</div>
 					<div class="section-content type-column">
@@ -968,7 +968,7 @@
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view3-a"><i class="ico-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view3-b"><i class="ico-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
-							<button type="button" class="btn-compare">다른 단지 비교하기</button>
+							<button type="button" class="btn-compare" data-layer="compare-layer">다른 단지 비교하기</button>
 						</div>
 					</div>
 					<div class="section-content type-column">
@@ -1072,7 +1072,7 @@
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view4-a"><i class="ico-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view4-b"><i class="ico-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
-							<button type="button" class="btn-compare">다른 단지 비교하기</button>
+							<button type="button" class="btn-compare" data-layer="compare-layer">다른 단지 비교하기</button>
 						</div>
 					</div>
 					<div class="section-content type-column">
@@ -1187,7 +1187,7 @@
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view5-a"><i class="ico-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view5-b"><i class="ico-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
-							<button type="button" class="btn-compare">다른 단지 비교하기</button>
+							<button type="button" class="btn-compare" data-layer="compare-layer">다른 단지 비교하기</button>
 						</div>
 					</div>
 					<div class="section-content type-column">
@@ -1285,7 +1285,7 @@
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view6-a"><i class="ico-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view6-b"><i class="ico-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
-							<button type="button" class="btn-compare">다른 단지 비교하기</button>
+							<button type="button" class="btn-compare" data-layer="compare-layer">다른 단지 비교하기</button>
 						</div>
 					</div>
 					<div class="section-content type-column">
@@ -1398,7 +1398,7 @@
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view7-a"><i class="sp-com sp-view-a"></i><span class="for-a11y">차트보기</span></button></li>
 								<li class="list-item-tab"><button type="button" class="list-item-btn" name="#view7-b"><i class="sp-com sp-view-b"></i><span class="for-a11y">표보기</span></button></li>
 							</ul>
-							<button type="button" class="btn-compare">다른 단지 비교하기</button>
+							<button type="button" class="btn-compare" data-layer="compare-layer">다른 단지 비교하기</button>
 						</div>
 					</div>
 					<div class="section-content type-column">
@@ -1614,10 +1614,107 @@
 				</div>
 			</div>
 		</div>
-		<button type="button" class="btn_layer-close"><i class="sp-com sp-layer-close"></i><span class="for-a11y">레이어팝업 닫기</span></button>
+		<button type="button" class="btn_layer-close"><i class="ico-com icon-close-a"></i><span class="for-a11y">레이어팝업 닫기</span></button>
 	</div>
 </div>
 <!-- E : 로그인 layer -->
+
+<!-- S : 다른 단지 비교하기 layer -->
+<div id="compare-layer" class="layer_section">
+	<div class="layer_section-container">
+		<div class="layer-content">
+			<div class="box-compare">
+				<div class="layer-header">
+					<h1 class="layer-header-title">다른 단지 비교하기</h1>
+				</div>
+				<div class="compare-content">
+					<div class="box-sub-tab">
+						<ul class="list-sub-tab">
+							<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#compare-a">유사(추천)단지</button></li>
+							<li class="list-item-sub-tab"><button type="button" class="list-item-btn" name="#compare-b">사용자 관심 단지</button></li>
+						</ul>
+						<div class="tab-sub-contents" id="compare-a">
+							<ul class="compare-list">
+								<li class="compare-item">
+									<label class="choice-b">
+										<input type="checkbox" class="in-choice">
+										<span class="choice-b-txt">서빙고동 금호베스트빌</span>
+									</label>
+								</li>
+								<li class="compare-item">
+									<label class="choice-b">
+										<input type="checkbox" class="in-choice">
+										<span class="choice-b-txt">노량진동 메가스터디타워</span>
+									</label>
+								</li>
+								<li class="compare-item">
+									<label class="choice-b">
+										<input type="checkbox" class="in-choice">
+										<span class="choice-b-txt">하왕십리동 센트라스1,2차</span>
+									</label>
+								</li>
+								<li class="compare-item">
+									<label class="choice-b">
+										<input type="checkbox" class="in-choice">
+										<span class="choice-b-txt">한강로3가 대우한강트럼프월드</span>
+									</label>
+								</li>
+								<li class="compare-item">
+									<label class="choice-b">
+										<input type="checkbox" class="in-choice">
+										<span class="choice-b-txt">이문동 래미안 이문2차</span>
+									</label>
+								</li>
+							</ul>
+							<div class="btn-more-area">
+								<button type="button" class="btn-more">다른 단지 더보기</button>
+							</div>
+						</div>
+						<div class="tab-sub-contents" id="compare-b">
+							<ul class="compare-list">
+								<li class="compare-item">
+									<label class="choice-b">
+										<input type="checkbox" class="in-choice">
+										<span class="choice-b-txt">서빙고동 금호베스트빌</span>
+									</label>
+								</li>
+								<li class="compare-item">
+									<label class="choice-b">
+										<input type="checkbox" class="in-choice">
+										<span class="choice-b-txt">노량진동 메가스터디타워</span>
+									</label>
+								</li>
+								<li class="compare-item">
+									<label class="choice-b">
+										<input type="checkbox" class="in-choice">
+										<span class="choice-b-txt">하왕십리동 센트라스1,2차</span>
+									</label>
+								</li>
+								<li class="compare-item">
+									<label class="choice-b">
+										<input type="checkbox" class="in-choice">
+										<span class="choice-b-txt">한강로3가 대우한강트럼프월드</span>
+									</label>
+								</li>
+								<li class="compare-item">
+									<label class="choice-b">
+										<input type="checkbox" class="in-choice">
+										<span class="choice-b-txt">이문동 래미안 이문2차</span>
+									</label>
+								</li>
+							</ul>
+							<div class="btn-more-area">
+								<button type="button" class="btn-more">다른 단지 더보기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="btn_layer-close"><i class="ico-com icon-close-a"></i><span class="for-a11y">레이어팝업 닫기</span></button>
+	</div>
+</div>
+<!-- E : 다른 단지 비교하기 layer -->
 
 <!-- S : 도움말 layer -->
 <div id="info-layer" class="layer_section">
@@ -1781,7 +1878,7 @@
 			<!--<section class="help-content-a">
 			</section>-->
 		</div>
-		<button type="button" class="btn_layer-close"><i class="sp-com sp-layer-close"></i><span class="for-a11y">레이어팝업 닫기</span></button>
+		<button type="button" class="btn_layer-close"><i class="ico-com icon-close-a"></i><span class="for-a11y">레이어팝업 닫기</span></button>
 	</div>
 	<script>
 		var swiper = new Swiper('.swiper-container', {
