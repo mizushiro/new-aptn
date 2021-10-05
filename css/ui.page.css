@@ -997,23 +997,6 @@ html.scroll_off {overflow:hidden}
 }
 
 @media (max-width:1720px) {
-	/* align
-	.order-item1 {order:1}
-	.order-item2 {order:2}
-	.order-item4 {order:3}
-	.order-item5 {order:4}
-	.order-item7 {order:5}
-	.order-item8 {order:6}
-	.order-item9 {order:7}
-	.order-item11 {order:8}
-	.order-item12 {order:9}
-	.order-item13 {order:10}
-	.order-item6 {order:11}
-	.order-item10 {order:12}
-	.order-item14 {order:13}
-	.order-item3 {order:14}
-	*/
-
 	/* size */
 	.section-item {width:calc((100% - 20px) / 2)}
 }
@@ -1126,6 +1109,8 @@ html.scroll_off {overflow:hidden}
 }
 
 @media (max-width:1023px) {
+	/* size */
+	.section-item {width:100%}
 
 	/* layer */
 	.layer_section .layer_section-container.help-content {width:700px}
@@ -1289,6 +1274,20 @@ html.scroll_off {overflow:hidden}
 }
 @media (max-width:560px) {
 	/* header */
+	.wrap .header .sub-bi {display:none}
+
+	/* search */
+	.box-sh {top:0;border-radius:0;left:0;width:100%}
+	.box-sh.open {bottom:34%}
+	.box-sh .box-result {height:calc(100% - 90px)}
+	.box-sh .sh-result {height:100%}
+	.sp-com.sp-logo-c {background-position-y:-40px}
+	.box-sh .sh-area .btn-login {background-color:#4560d8;border-color:#233fbd}
+	.box-sh .sh-result {border-color:#0b78a0;background-color:rgba(238,244,254,.8)}
+
+
+
+	/* header */
 	.box-header .btn-close {right:0}
 
 	.detail-wrap {padding:80px 16px 0}
@@ -1324,16 +1323,6 @@ html.scroll_off {overflow:hidden}
 	.aptn-info-data {height:auto}
 	.aptn-info-data .aptn-item-title {min-height:24px}
 	.aptn-info-data .aptn-item-a .aptn-item-content {width:100%;padding-left:0;margin-top:4px}
-
-	/* search */
-	.box-sh {top:0;border-radius:0;left:0;width:100%;border-width:0 0 1px;background-color:transparent}
-	.box-sh.open {bottom:34%}
-	.box-sh .box-result {height:calc(100% - 90px)}
-	.box-sh .sh-result {height:100%}
-	.box-sh .sh-area {background-color:rgba(22,145,198,.8)}
-	.sp-com.sp-logo-c {background-position-y:-40px}
-	.box-sh .sh-area .btn-login {background-color:#4560d8;border-color:#233fbd}
-	.box-sh .sh-result {border-color:#0b78a0;background-color:rgba(238,244,254,.8)}
 
 	/* login */
 	.layer_section .layer_section-container {max-width:calc(100% - 32px);padding:0 12px}
