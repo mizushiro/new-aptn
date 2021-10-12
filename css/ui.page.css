@@ -181,7 +181,7 @@ html.scroll_off {overflow:hidden}
 .header-nav .btn-my-info {height:40px;border:1px solid #04a09a;border-radius:20px;display:flex;align-items:center;justify-content:center;padding:0 30px;font-size:14px;font-weight:500;color:#fff;background-color:#00b0a9}
 
 /* search */
-.box-sh {position:absolute;top:20px;left:20px;width:400px;z-index:101;border-radius:8px;background-color:#fff;box-shadow:0 1px 4px 0 rgba(0,0,0,.25);overflow:hidden}
+.box-sh {position:absolute;top:20px;left:20px;width:400px;z-index:101;border-radius:8px;background-color:#fff;box-shadow:0 1px 4px 0 rgba(0,0,0,.25)/*;overflow:hidden*/}
 .box-sh .sh-area {display:flex;align-items:center;padding:10px}
 .box-sh .sh-area .sh-input {width:calc(100% - 80px)}
 .box-sh .sh-area .input-sh {height:40px;border:none;padding:0 10px;font-size:14px;color:#333;width:100%}
@@ -275,23 +275,24 @@ html.scroll_off {overflow:hidden}
 
 .box-sh .sh-area .company-logo {width:31px}
 .box-sh .sh-area .link-company {display:block;height:32px}
-.sh-input .box-sh-keyword {position:absolute;top:31px;left:0;right:0;background-color:#fff;border:1px solid #666;;border-top:none;border-radius:0 0 2px 2px;z-index:10;max-height:380px;overflow-y:auto;-webkit-overflow-scrolling:touch}
-.sh-input .box-sh-keyword .sh-keyword-item:first-child {border-top:1px solid #666;padding-top:5px}
-.sh-input .box-sh-keyword .sh-keyword-item:last-child {padding-bottom:5px}
-.sh-input .box-sh-keyword .sh-keyword-item .move-map {display:flex;width:100%;padding:5px 8px}
+.sh-input .box-sh-keyword {position:absolute;top:54px;left:0;right:0;padding-top:6px;background-color:#fff;border-radius:0 0 8px 8px;z-index:10;max-height:380px;overflow-y:auto;-webkit-overflow-scrolling:touch;box-shadow:0 3px 4px 0 rgba(0,0,0,.25)}
+.sh-input .box-sh-keyword .sh-keyword-item:first-child {border-top:1px solid #eee;padding-top:16px}
+.sh-input .box-sh-keyword .sh-keyword-item:last-child {padding-bottom:16px}
+.sh-input .box-sh-keyword .sh-keyword-item .move-map {display:flex;width:100%;padding:10px 15px;cursor:pointer}
 .sh-input .box-sh-keyword .sh-keyword-item.on .move-map,
-.sh-input .box-sh-keyword .sh-keyword-item .move-map:hover {background-color:#e6f0ff}
-.sh-input .box-sh-keyword .sh-keyword-item.on .move-map .sp-map-point,
-.sh-input .box-sh-keyword .sh-keyword-item .move-map:hover .sp-map-point {background-position-x:-220px}
-.sh-input .box-sh-keyword .sh-keyword-item .move-map .sp-map-point {margin-right:8px}
-.sh-input .box-sh-keyword .sh-keyword-item .move-map .keyword-value {width:calc(100% - 24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px;color:#666;line-height:18px;letter-spacing:-.5px}
-.sh-input .box-sh-keyword .sh-keyword-item .move-map .keyword-value .keyword {font-weight:600;color:#1691c6}
+.sh-input .box-sh-keyword .sh-keyword-item .move-map:hover {background-color:#f6f6fb}
+.sh-input .box-sh-keyword .sh-keyword-item .move-map i {margin-right:8px}
+.sh-input .box-sh-keyword .sh-keyword-item .move-map .keyword-value {width:calc(100% - 24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px;color:#8d8d8d}
+.sh-input .box-sh-keyword .sh-keyword-item .move-map .keyword-value .keyword {color:#00b0a9}
 .sh-input .box-sh-keyword .sh-keyword-item .keyword-name {display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sh-input .box-sh-keyword .sh-keyword-item .keyword-name ~ .address-data {font-size:11px;color:#000;font-weight:600}
+.sh-input .box-sh-keyword .sh-keyword-item .keyword-name ~ .address-data {font-size:12px;color:#8d8d8d;font-weight:500}
 .box-sh .sh-area .sh-input .input-a {width:100%;vertical-align:top}
 .box-sh .sh-area .btn-login {width:32px;height:32px;border:1px solid #04709f;background-color:#1691c6;border-radius:2px}
 .box-sh .sh-result {border-top:1px solid #222;padding:0;position:relative;height:calc(100vh - 122px);overflow-y:auto;-webkit-overflow-scrolling:touch}
 .box-sh .sh-result .btn-more {border-top:1px solid #ccc;padding:10px;width:100%;color:#333;font-weight:600;font-size:14px}
+.box-sh .sh-point-a {display:block;width:16px;height:16px;background:url("/images/common/sh-point-a.png") no-repeat 0 0}
+.box-sh .sh-point-b {display:block;width:16px;height:16px;background:url("/images/common/sh-point-b.png") no-repeat 0 0}
+
 
 
 
