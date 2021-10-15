@@ -100,7 +100,7 @@ input[type='text']::-ms-clear {display:none !important}
 input[type='search']::-webkit-search-cancel-button {display:none !important}
 input[type='file'] {line-height:1;padding:0 16px;border:1px solid #666;font-size:16px;font-family:'Spoqa Han Sans Neo', 'Noto Sans KR', HelveticaNeue,AppleSDGothicNeo,sans-serif;cursor:pointer;outline:none;box-sizing:border-box;font-weight:400}
 
-select {font-family:'Spoqa Han Sans Neo', 'Noto Sans KR', HelveticaNeue,AppleSDGothicNeo,sans-serif;font-size:16px;border:1px solid #959595;height:32px;line-height:32px;padding:0 16px;font-weight:400}
+select {font-family:'Spoqa Han Sans Neo', 'Noto Sans KR', HelveticaNeue,AppleSDGothicNeo,sans-serif;font-size:16px;border:1px solid #959595;height:32px;line-height:32px;padding:0 16px;font-weight:400;-webkit-appearance:none;-moz-appearance:none;appearance:none}
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {color:#8d8d8d}
 input:-moz-placeholder,
@@ -155,6 +155,10 @@ html.scroll_off {overflow:hidden}
 .choice-b .in-choice {position:absolute;opacity:0}
 .choice-b .choice-b-txt {padding-left:46px;font-size:15px;color:#969696;position:relative;cursor:pointer}
 .choice-b .in-choice:checked + .choice-b-txt:before {content:'';background:url("/images/common/check.png") no-repeat 0 0;width:14px;height:10px;position:absolute;top:50%;margin-top:-5px;left:15px}
+
+/* select */
+.select-a {height:40px;border:1px solid #e7e7e7;border-radius:4px;font-size:14px;background:url("/images/common/blt-arrow-sel.png") 100% 50% no-repeat;padding:0 32px 0 16px}
+.select-a::-ms-expand {display:none}
 
 /* ETC */
 .for-a11y {position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;clip:rect(0 0 0 0);overflow:hidden;text-indent:-99em}
@@ -776,6 +780,13 @@ html.scroll_off {overflow:hidden}
 #viewer-layer .layer_section-container {width:720px}
 .layer-content .viewer-set {padding:30px 25px 25px}
 .viewer-set .viewer-set-item.type-flex {display:flex;align-items:center}
+.viewer-set .viewer-set-item ~ .viewer-set-item {margin-top:30px}
+.viewer-set .viewer-set-item .set-title {font-size:17px;color:#151515;padding-left:12px;position:relative}
+.viewer-set .viewer-set-item.type-flex .set-title {margin-right:22px}
+.viewer-set .viewer-set-item .select-a {min-width:180px}
+.viewer-set .viewer-set-item .set-title:before {content:'';position:absolute;left:0;top:7px;width:4px;height:4px;background-color:#151515;border-radius:50%}
+.viewer-set .viewer-set-item .viewer-map {margin-top:16px;border-radius:4px;overflow:hidden;max-height:calc(100vh - 240px)}
+
 
 /* box tip */
 .box-tip-a {background-color:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 4px 0 rgba(0,0,0,.25)}
