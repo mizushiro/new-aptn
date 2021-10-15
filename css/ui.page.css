@@ -381,8 +381,15 @@ html.scroll_off {overflow:hidden}
 .ico-com.sp-map-distance {background-position:-140px 0}
 .ico-com.sp-map-area {background-position:-160px 0}
 .control-section .active .ico-com {background-position-y:-20px}
+.control-section .active .ico-com.weather1,
+.control-section .active .ico-com.weather2,
+.control-section .active .ico-com.weather3 {background-position-y:-80px}
 .ico-com.sp-view-a {width:20px;height:20px;background-position:-200px 0}
 .ico-com.sp-view-b {width:20px;height:20px;background-position:-220px 0}
+.ico-com.icon-viewer {width:20px;height:20px;background-position:-240px 0}
+.ico-com.weather1 {width:28px;height:28px;background-position:0 -40px}
+.ico-com.weather2 {width:28px;height:28px;background-position:-40px -40px}
+.ico-com.weather3 {width:28px;height:28px;background-position:-80px -40px}
 
 
 /* radio */
@@ -753,6 +760,7 @@ html.scroll_off {overflow:hidden}
 .layer-content .layer-header-title {font-size:18px;color:#000;font-weight:500}
 
 /* 다른 단지 비교하기 */
+#compare-layer .layer_section-container {width:520px}
 .layer-content .box-compare {max-width:520px}
 .layer-content .compare-content {padding:20px 0}
 .layer-content .compare-content .list-sub-tab {margin:0 15px}
@@ -763,6 +771,11 @@ html.scroll_off {overflow:hidden}
 .layer-content .compare-content .btn-more {height:46px;border-radius:23px;border:1px solid #e8e8e8;padding:0 36px;font-size:14px;color:#969696;font-weight:500;display:inline-flex;align-items:center}
 .layer-content .compare-content .btn-more:after {content:'';display:inline-block;background:url("/images/common/btn-more.png") no-repeat 0 0;width:11px;height:7px;margin-left:16px}
 .layer-content .compare-content .btn-more:hover {border-color:#0aa29c;color:#0aa29c}
+
+/* 다른 단지 비교하기 */
+#viewer-layer .layer_section-container {width:720px}
+.layer-content .viewer-set {padding:30px 25px 25px}
+.viewer-set .viewer-set-item.type-flex {display:flex;align-items:center}
 
 /* box tip */
 .box-tip-a {background-color:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 4px 0 rgba(0,0,0,.25)}
@@ -992,7 +1005,7 @@ html.scroll_off {overflow:hidden}
 
 
 	/* layer */
-	.layer_section .layer_section-container {width:calc(100% - 32px)}
+	.layer_section .layer_section-container {width:calc(100% - 32px) !important;}
 	.layer_section .layer_section-container.help-content {padding:16px;height:calc(100% - 32px)}
 	.help-content .layer-content {height:100%}
 	.help-content .swiper-container {min-height:100%;height:100%}
