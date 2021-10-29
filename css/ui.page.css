@@ -221,39 +221,38 @@ html.scroll_off {overflow:hidden}
 
 .box-sh .apt-summary {display:none}
 .box-sh .apt-summary.is-open {display:block}
-.apt-summary .apt-name {width:calc(100% - 80px);padding:8px 16px}
+.apt-summary .apt-name {width:calc(100% - 80px);padding:0 16px}
 .apt-summary .apt-name .apt-title {font-size:18px;font-weight:500;color:#000;transform:rotate(.04deg);text-overflow:ellipsis;overflow:hidden;word-break:break-all;white-space:nowrap}
 .apt-summary .apt-name .apt-address {color:#8d8d8d;font-size:13px;margin-top:2px;text-overflow:ellipsis;overflow:hidden;word-break:break-all;white-space:nowrap}
 .apt-summary .size-list {display:flex}
-.apt-summary .size-list .btn-size-choice {flex:1;height:50px;background-color:#e8faf9;border:1px solid #d2f1f0;display:flex;align-items:center;justify-content:center;font-size:15px;color:#151515;font-weight:500;border-left:none}
+.apt-summary .size-list .btn-size-choice {flex:1;height:40px;background-color:#e8faf9;border:1px solid #d2f1f0;display:flex;align-items:center;justify-content:center;font-size:15px;color:#151515;font-weight:500;border-left:none}
 .apt-summary .size-list .btn-size-choice:nth-last-child(1) {border-right:none}
 .apt-summary .size-list .btn-size-choice.active {position:relative;background-color:#00b0a9;color:#fff}
 .apt-summary .size-list .btn-size-choice.active:before {content:'';position:absolute;top:-1px;left:-1px;right:-1px;bottom:-1px;border:1px solid #04a09a}
-.apt-summary .box-summary {max-height:calc(100vh - 290px);overflow-y:auto}
+.apt-summary .box-summary {max-height:calc(100vh - 270px);overflow-y:auto}
 .apt-summary .summary-section ~ .summary-section {border-top:4px solid #e8ebee}
 .apt-summary .summary-section ~ .summary-section .summary-title-wrap {border-top:1px solid #d9dee3}
-.apt-summary .summary-title-wrap {display:flex;padding:0 15px;min-height:68px;border-bottom:1px solid #e8ebee;justify-content:space-between}
-.apt-summary .summary-title-wrap .summary-title {font-size:16px;color:#000;font-weight:500;transform:rotate(.04deg);padding-top:30px}
-.apt-summary .summary-title-wrap .btn-detail {margin-top:18px}
-.apt-summary .summary-content {padding:20px 15px 40px}
+.apt-summary .summary-title-wrap {display:flex;padding:0 15px;min-height:50px;border-bottom:1px solid #e8ebee;justify-content:space-between;align-items:center}
+.apt-summary .summary-title-wrap .summary-title {font-size:16px;color:#000;font-weight:500;transform:rotate(.04deg)}
+.apt-summary .summary-content {padding:8px 15px}
 .apt-summary .appraisal-list {margin-top:11px}
 .apt-summary .lately-price {text-align:right;font-size:14px;color:#000;padding-right:20px}
-.apt-summary .lately-price .price-value {font-size:26px;font-family:'Roboto', 'sans-serif';font-weight:600;padding-left:8px;position:relative;top:2px}
-.apt-summary .box-aptn-data {height:80px;border-radius:4px;background-color:#f6f6fb;padding-top:20px;margin-top:10px}
-.apt-summary .box-aptn-data .aptn-data {text-align:right;padding-right:20px;font-size:16px;color:#000}
-.apt-summary .box-aptn-data .aptn-data .data-value {font-size:38px;font-family:'Roboto', 'sans-serif';color:#35c44b;font-weight:600;padding-left:8px;position:relative;top:2px}
-.apt-summary .box-chart1 {height:350px}
+.apt-summary .lately-price .price-value {font-size:20px;font-family:'Roboto', 'sans-serif';font-weight:600;padding-left:8px;position:relative;top:2px}
+.apt-summary .box-aptn-data {height:40px;border-radius:4px;background-color:#f6f6fb;margin-top:4px}
+.apt-summary .box-aptn-data .aptn-data {text-align:right;padding-right:20px;font-size:15px;color:#000}
+.apt-summary .box-aptn-data .aptn-data .data-value {font-size:28px;font-family:'Roboto', 'sans-serif';color:#35c44b;font-weight:600;padding-left:8px;position:relative;top:2px}
+.apt-summary .box-chart1 {height:240px;margin-top:4px}
 .apt-summary .box-chart2 {height:300px}
-.apt-summary .box-chart3 {height:360px;border-radius:6px;overflow:hidden}
-.apt-summary .slider-control {display:flex;justify-content:space-between;margin-top:15px;margin-bottom:20px}
+.apt-summary .box-chart3 {height:180px;border-radius:6px;overflow:hidden}
+.apt-summary .slider-control {display:flex;justify-content:space-between;margin-top:8px;margin-bottom:20px}
 .slider-control .slider-item {width:calc(50% - 5px);background-color:#e8faf9;border:1px solid #d2f1f0;border-radius:2px;height:40px;padding:17px 9px 0}
 .slider-control .slider-item .slider-value {margin-top:24px}
-.slider-control .slider-item .slider-value .form-a {width:100%;text-align:center;height:20px;line-height:20px;padding:0;border:none;background-color:transparent;font-size:17px;color:#00b0a9;font-weight:600;font-family:'Roboto', 'sans-serif';outline:none !important;}
+.slider-control .slider-item .slider-value .form-a {width:100%;text-align:center;height:20px;line-height:20px;padding:0;border:none;background-color:transparent;font-size:15px;color:#00b0a9;font-weight:600;font-family:'Roboto', 'sans-serif';outline:none !important;}
 .slider-control .slider-item .slider-value .form-a:readonly {background-color:transparent !important}
 
-.btn-detail {height:40px;padding:0 32px;display:flex;justify-content:center;align-items:center;border-radius:20px;border:1px solid #00b0a9}
+.btn-detail {height:36px;padding:0 28px;display:flex;justify-content:center;align-items:center;border-radius:18px;border:1px solid #00b0a9}
 .btn-detail .btn-txt {color:#151515;font-weight:500;padding-top:1px}
-.btn-detail:after {content:'';background:url("/images/common/btn-arrow.png") no-repeat 0 0;width:6px;height:10px;display:block;margin-left:10px}
+/*.btn-detail:after {content:'';background:url("/images/common/btn-arrow.png") no-repeat 0 0;width:6px;height:10px;display:block;margin-left:10px}*/
 
 .appraisal-list {display:flex;flex-wrap:wrap}
 .appraisal-list .appraisal-item {width:50%;border-bottom:1px solid #efeff0;display:flex;align-items:center;justify-content:space-between;padding:6px 0}
