@@ -163,6 +163,7 @@ $(document).ready(function(){
 	$('.btn-filter').on('click', function (e) {
 		$(this).addClass('active');
 		$('.filter-option').addClass('is-open');
+		$('.apt-summary').removeClass('is-open');
 	});
 	$('.btn-close-a').on('click', function (e) {
 		$('.btn-filter').removeClass('active');
