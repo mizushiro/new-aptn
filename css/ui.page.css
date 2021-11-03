@@ -739,9 +739,9 @@ html.scroll_off {overflow:hidden}
 .box-map-control .box-map-type .btn-map-type.active {border:none}
 .box-map-control .box-map-type .btn-map-type.active + .btn-map-type {border:none}
 
-.box-map-position {position:absolute;top:20px;left:20px;width:164px}
-.map-viewer-way {width:164px;height:164px;background:url("/images/common/viewer-round.png") no-repeat 50% 50%;display:flex;align-items:center;justify-content:center}
-.map-viewer-way .viewer-way-detail {width:100px;height:100px;overflow:hidden;border-radius:50%;border:2px solid #fff}
+.box-map-position {position:absolute;top:20px;left:20px;width:200px}
+.map-viewer-way {width:200px;height:200px;background:url("/images/common/viewer-round.png") no-repeat 50% 50%;display:flex;align-items:center;justify-content:center}
+.map-viewer-way .viewer-way-detail {width:136px;height:136px;overflow:hidden;border-radius:50%;border:2px solid #fff}
 .box-map-position .way-data {color:#fff;font-size:13px;letter-spacing:0;margin-top:16px;text-align:center;font-weight:500}
 
 /* tooltip */
