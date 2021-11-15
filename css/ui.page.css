@@ -551,6 +551,14 @@ html.scroll_off {overflow:hidden}
 .top-group .box-map-control .btn-control-gorup {display:flex;margin-top:0;margin-left:14px}
 .top-group .box-map-control .btn-control-gorup .btn-control ~ .btn-control {border-left:1px solid #e8e8e8;border-top:none}
 
+.box-sub-info {position:absolute;right:20px;top:20px;z-index:10}
+.box-sub-info .btn-sub-info {height:48px;min-width:120px;display:flex;border:1px solid transparent;border-radius:8px;box-shadow:0 1px 4px 0 rgba(0,0,0,.25);background-color:#fff;align-items:center;justify-content:center;margin-bottom:4px;font-weight:500;font-size:14px;color:#151515}
+.box-sub-info .btn-sub-info.active {border-color:#04a09a}
+.box-sub-info .state-type {height:26px;width:26px;display:flex;align-items:center;justify-content:center;color:#fff;border-radius:50%;font-size:13px;font-weight:600;margin-right:8px}
+.box-sub-info .state-type.level-a {background-color:#e31212}
+.box-sub-info .state-type.level-b {background-color:#e08d16}
+.box-sub-info .state-type.level-c {background-color:#35c44b}
+
 /* tab content */
 .tab-contents,
 .tab-sub-contents {display:none}
