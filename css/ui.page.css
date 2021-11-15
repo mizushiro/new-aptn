@@ -486,8 +486,11 @@ html.scroll_off {overflow:hidden}
 .section-content .lately-price .price-value {font-size:26px;font-family:'Roboto', 'sans-serif';font-weight:600;padding-left:8px;position:relative;top:2px;display:inline-block}
 .section-content .box-aptn-data {border-radius:4px;background-color:#f6f6fb;padding:12px 16px;margin-top:10px}
 .section-content .box-aptn-data .aptn-data {text-align:right;font-size:16px;color:#000}
-.section-content .box-aptn-data .aptn-data .data-value {font-size:42px;font-family:'Roboto', 'sans-serif';color:#35c44b;font-weight:600;padding-left:8px;position:relative;top:2px;display:inline-block}
+.section-content .box-aptn-data .aptn-data .data-value {font-size:42px;font-family:'Roboto', 'sans-serif';font-weight:600;padding-left:8px;position:relative;top:2px;display:inline-block}
 .section-content .box-aptn-data .aptn-data .data-unit {font-size:22px;color:#000}
+.section-content .box-aptn-data .aptn-data.level-a .data-value {color:#e31212}
+.section-content .box-aptn-data .aptn-data.level-b .data-value {color:#e08d16}
+.section-content .box-aptn-data .aptn-data.level-c .data-value {color:#35c44b}
 
 .section-content .box-state {display:flex;margin:16px -2px 0 0;padding:0 0 0 8px}
 .section-content .box-state .state-item {flex:1;text-align:center;padding:0 12px;position:relative}
@@ -502,7 +505,10 @@ html.scroll_off {overflow:hidden}
 .section-content .box-state.level-c .state-item:nth-of-type(3) .state-icon {background-image:url("/images/common/state-c.png")}
 
 .box-appraisal {padding:0 0 4px 0;text-align:right;color:#000;font-size:16px;border-bottom:1px solid #cdcdcd}
-.box-appraisal .appraisal-value {color:#35c44b;font-size:68px;font-weight:600;font-family:'Roboto', 'sans-serif'}
+.box-appraisal .appraisal-value {font-size:68px;font-weight:600;font-family:'Roboto', 'sans-serif'}
+.box-appraisal.level-a .appraisal-value {color:#e31212}
+.box-appraisal.level-b .appraisal-value {color:#e08d16}
+.box-appraisal.level-c .appraisal-value {color:#35c44b}
 
 .section-content .appraisal-list .appraisal-item .appraisal-item-title {width:86px}
 .section-content .appraisal-list .appraisal-item .appraisal-item-value {width:calc(100% - 86px)}
@@ -1046,6 +1052,8 @@ html.scroll_off {overflow:hidden}
 	.section-content .col-b.flex-column {width:100%;height:auto;border-top:1px solid #dee5e7;display:block}
 	.aptn-rank-area .aptn-rank-list {display:block}
 	.aptn-rank-area .aptn-rank-list .aptn-rank-item {width:100%;padding:8px 80px}
+
+	.box-sub-info .btn-sub-info {height:42px}
 
 	/* table */
 	.list-table-a thead tr th {font-size:13px}
