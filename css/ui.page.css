@@ -250,9 +250,9 @@ html.scroll_off {overflow:hidden}
 .slider-control .slider-item .slider-value .form-a {width:100%;text-align:center;height:20px;line-height:20px;padding:0;border:none;background-color:transparent;font-size:15px;color:#00b0a9;font-weight:600;font-family:'Roboto', 'sans-serif';outline:none !important;}
 .slider-control .slider-item .slider-value .form-a:readonly {background-color:transparent !important}
 
-.btn-detail {height:36px;padding:0 28px;display:flex;justify-content:center;align-items:center;border-radius:18px;border:1px solid #00b0a9}
-.btn-detail .btn-txt {color:#151515;font-weight:500;padding-top:1px}
-/*.btn-detail:after {content:'';background:url("/images/common/btn-arrow.png") no-repeat 0 0;width:6px;height:10px;display:block;margin-left:10px}*/
+.btn-detail {height:40px;padding:0 8px 0 24px;display:flex;justify-content:center;align-items:center;border-radius:20px;border:1px solid #04a09a;flex-shrink:0;background-color:#00b0a9}
+.btn-detail .btn-txt {color:#fff;font-weight:500;padding-top:1px}
+.btn-detail:after {content:'';background:url("/images/common/btn-arrow3.png") no-repeat 0 0;width:26px;height:26px;display:block;margin-left:10px}
 
 .appraisal-list {display:flex;flex-wrap:wrap}
 .appraisal-list .appraisal-item {width:50%;border-bottom:1px solid #efeff0;display:flex;align-items:center;justify-content:space-between;padding:6px 0}
@@ -509,7 +509,7 @@ html.scroll_off {overflow:hidden}
 .aptn-info-data .aptn-item {width:50%;display:flex}
 .aptn-info-data .aptn-item-title {width:88px;text-align:center;font-size:12px;color:#8e8f8e;background-color:#f6f6fb;border-radius:4px;font-weight:500;display:flex;align-items:center;justify-content:center;min-height:34px}
 .aptn-info-data .aptn-item-content {line-height:24px;padding-left:20px;width:calc(100% - 88px);font-size:14px;color:#000;display:flex;align-items:center}
-.aptn-rank-area .aptn-rank-list {display:flex;margin-top:28px}
+.aptn-rank-area .aptn-rank-list {display:flex;margin-top:28px;margin-bottom:16px}
 .aptn-rank-area .aptn-rank-list .aptn-rank-item {width:calc(100% / 3);padding:0 24px;position:relative}
 .aptn-rank-area .aptn-rank-list .aptn-rank-item ~ .aptn-rank-item:before {content:'';position:absolute;top:50%;left:0;width:1px;height:60px;margin-top:-30px;background-color:#efeff0}
 .aptn-rank-area .aptn-rank-list .box-circle {border-radius:50%;border:12px solid transparent;position:relative;padding-top:calc(100% - 24px)}
