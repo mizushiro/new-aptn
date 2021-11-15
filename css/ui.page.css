@@ -544,6 +544,11 @@ html.scroll_off {overflow:hidden}
 .legend-info .legend-color3 {background-color:#e31212;border-color:#b31414}
 .legend-info .legend-color4 {background-color:#fee3ce;border-color:#e8b288}
 .legend-info .legend-color5 {background-color:#b6e9f2;border-color:#89d9e7}
+.legend-info .legend-color6 {background-color:#151515;border-color:#000}
+.legend-info .legend-color7 {background-color:gold;border-color:gold}
+.legend-info .legend-color8 {background-color:#cfd8dc;border-color:#cfd8dc}
+.legend-info .legend-color9 {background-color:#f5f5f5;border-color:#f5f5f5}
+.legend-info .legend-color10 {background-color:#3476ff;border-color:#1151d5}
 
 .section-content .slider-control {padding:10px;display:flex;justify-content:space-between;flex-shrink:0;height:90px}
 
