@@ -241,6 +241,10 @@ html.scroll_off {overflow:hidden}
 .apt-summary .box-aptn-data {height:40px;border-radius:4px;background-color:#f6f6fb;margin-top:4px}
 .apt-summary .box-aptn-data .aptn-data {text-align:right;padding-right:20px;font-size:15px;color:#000}
 .apt-summary .box-aptn-data .aptn-data .data-value {font-size:28px;font-family:'Roboto', 'sans-serif';color:#35c44b;font-weight:600;padding-left:8px;position:relative;top:2px}
+.apt-summary .box-aptn-data .aptn-data.level-a .data-value {color:#e31212}
+.apt-summary .box-aptn-data .aptn-data.level-b .data-value {color:#e08d16}
+.apt-summary .box-aptn-data .aptn-data.level-c .data-value {color:#35c44b}
+
 .apt-summary .box-chart1 {height:240px;margin-top:4px}
 .apt-summary .box-chart2 {height:300px}
 .apt-summary .box-chart3 {height:180px;border-radius:6px;overflow:hidden}
@@ -550,8 +554,8 @@ html.scroll_off {overflow:hidden}
 .legend-info .legend-color3 {background-color:#e31212;border-color:#b31414}
 .legend-info .legend-color4 {background-color:#fee3ce;border-color:#e8b288}
 .legend-info .legend-color5 {background-color:#b6e9f2;border-color:#89d9e7}
-.legend-info .legend-color6 {background-color:#151515;border-color:#000}
-.legend-info .legend-color7 {background-color:gold;border-color:gold}
+.legend-info .legend-color6 {background-color:#fbdddd;border-color:#f6b6b6}
+.legend-info .legend-color7 {background-color:#dde7ff;border-color:#a8c2ff}
 .legend-info .legend-color8 {background-color:#cfd8dc;border-color:#cfd8dc}
 .legend-info .legend-color9 {background-color:#f5f5f5;border-color:#f5f5f5}
 .legend-info .legend-color10 {background-color:#3476ff;border-color:#1151d5}
@@ -804,7 +808,7 @@ html.scroll_off {overflow:hidden}
 
 /* 다른 단지 비교하기 */
 #compare-layer .layer_section-container {width:520px}
-.layer-content .box-compare {max-width:520px}
+/* .layer-content .box-compare {max-width:520px} */
 .layer-content .compare-content {padding:20px 0}
 .layer-content .compare-content .list-sub-tab {margin:0 15px}
 .layer-content .compare-content .compare-list {padding:0 15px;margin-top:15px;max-height:300px;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
@@ -1053,7 +1057,10 @@ html.scroll_off {overflow:hidden}
 	.aptn-rank-area .aptn-rank-list {display:block}
 	.aptn-rank-area .aptn-rank-list .aptn-rank-item {width:100%;padding:8px 80px}
 
-	.box-sub-info .btn-sub-info {height:42px}
+	.box-sub-info {top:8px;right:8px}
+	.box-sub-info .btn-sub-info {height:38px;min-width:110px}
+	.apartment-info .apartment-address.new-type {padding-left:60px}
+	.apartment-info .apartment-address .address-type {height:24px;padding:1px 10px 0}
 
 	/* table */
 	.list-table-a thead tr th {font-size:13px}
