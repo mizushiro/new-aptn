@@ -1058,7 +1058,8 @@ html.scroll_off {overflow:hidden}
 	.aptn-rank-area .aptn-rank-list .aptn-rank-item {width:100%;padding:8px 80px}
 
 	.box-sub-info {top:8px;right:8px}
-	.box-sub-info .btn-sub-info {height:38px;min-width:110px}
+	.box-sub-info .btn-sub-info {height:32px;min-width:92px;font-size:13px}
+	.box-sub-info .state-type {margin-right:4px;width:20px;height:20px;font-size:12px;padding-top:2px}
 	.apartment-info .apartment-address.new-type {padding-left:60px}
 	.apartment-info .apartment-address .address-type {height:24px;padding:1px 10px 0}
 
