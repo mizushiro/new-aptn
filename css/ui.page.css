@@ -687,12 +687,12 @@ html.scroll_off {overflow:hidden}
 [class^="marker-apartment-"] .layer-data .aptn-data {font-size:12px;font-weight:500;color:#000}
 [class^="marker-apartment-"] .layer-data .lately-price .price-value,
 [class^="marker-apartment-"] .layer-data .aptn-data .data-value {font-size:18px;font-weight:600;font-family:'Roboto', 'sans-serif'}
-[class^="marker-zone-"] {position:absolute;width:82px;height:82px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;background-size:100%;background-position:0 0;background-repeat:no-repeat}
-[class^="marker-zone-"] .txt-area {color:#fff;font-size:12px;font-weight:500;margin-top:4px}
-[class^="marker-zone-"] .apartment-count {color:#fff;font-size:26px;font-weight:600;font-family:'Roboto', 'sans-serif';line-height:100%;margin-top:2px}
-.marker-zone-a {background-image:url("/images/common/map-round-big-a.png")}
+.marker-zone {position:absolute;width:68px;height:68px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;background-size:100%;background-position:0 0;background-repeat:no-repeat;background-image:url("/images/common/map-round-basic.png")}
+.marker-zone .txt-area {color:#fff;font-size:12px;font-weight:500;margin-top:4px}
+.marker-zone .apartment-count {color:#fff;font-size:26px;font-weight:600;font-family:'Roboto', 'sans-serif';line-height:100%;margin-top:0}
+/*.marker-zone-a {background-image:url("/images/common/map-round-big-a.png")}
 .marker-zone-b {background-image:url("/images/common/map-round-big-b.png")}
-.marker-zone-c {background-image:url("/images/common/map-round-big-c.png")}
+.marker-zone-c {background-image:url("/images/common/map-round-big-c.png")}*/
 
 
 
