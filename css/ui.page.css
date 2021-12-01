@@ -568,6 +568,8 @@ html.scroll_off {overflow:hidden}
 
 .top-group {display:flex;width:100%;justify-content:space-between;flex-wrap:wrap}
 .top-group .group-col-map {width:calc((100% - 20px) - ((100% - 40px) / 3));position:relative;border-radius:16px;box-shadow:0 1px 4px 0 rgba(0,0,0,.05);background-color:#fff;overflow:hidden;margin-bottom:20px}
+.top-group .group-col-map .area-compare {position:absolute;top:20px;left:20px;z-index:10;right:160px;background-color:#fff;border-radius:8px;box-shadow:0 1px 4px 0 rgba(0,0,0,.25);padding:16px;max-height:calc(100% - 40px);overflow-y:auto;-webkit-overflow-scrolling:touch}
+.top-group .group-col-map .area-compare .apt-compare-list {padding:0 0 12px}
 .top-group .group-col {width:calc((100% - 40px) / 3)}
 .top-group .section-item {width:100%}
 .top-group .box-map-control .control-section {top:auto;bottom:20px;display:flex}
@@ -829,12 +831,12 @@ html.scroll_off {overflow:hidden}
 .layer-content .compare-content .btn-more {height:46px;border-radius:23px;border:1px solid #e8e8e8;padding:0 36px;font-size:14px;color:#969696;font-weight:500;display:inline-flex;align-items:center}
 .layer-content .compare-content .btn-more:after {content:'';display:inline-block;background:url("/images/common/btn-more.png") no-repeat 0 0;width:11px;height:7px;margin-left:16px}
 .layer-content .compare-content .btn-more:hover {border-color:#0aa29c;color:#0aa29c}
-.layer-content .apt-compare-list {padding:0 16px 12px;display:flex;flex-wrap:wrap}
-.layer-content .apt-compare-list .compare-item {padding:8px;width:calc((100% - 8px) / 3);margin-right:4px;margin-bottom:4px;border:1px solid #e8e8e8;border-radius:8px;color:#333;font-size:13px;display:flex;align-items:center;min-height:36px;cursor:pointer}
-.layer-content .apt-compare-list .compare-item:nth-of-type(3n) {margin-right:0}
-.layer-content .apt-compare-list .compare-item i {width:16px;height:16px;border-radius:50%;text-align:center;background-color:#999;font-style:normal;font-size:11px;margin-right:4px;color:#fff;line-height:16px;flex-shrink:0}
-.layer-content .apt-compare-list .compare-item.active {border-color:#00b0a9;background-color:#00b0a9;color:#fff}
-.layer-content .apt-compare-list .compare-item.active i {background-color:#fff;color:#00b0a9}
+.apt-compare-list {padding:0 16px 12px;display:flex;flex-wrap:wrap}
+.apt-compare-list .compare-item {padding:8px;width:calc((100% - 8px) / 3);margin-right:4px;margin-bottom:4px;border:1px solid #e8e8e8;border-radius:8px;color:#333;font-size:13px;display:flex;align-items:center;min-height:36px;cursor:pointer}
+.apt-compare-list .compare-item:nth-of-type(3n) {margin-right:0}
+.apt-compare-list .compare-item i {width:16px;height:16px;border-radius:50%;text-align:center;background-color:#999;font-style:normal;font-size:11px;margin-right:4px;color:#fff;line-height:16px;flex-shrink:0}
+.apt-compare-list .compare-item.active {border-color:#00b0a9;background-color:#00b0a9;color:#fff}
+.apt-compare-list .compare-item.active i {background-color:#fff;color:#00b0a9}
 
 /* 다른 단지 비교하기 */
 #viewer-layer .layer_section-container {width:720px}
@@ -1016,6 +1018,8 @@ html.scroll_off {overflow:hidden}
 	.footer-area .footer-content .text-copy-a .text-copy-item {display:block;padding:0}
 	.footer-area .footer-content .text-copy-a .text-copy-item ~ .text-copy-item {padding:0;margin-top:2px}
 	.footer-area .footer-content .text-copy-a .text-copy-item ~ .text-copy-item:before {display:none}
+
+	.aptn-rank-area .aptn-rank-list .aptn-rank-item {padding:0 16px}
 }
 @media (max-width:1024px) {
 	.list-table-a thead {padding-right:0}
@@ -1028,16 +1032,24 @@ html.scroll_off {overflow:hidden}
 	.section-item {width:100%}
 	.top-group .group-col-map {height:400px}
 
+	.top-group .group-col-map .area-compare {top:8px;left:8px;right:108px;max-width:600px;max-height:calc(100% - 16px)}
+
+	.box-sub-info {top:8px;right:8px}
+	.box-sub-info .btn-sub-info,
+	.compare-btn .btn-compare {height:32px;min-width:92px;font-size:13px}
+	.box-sub-info .state-type {margin-right:4px;width:20px;height:20px;font-size:12px;padding-top:2px}
+	.apartment-info .apartment-address.new-type {padding-left:60px}
+	.apartment-info .apartment-address .address-type {height:24px;padding:1px 10px 0}
+
+	.compare-btn {right:8px;bottom:8px}
+
 	/* layer */
 	.layer_section .layer_section-container.help-content {width:700px}
 	.help-content .box-sec-img {margin:40px 30px 0}
-}
-@media (max-width:768px) {
 
+	.aptn-rank-area .aptn-rank-list .aptn-rank-item {padding:0 5%}
 }
-@media (max-width:767px) {
 
-}
 @media (max-width:600px) {
 	/* header */
 	.wrap .header .sub-bi {display:none}
@@ -1074,15 +1086,6 @@ html.scroll_off {overflow:hidden}
 	.aptn-rank-area .aptn-rank-list {display:block}
 	.aptn-rank-area .aptn-rank-list .aptn-rank-item {width:100%;padding:8px 140px}
 
-	.box-sub-info {top:8px;right:8px}
-	.box-sub-info .btn-sub-info,
-	.compare-btn .btn-compare {height:32px;min-width:92px;font-size:13px}
-	.box-sub-info .state-type {margin-right:4px;width:20px;height:20px;font-size:12px;padding-top:2px}
-	.apartment-info .apartment-address.new-type {padding-left:60px}
-	.apartment-info .apartment-address .address-type {height:24px;padding:1px 10px 0}
-
-	.compare-btn {right:8px;bottom:8px}
-
 	/* table */
 	.list-table-a thead tr th {font-size:13px}
 	.list-table-a thead tr th .unit {font-size:11px}
@@ -1116,4 +1119,10 @@ html.scroll_off {overflow:hidden}
 	.not-mb {display:none !important}
 	.top-group .box-map-control .btn-control-gorup {margin-left:8px}
 	.top-group .box-map-control .btn-control {width:44px;height:44px}
+}
+
+@media (max-width:400px) {
+	.aptn-rank-area .aptn-rank-list .aptn-rank-item {padding:8px 90px}
+	.top-group .group-col-map .area-compare {right:8px;max-height:calc(100% - 56px);z-index:11}
+
 }
