@@ -185,7 +185,7 @@ html.scroll_off {overflow:hidden}
 .header-nav .btn-my-info {height:40px;border:1px solid #04a09a;border-radius:20px;display:flex;align-items:center;justify-content:center;padding:0 30px;font-size:14px;font-weight:500;color:#fff;background-color:#00b0a9}
 
 /* search */
-.box-sh {position:absolute;top:20px;left:20px;width:400px;z-index:101;border-radius:8px;background-color:#fff;box-shadow:0 1px 4px 0 rgba(0,0,0,.25)/*;overflow:hidden*/}
+.box-sh {position:absolute;top:20px;left:20px;width:380px;z-index:101;border-radius:8px;background-color:#fff;box-shadow:0 1px 4px 0 rgba(0,0,0,.25)/*;overflow:hidden*/}
 .box-sh .sh-area {display:flex;align-items:center;padding:10px}
 .box-sh .sh-area .sh-input {width:calc(100% - 80px)}
 .box-sh .sh-area .input-sh {height:40px;border:none;padding:0 10px;font-size:14px;color:#333;width:100%}
@@ -232,26 +232,26 @@ html.scroll_off {overflow:hidden}
 .apt-summary .box-summary {max-height:calc(100vh - 270px);overflow-y:auto}
 .apt-summary .summary-section ~ .summary-section {border-top:4px solid #e8ebee}
 .apt-summary .summary-section ~ .summary-section .summary-title-wrap {border-top:1px solid #d9dee3}
-.apt-summary .summary-title-wrap {display:flex;padding:0 15px;min-height:50px;border-bottom:1px solid #e8ebee;justify-content:space-between;align-items:center}
+.apt-summary .summary-title-wrap {display:flex;padding:9px 15px;min-height:50px;border-bottom:1px solid #e8ebee;justify-content:space-between;align-items:center}
 .apt-summary .summary-title-wrap .summary-title {font-size:16px;color:#000;font-weight:500;transform:rotate(.04deg)}
 .apt-summary .summary-content {padding:8px 15px}
 .apt-summary .appraisal-list {margin-top:11px}
-.apt-summary .lately-price {text-align:right;font-size:14px;color:#000;padding-right:20px}
+.apt-summary .lately-price {text-align:right;font-size:14px;color:#000;padding: 6px 20px;}
 .apt-summary .lately-price .price-value {font-size:20px;font-family:'Roboto', 'sans-serif';font-weight:600;padding-left:8px;position:relative;top:2px}
-.apt-summary .box-aptn-data {height:40px;border-radius:4px;background-color:#f6f6fb;margin-top:4px}
-.apt-summary .box-aptn-data .aptn-data {text-align:right;padding-right:20px;font-size:15px;color:#000}
+.apt-summary .box-aptn-data {height:54px;border-radius:4px;background-color:#f6f6fb;margin-top:4px}
+.apt-summary .box-aptn-data .aptn-data {text-align:right;padding: 10px 20px;font-size:15px;color:#000}
 .apt-summary .box-aptn-data .aptn-data .data-value {font-size:28px;font-family:'Roboto', 'sans-serif';color:#35c44b;font-weight:600;padding-left:8px;position:relative;top:2px}
 .apt-summary .box-aptn-data .aptn-data.level-a .data-value {color:#e31212}
 .apt-summary .box-aptn-data .aptn-data.level-b .data-value {color:#e08d16}
 .apt-summary .box-aptn-data .aptn-data.level-c .data-value {color:#35c44b}
 
-.apt-summary .box-chart1 {height:240px;margin-top:4px}
+.apt-summary .box-chart1 {height:320px;margin-top:4px}
 .apt-summary .box-chart2 {height:300px}
-.apt-summary .box-chart3 {height:180px;border-radius:6px;overflow:hidden}
+.apt-summary .box-chart3 {height:300px;border-radius:6px;overflow:hidden}
 .apt-summary .slider-control {display:flex;justify-content:space-between;margin-top:8px;margin-bottom:20px}
 .slider-control .slider-item {width:calc(50% - 5px);background-color:#e8faf9;border:1px solid #d2f1f0;border-radius:2px;height:40px;padding:17px 9px 0}
 .slider-control .slider-item .slider-value {margin-top:24px}
-.slider-control .slider-item .slider-value .form-a {width:100%;text-align:center;height:20px;line-height:20px;padding:0;border:none;background-color:transparent;font-size:15px;color:#00b0a9;font-weight:600;font-family:'Roboto', 'sans-serif';outline:none !important;}
+.slider-control .slider-item .slider-value .form-a {width:100%;text-align:center;height:20px;line-height:20px;padding:0;border:none;background-color:transparent;font-size:15px;color:#00b0a9;font-weight:600;font-family:'Roboto', 'sans-serif';outline:none !important;margin-bottom:40px}
 .slider-control .slider-item .slider-value .form-a:readonly {background-color:transparent !important}
 
 .btn-detail {height:40px;padding:0 8px 0 24px;display:flex;justify-content:center;align-items:center;border-radius:20px;border:1px solid #04a09a;flex-shrink:0;background-color:#00b0a9}
@@ -282,7 +282,8 @@ html.scroll_off {overflow:hidden}
 
 .box-sh .sh-area .company-logo {width:31px}
 .box-sh .sh-area .link-company {display:block;height:32px}
-.sh-input .box-sh-keyword {position:absolute;top:54px;left:0;right:0;padding-top:6px;background-color:#fff;border-radius:0 0 8px 8px;z-index:10;max-height:380px;overflow-y:auto;-webkit-overflow-scrolling:touch;box-shadow:0 3px 4px 0 rgba(0,0,0,.25)}
+.sh-input .box-sh-keyword {position:absolute;top:54px;left:0;right:0;padding-top:6px;background-color:#fff;border-radius:0 0 8px 8px;z-index:10;max-height:380px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.sh-input .box-sh-keyword.active {box-shadow:0 3px 4px 0 rgba(0,0,0,.25)}
 .sh-input .box-sh-keyword .sh-keyword-item:first-child {border-top:1px solid #eee;padding-top:16px}
 .sh-input .box-sh-keyword .sh-keyword-item:last-child {padding-bottom:16px}
 .sh-input .box-sh-keyword .sh-keyword-item .move-map {display:flex;width:100%;padding:10px 15px;cursor:pointer}
@@ -561,6 +562,7 @@ html.scroll_off {overflow:hidden}
 .legend-info .legend-color8 {background-color:#cfd8dc;border-color:#cfd8dc}
 .legend-info .legend-color9 {background-color:#f5f5f5;border-color:#f5f5f5}
 .legend-info .legend-color10 {background-color:#3476ff;border-color:#1151d5}
+.legend-info .legend-color11 {background-color:#dce7ff;border-color:#dce7ff}
 
 .section-content .slider-control {padding:10px;display:flex;justify-content:space-between;flex-shrink:0;height:90px}
 
@@ -574,11 +576,15 @@ html.scroll_off {overflow:hidden}
 
 .box-sub-info {position:absolute;right:20px;top:20px;z-index:10}
 .box-sub-info .btn-sub-info {height:48px;min-width:120px;display:flex;border:1px solid transparent;border-radius:8px;box-shadow:0 1px 4px 0 rgba(0,0,0,.25);background-color:#fff;align-items:center;justify-content:center;margin-bottom:4px;font-weight:500;font-size:14px;color:#151515}
-.box-sub-info .btn-sub-info.active {border-color:#04a09a}
+.box-sub-info .btn-sub-info.active {background-color:#04a09a;color:#fff}
 .box-sub-info .state-type {height:26px;width:26px;display:flex;align-items:center;justify-content:center;color:#fff;border-radius:50%;font-size:13px;font-weight:600;margin-right:8px}
+.box-sub-info .active .state-type.level-a {background-color:#fff;color:#e31212}
+.box-sub-info .active .state-type.level-b {background-color:#fff;color:#e08d16}
+.box-sub-info .active .state-type.level-c {background-color:#fff;color:#35c44b}
 .box-sub-info .state-type.level-a {background-color:#e31212}
 .box-sub-info .state-type.level-b {background-color:#e08d16}
 .box-sub-info .state-type.level-c {background-color:#35c44b}
+
 
 .compare-btn {position:absolute;right:20px;bottom:20px;z-index:10}
 .compare-btn .btn-compare {height:48px;min-width:120px;display:flex;border:1px solid #04a09a;border-radius:8px;box-shadow:0 1px 4px 0 rgba(0,0,0,.25);background-color:#00b0a9;align-items:center;justify-content:center;margin-bottom:4px;font-weight:500;font-size:14px;color:#fff}
