@@ -169,7 +169,7 @@ html.scroll_off {overflow:hidden}
 /* new layout */
 .wrap {width:100%;height:100%}
 .wrap .header {height:70px;background-color:#fff;box-shadow:0 0 1px rgba(0,0,0,.15);position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:0 20px 0 30px}
-.wrap .content-area {height:calc(100% - 70px);width:100%;position:relative}
+.wrap .content-area {height:calc(100% - 70px);width:100%;position:relative;overflow:hidden}
 .wrap .map-contents {width:100%;height:100%}
 
 /* header */
@@ -279,7 +279,6 @@ html.scroll_off {overflow:hidden}
 .ui-slider-horizontal .ui-slider-range-max {right:0}
 .ui-sortable-handle {-ms-touch-action:none;touch-action:none}
 
-
 .box-sh .sh-area .company-logo {width:31px}
 .box-sh .sh-area .link-company {display:block;height:32px}
 .sh-input .box-sh-keyword {position:absolute;top:54px;left:0;right:0;padding-top:6px;background-color:#fff;border-radius:0 0 8px 8px;z-index:10;max-height:380px;overflow-y:auto;-webkit-overflow-scrolling:touch}
@@ -300,8 +299,6 @@ html.scroll_off {overflow:hidden}
 .box-sh .sh-result .btn-more {border-top:1px solid #ccc;padding:10px;width:100%;color:#333;font-weight:600;font-size:14px}
 .box-sh .sh-point-a {display:block;width:16px;height:16px;background:url("/images/common/sh-point-a.png") no-repeat 0 0}
 .box-sh .sh-point-b {display:block;width:16px;height:16px;background:url("/images/common/sh-point-b.png") no-repeat 0 0}
-
-
 
 
 /* color */
@@ -569,7 +566,9 @@ html.scroll_off {overflow:hidden}
 .top-group {display:flex;width:100%;justify-content:space-between;flex-wrap:wrap}
 .top-group .group-col-map {width:calc((100% - 20px) - ((100% - 40px) / 3));position:relative;border-radius:16px;box-shadow:0 1px 4px 0 rgba(0,0,0,.05);background-color:#fff;overflow:hidden;margin-bottom:20px}
 .top-group .group-col-map .area-compare {position:absolute;top:20px;left:20px;z-index:10;right:160px;background-color:#fff;border-radius:8px;box-shadow:0 1px 4px 0 rgba(0,0,0,.25);padding:16px;max-height:calc(100% - 40px);overflow-y:auto;-webkit-overflow-scrolling:touch}
-.top-group .group-col-map .area-compare .apt-compare-list {padding:0 0 12px}
+.top-group .group-col-map .area-compare .area-compare-title {margin:-16px -16px 0;padding:0 16px;border-bottom:1px solid #e8ebee;display:flex;align-items:center;height:48px;font-size:16px;font-weight:500;color:#000}
+.top-group .group-col-map .area-compare .apt-compare-list {padding:16px 0 12px}
+.top-group .group-col-map .area-compare .btn_compare-close {position:absolute;top:8px;right:8px;width:32px;height:32px;z-index:20;border:1px solid #e8e8e8;border-radius:4px;background-color:#fff;display:flex;align-items:center;justify-content:center}
 .top-group .group-col {width:calc((100% - 40px) / 3)}
 .top-group .section-item {width:100%}
 .top-group .box-map-control .control-section {top:auto;bottom:20px;display:flex}
@@ -586,7 +585,6 @@ html.scroll_off {overflow:hidden}
 .box-sub-info .state-type.level-a {background-color:#e31212}
 .box-sub-info .state-type.level-b {background-color:#e08d16}
 .box-sub-info .state-type.level-c {background-color:#35c44b}
-
 
 .compare-btn {position:absolute;right:20px;bottom:20px;z-index:10}
 .compare-btn .btn-compare {height:48px;min-width:120px;display:flex;border:1px solid #04a09a;border-radius:8px;box-shadow:0 1px 4px 0 rgba(0,0,0,.25);background-color:#00b0a9;align-items:center;justify-content:center;margin-bottom:4px;font-weight:500;font-size:14px;color:#fff}
@@ -822,7 +820,7 @@ html.scroll_off {overflow:hidden}
 /* 다른 단지 비교하기 */
 #compare-layer .layer_section-container {width:600px}
 .layer-content .box-compare {max-width:600px}
-.layer-content .compare-content {padding:20px 0}
+.layer-content .compare-content {padding:20px 0;max-height:calc(100vh - 100px);overflow-y:auto;-webkit-overflow-scrolling:touch}
 .layer-content .compare-content .list-sub-tab {margin:0 15px}
 .layer-content .compare-content .compare-list {padding:0 15px;margin-top:15px;max-height:300px;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
 .layer-content .compare-content .compare-list .compare-item {padding:18px 0}
