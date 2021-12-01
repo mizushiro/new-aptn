@@ -565,7 +565,7 @@ html.scroll_off {overflow:hidden}
 
 .top-group {display:flex;width:100%;justify-content:space-between;flex-wrap:wrap}
 .top-group .group-col-map {width:calc((100% - 20px) - ((100% - 40px) / 3));position:relative;border-radius:16px;box-shadow:0 1px 4px 0 rgba(0,0,0,.05);background-color:#fff;overflow:hidden;margin-bottom:20px}
-.top-group .group-col-map .area-compare {position:absolute;top:20px;left:20px;z-index:10;right:160px;background-color:#fff;border-radius:8px;box-shadow:0 1px 4px 0 rgba(0,0,0,.25);padding:16px;max-height:calc(100% - 40px);overflow-y:auto;-webkit-overflow-scrolling:touch}
+.top-group .group-col-map .area-compare {position:absolute;top:20px;left:20px;z-index:10;right:160px;background-color:#fff;border-radius:8px;box-shadow:0 1px 4px 0 rgba(0,0,0,.25);padding:16px;max-height:calc(100% - 40px);overflow-y:auto;-webkit-overflow-scrolling:touch;max-width:600px}
 .top-group .group-col-map .area-compare .area-compare-title {margin:-16px -16px 0;padding:0 16px;border-bottom:1px solid #e8ebee;display:flex;align-items:center;height:48px;font-size:16px;font-weight:500;color:#000}
 .top-group .group-col-map .area-compare .apt-compare-list {padding:16px 0 12px}
 .top-group .group-col-map .area-compare .btn_compare-close {position:absolute;top:8px;right:8px;width:32px;height:32px;z-index:20;border:1px solid #e8e8e8;border-radius:4px;background-color:#fff;display:flex;align-items:center;justify-content:center}
