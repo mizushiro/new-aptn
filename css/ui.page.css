@@ -761,9 +761,9 @@ html.scroll_off {overflow:hidden}
 .box-map-control .control-section {position:absolute;top:20px;right:20px;z-index:100}
 .box-map-control .btn-control {width:50px;height:50px;text-align:center;background-color:#fff;border-radius:8px;box-shadow:0 1px 4px 0 rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center}
 .box-map-control .box-layer {position:relative}
-.box-map-control .box-layer .tooltip-layer {width:160px;border:none;border-radius:8px;box-shadow:0 1px 4px 0 rgba(0,0,0,.25);top:100px;right:60px;left:auto}
+.box-map-control .box-layer .tooltip-layer {width:160px;border:none;border-radius:8px;box-shadow:0 1px 4px 0 rgba(0,0,0,.25);top:100px;right:-260px;left:auto}
 .box-map-control .box-layer .tooltip-layer.v2 {top:auto;bottom:-100px;-webkit-transition:bottom .2s ease-out;transition:bottom .2s ease-out}
-.box-map-control .box-layer .tooltip-layer.is-showing {top:0;left:0;right:auto}
+.box-map-control .box-layer .tooltip-layer.is-showing {top:0;right:60px}
 .box-map-control .box-layer .tooltip-layer.v2.is-showing {top:auto;bottom:120%;left:0;right:auto}
 .box-map-control .box-layer .tooltip-layer:before {display:none}
 .box-map-control .btn-control-gorup {box-shadow:0 1px 4px 0 rgba(0,0,0,.25);border-radius:8px;overflow:hidden;margin-top:14px}
@@ -818,8 +818,8 @@ html.scroll_off {overflow:hidden}
 .layer-content .layer-header-title {font-size:18px;color:#000;font-weight:500}
 
 /* 다른 단지 비교하기 */
-#compare-layer .layer_section-container {width:520px}
-.layer-content .box-compare {max-width:520px}
+#compare-layer .layer_section-container {width:600px}
+.layer-content .box-compare {max-width:600px}
 .layer-content .compare-content {padding:20px 0}
 .layer-content .compare-content .list-sub-tab {margin:0 15px}
 .layer-content .compare-content .compare-list {padding:0 15px;margin-top:15px;max-height:300px;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
@@ -829,6 +829,12 @@ html.scroll_off {overflow:hidden}
 .layer-content .compare-content .btn-more {height:46px;border-radius:23px;border:1px solid #e8e8e8;padding:0 36px;font-size:14px;color:#969696;font-weight:500;display:inline-flex;align-items:center}
 .layer-content .compare-content .btn-more:after {content:'';display:inline-block;background:url("/images/common/btn-more.png") no-repeat 0 0;width:11px;height:7px;margin-left:16px}
 .layer-content .compare-content .btn-more:hover {border-color:#0aa29c;color:#0aa29c}
+.layer-content .apt-compare-list {padding:0 16px 12px;display:flex;flex-wrap:wrap}
+.layer-content .apt-compare-list .compare-item {padding:8px;width:calc((100% - 8px) / 3);margin-right:4px;margin-bottom:4px;border:1px solid #e8e8e8;border-radius:8px;color:#333;font-size:13px;display:flex;align-items:center;min-height:36px;cursor:pointer}
+.layer-content .apt-compare-list .compare-item:nth-of-type(3n) {margin-right:0}
+.layer-content .apt-compare-list .compare-item i {width:16px;height:16px;border-radius:50%;text-align:center;background-color:#999;font-style:normal;font-size:11px;margin-right:4px;color:#fff;line-height:16px;flex-shrink:0}
+.layer-content .apt-compare-list .compare-item.active {border-color:#00b0a9;background-color:#00b0a9;color:#fff}
+.layer-content .apt-compare-list .compare-item.active i {background-color:#fff;color:#00b0a9}
 
 /* 다른 단지 비교하기 */
 #viewer-layer .layer_section-container {width:720px}
